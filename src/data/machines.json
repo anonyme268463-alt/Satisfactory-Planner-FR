@@ -1,0 +1,6 @@
+[
+  { "id": "smelter", "name": "Fonderie", "nameEn": "Smelter", "powerConsumption": 4, "baseSpeed": 1.0 },
+  { "id": "constructor", "name": "Constructeur", "nameEn": "Constructor", "powerConsumption": 4, "baseSpeed": 1.0 },
+  { "id": "assembler", "name": "Assembleuse", "nameEn": "Assembler", "powerConsumption": 15, "baseSpeed": 1.0 },
+  { "id": "miner-mk1", "name": "Foreuse Mk1", "nameEn": "Miner Mk1", "powerConsumption": 5, "baseSpeed": 1.0 }
+]

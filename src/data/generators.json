@@ -1,0 +1,5 @@
+[
+  { "id": "biomass-burner", "name": "Brûleur de biomasse", "nameEn": "Biomass Burner", "powerProduction": 30 },
+  { "id": "coal-generator", "name": "Générateur à charbon", "nameEn": "Coal Generator", "powerProduction": 75 },
+  { "id": "fuel-generator", "name": "Générateur à carburant", "nameEn": "Fuel Generator", "powerProduction": 250 }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "id": "recipe-iron-ingot",
+    "name": "Lingot de fer",
+    "nameEn": "Iron Ingot",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "iron-ore", "amount": 30 }],
+    "products": [{ "itemId": "iron-ingot", "amount": 30 }],
+    "producedIn": "smelter",
+    "duration": 2
+  },
+  {
+    "id": "recipe-iron-plate",
+    "name": "Plaque de fer",
+    "nameEn": "Iron Plate",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "iron-ingot", "amount": 30 }],
+    "products": [{ "itemId": "iron-plate", "amount": 20 }],
+    "producedIn": "constructor",
+    "duration": 6
+  },
+  {
+    "id": "recipe-iron-rod",
+    "name": "Tige de fer",
+    "nameEn": "Iron Rod",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "iron-ingot", "amount": 15 }],
+    "products": [{ "itemId": "iron-rod", "amount": 15 }],
+    "producedIn": "constructor",
+    "duration": 4
+  },
+  {
+    "id": "recipe-screw",
+    "name": "Vis",
+    "nameEn": "Screw",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "iron-rod", "amount": 10 }],
+    "products": [{ "itemId": "screw", "amount": 40 }],
+    "producedIn": "constructor",
+    "duration": 6
+  },
+  {
+    "id": "recipe-reinforced-iron-plate",
+    "name": "Plaque de fer renforcée",
+    "nameEn": "Reinforced Iron Plate",
+    "isAlternate": false,
+    "ingredients": [
+      { "itemId": "iron-plate", "amount": 30 },
+      { "itemId": "screw", "amount": 60 }
+    ],
+    "products": [{ "itemId": "reinforced-iron-plate", "amount": 5 }],
+    "producedIn": "assembler",
+    "duration": 12
+  }
+]

@@ -1,0 +1,11 @@
+[
+  { "id": "iron-ore", "name": "Minerai de fer", "nameEn": "Iron Ore", "category": "Resource", "isFluid": false },
+  { "id": "copper-ore", "name": "Minerai de cuivre", "nameEn": "Copper Ore", "category": "Resource", "isFluid": false },
+  { "id": "limestone", "name": "Calcaire", "nameEn": "Limestone", "category": "Resource", "isFluid": false },
+  { "id": "coal", "name": "Charbon", "nameEn": "Coal", "category": "Resource", "isFluid": false },
+  { "id": "iron-ingot", "name": "Lingot de fer", "nameEn": "Iron Ingot", "category": "Component", "isFluid": false },
+  { "id": "iron-plate", "name": "Plaque de fer", "nameEn": "Iron Plate", "category": "Component", "isFluid": false },
+  { "id": "iron-rod", "name": "Tige de fer", "nameEn": "Iron Rod", "category": "Component", "isFluid": false },
+  { "id": "screw", "name": "Vis", "nameEn": "Screw", "category": "Component", "isFluid": false },
+  { "id": "reinforced-iron-plate", "name": "Plaque de fer renforcée", "nameEn": "Reinforced Iron Plate", "category": "Component", "isFluid": false }
+]

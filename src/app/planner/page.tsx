@@ -27,50 +27,68 @@ function StepCard({
   );
 
   return (
-    <div className="border-l-2 border-orange-500/30 pl-6 ml-2 space-y-4">
-      <div className="bg-zinc-700/50 p-4 rounded-lg border border-zinc-600 relative overflow-hidden group">
-        <div className="absolute top-0 left-0 w-1 h-full bg-orange-500"></div>
+    <div className="border-l-2 border-orange-500/20 pl-6 ml-2 space-y-4">
+      <div className="bg-zinc-800/40 p-5 rounded-xl border border-zinc-700/50 backdrop-blur-sm relative overflow-hidden group hover:border-orange-500/50 transition-all duration-300">
+        <div className="absolute top-0 left-0 w-1 h-full bg-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div>
         <div className="flex justify-between items-start">
           <div>
-            <h4 className="font-bold text-lg">{item?.name}</h4>
-            <p className="text-sm text-zinc-400 font-mono">{step.targetAmount.toFixed(2)} / min</p>
+            <h4 className="font-black text-xl tracking-tight">{item?.name}</h4>
+            <p className="text-xs text-zinc-500 font-mono flex items-center gap-1">
+                <span className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse"></span>
+                {step.targetAmount.toFixed(2)} UNITÉS / MIN
+            </p>
           </div>
           <div className="text-right">
-            <p className="text-xs text-zinc-500 uppercase tracking-tighter">Machine</p>
-            <p className="font-bold text-orange-400">{step.machineCount.toFixed(2)}x {machine?.name}</p>
-            <p className="text-[10px] text-zinc-500">{step.powerConsumption.toFixed(2)} MW</p>
+            <p className="text-[10px] text-zinc-500 uppercase font-black tracking-widest mb-1">Infrastructure</p>
+            <p className="font-black text-orange-400 text-lg leading-none">{step.machineCount.toFixed(2)}x <span className="text-zinc-200">{machine?.name}</span></p>
+            <p className="text-[10px] text-zinc-500 font-mono mt-1 italic">{step.powerConsumption.toFixed(2)} MW REQUIS</p>
           </div>
         </div>
-        <div className="mt-3 flex flex-wrap gap-4 items-center">
-           <div className="flex items-center gap-2">
-              <label className="text-[10px] text-zinc-500 uppercase font-bold">Recette:</label>
+
+        <div className="mt-6 flex flex-wrap gap-6 items-center pt-4 border-t border-zinc-700/50">
+           <div className="flex flex-col gap-1.5">
+              <label className="text-[9px] text-zinc-500 uppercase font-black tracking-tighter">Configuration Recette</label>
               <select
                 value={step.recipeId}
                 onChange={(e) => onRecipeChange(step.targetItemId, e.target.value)}
-                className="bg-zinc-900 border border-zinc-700 rounded px-1 py-0.5 text-[10px] text-zinc-300 focus:border-orange-500 outline-none"
+                className="bg-zinc-900 border border-zinc-700 rounded-lg px-2 py-1.5 text-xs text-zinc-300 focus:border-orange-500 outline-none font-bold"
               >
                 {alternativeRecipes.map(r => (
-                  <option key={r.id} value={r.id}>{r.name}{r.isAlternate ? ' (Alt)' : ''}</option>
+                  <option key={r.id} value={r.id}>{r.name}{r.isAlternate ? ' (Alternative)' : ''}</option>
                 ))}
               </select>
            </div>
-           <div className="flex items-center gap-2">
-              <label className="text-[10px] text-zinc-500 uppercase font-bold">Surcadencage:</label>
-              <input
-                type="number"
-                min="1"
-                max="250"
-                value={step.overclock}
-                onChange={(e) => onOverclockChange(step.recipeId, Number(e.target.value))}
-                className="bg-zinc-900 border border-zinc-700 rounded px-1 py-0.5 text-[10px] w-12 font-mono text-orange-500"
-              />
-              <span className="text-[10px] text-zinc-500">%</span>
+
+           <div className="flex flex-col gap-1.5">
+              <label className="text-[9px] text-zinc-500 uppercase font-black tracking-tighter">Fréquence Cadence</label>
+              <div className="flex items-center gap-2">
+                <input
+                    type="range"
+                    min="1"
+                    max="250"
+                    step="1"
+                    value={step.overclock}
+                    onChange={(e) => onOverclockChange(step.recipeId, Number(e.target.value))}
+                    className="w-24 accent-orange-500"
+                />
+                <div className="flex items-center bg-zinc-900 px-2 py-1 rounded border border-zinc-700">
+                    <input
+                        type="number"
+                        min="1"
+                        max="250"
+                        value={step.overclock}
+                        onChange={(e) => onOverclockChange(step.recipeId, Number(e.target.value))}
+                        className="bg-transparent text-[10px] w-8 font-mono text-orange-500 font-bold focus:outline-none"
+                    />
+                    <span className="text-[10px] text-zinc-500 font-bold">%</span>
+                </div>
+              </div>
            </div>
         </div>
       </div>
 
       {step.childSteps.length > 0 && (
-        <div className="space-y-4 mt-4">
+        <div className="space-y-6 mt-6">
           {step.childSteps.map((child, i) => (
             <StepCard
               key={`${child.targetItemId}-${i}`}
@@ -111,78 +129,88 @@ export default function ProductionPlanner() {
   };
 
   return (
-    <div className="p-8 bg-zinc-900 min-h-screen text-zinc-100">
+    <div className="p-8 bg-zinc-950 min-h-screen text-zinc-100 font-sans selection:bg-orange-500/30">
       <div className="max-w-7xl mx-auto">
-        <header className="flex justify-between items-center mb-12">
-            <h1 className="text-4xl font-black text-orange-500 uppercase tracking-tighter flex items-center gap-3">
-                <span className="bg-orange-500 text-zinc-900 px-2 py-1 rounded">S</span>
-                Satisfactory Planner FR
+        <header className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
+            <h1 className="text-5xl font-black text-orange-500 uppercase tracking-tighter flex items-center gap-4 italic">
+                <span className="bg-orange-500 text-zinc-950 px-3 py-1 rounded-sm not-italic">S</span>
+                Satisfactory Planner
             </h1>
-            <nav className="flex gap-6 text-sm font-bold uppercase tracking-widest text-zinc-400">
-                <Link href="/items" className="hover:text-orange-500 transition-colors">Objets</Link>
-                <Link href="/recipes" className="hover:text-orange-500 transition-colors">Recettes</Link>
-                <Link href="/planner" className="text-orange-500">Planificateur</Link>
-                <Link href="/power" className="hover:text-orange-500 transition-colors">Énergie</Link>
+            <nav className="flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-zinc-500">
+                <Link href="/items" className="hover:text-orange-500 transition-colors py-2 border-b-2 border-transparent hover:border-orange-500">Objets</Link>
+                <Link href="/recipes" className="hover:text-orange-500 transition-colors py-2 border-b-2 border-transparent hover:border-orange-500">Recettes</Link>
+                <Link href="/planner" className="text-orange-500 py-2 border-b-2 border-orange-500">Planificateur</Link>
+                <Link href="/power" className="hover:text-orange-500 transition-colors py-2 border-b-2 border-transparent hover:border-orange-500">Énergie</Link>
             </nav>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Sidebar: Controls */}
-          <div className="lg:col-span-1 space-y-6 bg-zinc-800 p-6 rounded-xl border border-zinc-700 h-fit sticky top-8">
-            <div>
-              <label className="block text-sm font-bold text-zinc-500 mb-2 uppercase tracking-widest">Produit Cible</label>
-              <select
-                value={targetItemId}
-                onChange={(e) => setTargetItemId(e.target.value)}
-                className="w-full bg-zinc-900 border border-zinc-700 rounded p-3 text-white focus:outline-none focus:border-orange-500 transition-colors appearance-none"
-              >
-                {itemsData.filter(i => i.category !== 'Resource').map(item => (
-                  <option key={item.id} value={item.id}>{item.name}</option>
-                ))}
-              </select>
+          <div className="lg:col-span-1 space-y-8 bg-zinc-900 p-8 rounded-2xl border border-zinc-800 h-fit sticky top-8 shadow-xl">
+            <div className="space-y-4">
+              <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-[0.3em]">Module de Cible</label>
+              <div className="relative group">
+                <select
+                    value={targetItemId}
+                    onChange={(e) => setTargetItemId(e.target.value)}
+                    className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:border-orange-500 transition-all appearance-none font-bold text-sm group-hover:border-zinc-700"
+                >
+                    {itemsData.filter(i => i.category !== 'Resource').map(item => (
+                    <option key={item.id} value={item.id}>{item.name}</option>
+                    ))}
+                </select>
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-600">▼</div>
+              </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-bold text-zinc-500 mb-2 uppercase tracking-widest">Taux (u/min)</label>
-              <input
-                type="number"
-                value={targetAmount}
-                onChange={(e) => setTargetAmount(Number(e.target.value))}
-                className="w-full bg-zinc-900 border border-zinc-700 rounded p-3 text-white font-mono focus:outline-none focus:border-orange-500 transition-colors"
-              />
+            <div className="space-y-4">
+              <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-[0.3em]">Débit Souhaité</label>
+              <div className="relative group">
+                <input
+                    type="number"
+                    value={targetAmount}
+                    onChange={(e) => setTargetAmount(Number(e.target.value))}
+                    className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white font-mono focus:outline-none focus:border-orange-500 transition-all font-black text-xl group-hover:border-zinc-700"
+                />
+                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] font-black text-zinc-600 uppercase">u/min</span>
+              </div>
             </div>
 
-            <div className="flex rounded-lg bg-zinc-900 p-1 border border-zinc-700">
+            <div className="flex rounded-xl bg-zinc-950 p-1 border border-zinc-800 shadow-inner">
                 <button
                     onClick={() => setView('tree')}
-                    className={`flex-1 py-2 text-xs font-bold uppercase rounded ${view === 'tree' ? 'bg-orange-500 text-zinc-900' : 'text-zinc-500'}`}
+                    className={`flex-1 py-3 text-[10px] font-black uppercase tracking-widest rounded-lg transition-all ${view === 'tree' ? 'bg-orange-500 text-zinc-950 shadow-lg' : 'text-zinc-500 hover:text-zinc-300'}`}
                 >
-                    Arbre
+                    Analyse Arbre
                 </button>
                 <button
                     onClick={() => setView('layout')}
-                    className={`flex-1 py-2 text-xs font-bold uppercase rounded ${view === 'layout' ? 'bg-orange-500 text-zinc-900' : 'text-zinc-500'}`}
+                    className={`flex-1 py-3 text-[10px] font-black uppercase tracking-widest rounded-lg transition-all ${view === 'layout' ? 'bg-orange-500 text-zinc-950 shadow-lg' : 'text-zinc-500 hover:text-zinc-300'}`}
                 >
-                    Plan (Vue dessus)
+                    Plan Technique
                 </button>
             </div>
 
-            <div className="pt-6 border-t border-zinc-700 space-y-4">
-              <h3 className="text-xs font-black text-orange-500 uppercase tracking-[0.2em]">Tableau de Bord</h3>
+            <div className="pt-8 border-t border-zinc-800 space-y-6">
+              <h3 className="text-[10px] font-black text-orange-500 uppercase tracking-[0.4em] flex items-center gap-2">
+                  <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
+                  Rapport de Production
+              </h3>
               {plan && (
-                <div className="space-y-4">
-                  <div className="bg-zinc-900/50 p-4 rounded border border-zinc-700">
-                    <span className="text-[10px] text-zinc-500 block uppercase font-bold mb-1">Énergie Totale</span>
-                    <span className="text-2xl font-mono text-orange-400 font-bold">{plan.totalPower.toFixed(1)} <small className="text-xs text-zinc-500">MW</small></span>
+                <div className="space-y-6">
+                  <div className="bg-zinc-950 p-5 rounded-2xl border border-zinc-800 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-orange-500/5 rounded-full -mr-8 -mt-8"></div>
+                    <span className="text-[9px] text-zinc-500 block uppercase font-black mb-1 tracking-widest italic">Puissance Estimée</span>
+                    <span className="text-3xl font-black text-orange-500 font-mono tracking-tighter">{plan.totalPower.toFixed(1)} <small className="text-xs text-zinc-600">MW</small></span>
                   </div>
 
-                  <div className="bg-zinc-900/50 p-4 rounded border border-zinc-700">
-                    <span className="text-[10px] text-zinc-500 block uppercase font-bold mb-2">Ressources Brutes</span>
-                    <div className="space-y-2">
+                  <div className="bg-zinc-950 p-5 rounded-2xl border border-zinc-800">
+                    <span className="text-[9px] text-zinc-500 block uppercase font-black mb-3 tracking-widest italic text-center border-b border-zinc-800 pb-2">Matériaux d'Entrée</span>
+                    <div className="space-y-3">
                         {Object.entries(plan.rawResources).map(([id, amount]) => (
-                        <div key={id} className="flex justify-between items-center text-xs font-mono">
-                            <span className="text-zinc-400">{itemsData.find(i => i.id === id)?.name || id}:</span>
-                            <span className="text-green-400 font-bold">{amount.toFixed(1)}</span>
+                        <div key={id} className="flex justify-between items-center">
+                            <span className="text-[10px] font-black text-zinc-400 uppercase tracking-tighter">{itemsData.find(i => i.id === id)?.name || id}</span>
+                            <span className="text-sm text-green-500 font-black font-mono">{amount.toFixed(1)}</span>
                         </div>
                         ))}
                     </div>
@@ -193,17 +221,16 @@ export default function ProductionPlanner() {
           </div>
 
           {/* Main: Visualization */}
-          <div className="lg:col-span-3 space-y-8">
+          <div className="lg:col-span-3 space-y-12">
              {view === 'tree' ? (
                <>
-                <div className="flex items-center gap-4 mb-4">
-                    <div className="h-[2px] flex-grow bg-zinc-800"></div>
-                    <h2 className="text-xs font-black text-zinc-500 uppercase tracking-[0.3em]">Arbre de Fabrication</h2>
-                    <div className="h-[2px] flex-grow bg-zinc-800"></div>
+                <div className="flex items-center gap-6">
+                    <h2 className="text-[11px] font-black text-zinc-600 uppercase tracking-[0.5em] whitespace-nowrap italic">Logistique de Fabrication</h2>
+                    <div className="h-px flex-grow bg-gradient-to-r from-zinc-800 to-transparent"></div>
                 </div>
 
                 {plan && plan.steps.length > 0 ? (
-                <div className="space-y-8">
+                <div className="space-y-10 pb-20">
                     {plan.steps.map((step, i) => (
                     <StepCard
                         key={`${step.targetItemId}-${i}`}
@@ -214,22 +241,26 @@ export default function ProductionPlanner() {
                     ))}
                 </div>
                 ) : (
-                <div className="flex flex-col items-center justify-center py-20 text-zinc-600 border-2 border-dashed border-zinc-800 rounded-2xl">
-                    <p className="uppercase font-bold tracking-widest">Aucune donnée disponible</p>
+                <div className="flex flex-col items-center justify-center py-32 text-zinc-700 border-2 border-dashed border-zinc-900 rounded-3xl group hover:border-orange-500/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mb-4 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                    <p className="uppercase font-black tracking-[0.3em] text-xs">Awaiting data input...</p>
                 </div>
                 )}
                </>
              ) : (
                 <>
-                <div className="flex items-center gap-4 mb-4">
-                    <div className="h-[2px] flex-grow bg-zinc-800"></div>
-                    <h2 className="text-xs font-black text-zinc-500 uppercase tracking-[0.3em]">Plan d'Usine (Vue de dessus)</h2>
-                    <div className="h-[2px] flex-grow bg-zinc-800"></div>
+                <div className="flex items-center gap-6 mb-8">
+                    <h2 className="text-[11px] font-black text-zinc-600 uppercase tracking-[0.5em] whitespace-nowrap italic">Schématique du Site</h2>
+                    <div className="h-px flex-grow bg-gradient-to-r from-zinc-800 to-transparent"></div>
                 </div>
                 {layout ? (
-                    <FactoryDiagram layout={layout} />
+                    <div className="pb-20">
+                        <FactoryDiagram layout={layout} />
+                    </div>
                 ) : (
-                    <p className="text-center text-zinc-500 py-20">Générez un plan pour voir le schéma.</p>
+                    <p className="text-center text-zinc-700 py-32 italic uppercase font-black tracking-widest text-[10px]">No active site layout generated.</p>
                 )}
                 </>
              )}

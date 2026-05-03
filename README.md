@@ -56,7 +56,3 @@ Permettre à tout joueur de :
 - Comparateur de recettes
 - Sauvegarde de projets
 - Dashboard énergétique
-
-## Installation locale
-```bash
-git clone https://github.com/anonyme268463-alt/Satisfactory-Planner-FR.git

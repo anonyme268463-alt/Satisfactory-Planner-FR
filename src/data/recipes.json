@@ -258,5 +258,65 @@
       "products": [{ "itemId": "smart-plating", "amount": 2 }],
       "producedIn": "assembler",
       "duration": 30
+  },
+  {
+    "id": "recipe-steel-beam",
+    "name": "Poutre en acier",
+    "nameEn": "Steel Beam",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "steel-ingot", "amount": 60 }],
+    "products": [{ "itemId": "steel-beam", "amount": 15 }],
+    "producedIn": "constructor",
+    "duration": 4
+  },
+  {
+    "id": "recipe-steel-pipe",
+    "name": "Tuyau en acier",
+    "nameEn": "Steel Pipe",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "steel-ingot", "amount": 30 }],
+    "products": [{ "itemId": "steel-pipe", "amount": 20 }],
+    "producedIn": "constructor",
+    "duration": 6
+  },
+  {
+    "id": "recipe-encased-industrial-beam",
+    "name": "Poutre industrielle encastrée",
+    "nameEn": "Encased Industrial Beam",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "steel-beam", "amount": 24 }, { "itemId": "concrete", "amount": 30 }],
+    "products": [{ "itemId": "encased-industrial-beam", "amount": 6 }],
+    "producedIn": "assembler",
+    "duration": 10
+  },
+  {
+    "id": "recipe-circuit-board",
+    "name": "Circuit imprimé",
+    "nameEn": "Circuit Board",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "copper-sheet", "amount": 15 }, { "itemId": "plastic", "amount": 30 }],
+    "products": [{ "itemId": "circuit-board", "amount": 7.5 }],
+    "producedIn": "assembler",
+    "duration": 8
+  },
+  {
+    "id": "recipe-copper-sheet",
+    "name": "Tôle de cuivre",
+    "nameEn": "Copper Sheet",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "copper-ingot", "amount": 20 }],
+    "products": [{ "itemId": "copper-sheet", "amount": 10 }],
+    "producedIn": "constructor",
+    "duration": 6
+  },
+  {
+    "id": "recipe-concrete",
+    "name": "Béton",
+    "nameEn": "Concrete",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "limestone", "amount": 45 }],
+    "products": [{ "itemId": "concrete", "amount": 15 }],
+    "producedIn": "constructor",
+    "duration": 4
   }
 ]

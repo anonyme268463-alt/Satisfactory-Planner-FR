@@ -16,6 +16,7 @@ export interface ProductionStep {
   powerConsumption: number; // MW
   overclock: number; // percentage, e.g., 100
   ingredients: { itemId: ItemId; amount: number }[];
+  products: { itemId: ItemId; amount: number }[];
   childSteps: ProductionStep[];
 }
 
@@ -96,7 +97,11 @@ export function solveProduction(
       overclock: oc,
       ingredients: recipe.ingredients.map(ing => ({
         itemId: ing.itemId,
-        amount: (ing.amount * ocMultiplier) * ratio // which simplifies to ing.amount * (amount / baseAmountPerMinute)
+        amount: ing.amount * ratio
+      })),
+      products: recipe.products.map(p => ({
+        itemId: p.itemId,
+        amount: p.amount * ratio
       })),
       childSteps: []
     };

@@ -3,9 +3,59 @@
   { "id": "copper-ore", "name": "Minerai de cuivre", "nameEn": "Copper Ore", "category": "Resource", "isFluid": false },
   { "id": "limestone", "name": "Calcaire", "nameEn": "Limestone", "category": "Resource", "isFluid": false },
   { "id": "coal", "name": "Charbon", "nameEn": "Coal", "category": "Resource", "isFluid": false },
+  { "id": "caterium-ore", "name": "Minerai de caterium", "nameEn": "Caterium Ore", "category": "Resource", "isFluid": false },
+  { "id": "raw-quartz", "name": "Quartz brut", "nameEn": "Raw Quartz", "category": "Resource", "isFluid": false },
+  { "id": "sulfur", "name": "Soufre", "nameEn": "Sulfur", "category": "Resource", "isFluid": false },
+  { "id": "bauxite", "name": "Bauxite", "nameEn": "Bauxite", "category": "Resource", "isFluid": false },
+  { "id": "uranium", "name": "Uranium", "nameEn": "Uranium", "category": "Resource", "isFluid": false },
+  { "id": "water", "name": "Eau", "nameEn": "Water", "category": "Resource", "isFluid": true },
+  { "id": "crude-oil", "name": "Pétrole brut", "nameEn": "Crude Oil", "category": "Resource", "isFluid": true },
+  { "id": "nitrogen-gas", "name": "Azote gazeux", "nameEn": "Nitrogen Gas", "category": "Resource", "isFluid": true },
+
   { "id": "iron-ingot", "name": "Lingot de fer", "nameEn": "Iron Ingot", "category": "Component", "isFluid": false },
+  { "id": "copper-ingot", "name": "Lingot de cuivre", "nameEn": "Copper Ingot", "category": "Component", "isFluid": false },
+  { "id": "caterium-ingot", "name": "Lingot de caterium", "nameEn": "Caterium Ingot", "category": "Component", "isFluid": false },
+  { "id": "steel-ingot", "name": "Lingot d'acier", "nameEn": "Steel Ingot", "category": "Component", "isFluid": false },
+  { "id": "aluminum-ingot", "name": "Lingot d'aluminium", "nameEn": "Aluminum Ingot", "category": "Component", "isFluid": false },
+
   { "id": "iron-plate", "name": "Plaque de fer", "nameEn": "Iron Plate", "category": "Component", "isFluid": false },
   { "id": "iron-rod", "name": "Tige de fer", "nameEn": "Iron Rod", "category": "Component", "isFluid": false },
   { "id": "screw", "name": "Vis", "nameEn": "Screw", "category": "Component", "isFluid": false },
-  { "id": "reinforced-iron-plate", "name": "Plaque de fer renforcée", "nameEn": "Reinforced Iron Plate", "category": "Component", "isFluid": false }
+  { "id": "reinforced-iron-plate", "name": "Plaque de fer renforcée", "nameEn": "Reinforced Iron Plate", "category": "Component", "isFluid": false },
+  { "id": "modular-frame", "name": "Cadre modulaire", "nameEn": "Modular Frame", "category": "Component", "isFluid": false },
+  { "id": "heavy-modular-frame", "name": "Cadre modulaire lourd", "nameEn": "Heavy Modular Frame", "category": "Component", "isFluid": false },
+  { "id": "steel-beam", "name": "Poutre en acier", "nameEn": "Steel Beam", "category": "Component", "isFluid": false },
+  { "id": "steel-pipe", "name": "Tuyau en acier", "nameEn": "Steel Pipe", "category": "Component", "isFluid": false },
+  { "id": "copper-sheet", "name": "Tôle de cuivre", "nameEn": "Copper Sheet", "category": "Component", "isFluid": false },
+  { "id": "encased-industrial-beam", "name": "Poutre industrielle encastrée", "nameEn": "Encased Industrial Beam", "category": "Component", "isFluid": false },
+  { "id": "rotor", "name": "Rotor", "nameEn": "Rotor", "category": "Component", "isFluid": false },
+  { "id": "stator", "name": "Stator", "nameEn": "Stator", "category": "Component", "isFluid": false },
+  { "id": "motor", "name": "Moteur", "nameEn": "Motor", "category": "Component", "isFluid": false },
+
+  { "id": "plastic", "name": "Plastique", "nameEn": "Plastic", "category": "Component", "isFluid": false },
+  { "id": "rubber", "name": "Caoutchouc", "nameEn": "Rubber", "category": "Component", "isFluid": false },
+  { "id": "polymer-resin", "name": "Résine polymère", "nameEn": "Polymer Resin", "category": "Component", "isFluid": false },
+  { "id": "petroleum-coke", "name": "Coke de pétrole", "nameEn": "Petroleum Coke", "category": "Component", "isFluid": false },
+
+  { "id": "wire", "name": "Fil électrique", "nameEn": "Wire", "category": "Component", "isFluid": false },
+  { "id": "cable", "name": "Câble", "nameEn": "Cable", "category": "Component", "isFluid": false },
+  { "id": "quickwire", "name": "Fil actif", "nameEn": "Quickwire", "category": "Component", "isFluid": false },
+  { "id": "circuit-board", "name": "Circuit imprimé", "nameEn": "Circuit Board", "category": "Component", "isFluid": false },
+  { "id": "computer", "name": "Ordinateur", "nameEn": "Computer", "category": "Component", "isFluid": false },
+
+  { "id": "alclad-aluminum-sheet", "name": "Tôle d'aluminium Alclad", "nameEn": "Alclad Aluminum Sheet", "category": "Component", "isFluid": false },
+  { "id": "aluminum-casing", "name": "Boîtier en aluminium", "nameEn": "Aluminum Casing", "category": "Component", "isFluid": false },
+  { "id": "aluminum-scrap", "name": "Ressuage d'aluminium", "nameEn": "Aluminum Scrap", "category": "Component", "isFluid": false },
+
+  { "id": "concrete", "name": "Béton", "nameEn": "Concrete", "category": "Component", "isFluid": false },
+  { "id": "quartz-crystal", "name": "Cristal de quartz", "nameEn": "Quartz Crystal", "category": "Component", "isFluid": false },
+  { "id": "silica", "name": "Silice", "nameEn": "Silica", "category": "Component", "isFluid": false },
+
+  { "id": "smart-plating", "name": "Placage intelligent", "nameEn": "Smart Plating", "category": "Component", "isFluid": false },
+  { "id": "versatile-framework", "name": "Structure polyvalente", "nameEn": "Versatile Framework", "category": "Component", "isFluid": false },
+  { "id": "automated-wiring", "name": "Câblage automatisé", "nameEn": "Automated Wiring", "category": "Component", "isFluid": false },
+
+  { "id": "fuel", "name": "Carburant", "nameEn": "Fuel", "category": "Fuel", "isFluid": true },
+  { "id": "heavy-oil-residue", "name": "Résidu d'huile lourde", "nameEn": "Heavy Oil Residue", "category": "Waste", "isFluid": true },
+  { "id": "alumina-solution", "name": "Solution d'alumine", "nameEn": "Alumina Solution", "category": "Component", "isFluid": true }
 ]

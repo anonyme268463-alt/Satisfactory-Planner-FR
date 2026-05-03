@@ -8,6 +8,7 @@
   { "id": "sulfur", "name": "Soufre", "nameEn": "Sulfur", "category": "Resource", "isFluid": false },
   { "id": "bauxite", "name": "Bauxite", "nameEn": "Bauxite", "category": "Resource", "isFluid": false },
   { "id": "uranium", "name": "Uranium", "nameEn": "Uranium", "category": "Resource", "isFluid": false },
+  { "id": "sam-ore", "name": "Minerai de SAM", "nameEn": "SAM Ore", "category": "Resource", "isFluid": false },
   { "id": "water", "name": "Eau", "nameEn": "Water", "category": "Resource", "isFluid": true },
   { "id": "crude-oil", "name": "Pétrole brut", "nameEn": "Crude Oil", "category": "Resource", "isFluid": true },
   { "id": "nitrogen-gas", "name": "Azote gazeux", "nameEn": "Nitrogen Gas", "category": "Resource", "isFluid": true },
@@ -17,6 +18,7 @@
   { "id": "caterium-ingot", "name": "Lingot de caterium", "nameEn": "Caterium Ingot", "category": "Component", "isFluid": false },
   { "id": "steel-ingot", "name": "Lingot d'acier", "nameEn": "Steel Ingot", "category": "Component", "isFluid": false },
   { "id": "aluminum-ingot", "name": "Lingot d'aluminium", "nameEn": "Aluminum Ingot", "category": "Component", "isFluid": false },
+  { "id": "ficsite-ingot", "name": "Lingot de ficsite", "nameEn": "Ficsite Ingot", "category": "Component", "isFluid": false },
 
   { "id": "iron-plate", "name": "Plaque de fer", "nameEn": "Iron Plate", "category": "Component", "isFluid": false },
   { "id": "iron-rod", "name": "Tige de fer", "nameEn": "Iron Rod", "category": "Component", "isFluid": false },
@@ -24,6 +26,7 @@
   { "id": "reinforced-iron-plate", "name": "Plaque de fer renforcée", "nameEn": "Reinforced Iron Plate", "category": "Component", "isFluid": false },
   { "id": "modular-frame", "name": "Cadre modulaire", "nameEn": "Modular Frame", "category": "Component", "isFluid": false },
   { "id": "heavy-modular-frame", "name": "Cadre modulaire lourd", "nameEn": "Heavy Modular Frame", "category": "Component", "isFluid": false },
+  { "id": "fused-modular-frame", "name": "Cadre modulaire fusionné", "nameEn": "Fused Modular Frame", "category": "Component", "isFluid": false },
   { "id": "steel-beam", "name": "Poutre en acier", "nameEn": "Steel Beam", "category": "Component", "isFluid": false },
   { "id": "steel-pipe", "name": "Tuyau en acier", "nameEn": "Steel Pipe", "category": "Component", "isFluid": false },
   { "id": "copper-sheet", "name": "Tôle de cuivre", "nameEn": "Copper Sheet", "category": "Component", "isFluid": false },
@@ -41,7 +44,10 @@
   { "id": "cable", "name": "Câble", "nameEn": "Cable", "category": "Component", "isFluid": false },
   { "id": "quickwire", "name": "Fil actif", "nameEn": "Quickwire", "category": "Component", "isFluid": false },
   { "id": "circuit-board", "name": "Circuit imprimé", "nameEn": "Circuit Board", "category": "Component", "isFluid": false },
+  { "id": "ai-limiter", "name": "Limiteur d'IA", "nameEn": "AI Limiter", "category": "Component", "isFluid": false },
+  { "id": "high-speed-connector", "name": "Connecteur haute vitesse", "nameEn": "High-Speed Connector", "category": "Component", "isFluid": false },
   { "id": "computer", "name": "Ordinateur", "nameEn": "Computer", "category": "Component", "isFluid": false },
+  { "id": "supercomputer", "name": "Supercalculateur", "nameEn": "Supercomputer", "category": "Component", "isFluid": false },
 
   { "id": "alclad-aluminum-sheet", "name": "Tôle d'aluminium Alclad", "nameEn": "Alclad Aluminum Sheet", "category": "Component", "isFluid": false },
   { "id": "aluminum-casing", "name": "Boîtier en aluminium", "nameEn": "Aluminum Casing", "category": "Component", "isFluid": false },
@@ -50,12 +56,22 @@
   { "id": "concrete", "name": "Béton", "nameEn": "Concrete", "category": "Component", "isFluid": false },
   { "id": "quartz-crystal", "name": "Cristal de quartz", "nameEn": "Quartz Crystal", "category": "Component", "isFluid": false },
   { "id": "silica", "name": "Silice", "nameEn": "Silica", "category": "Component", "isFluid": false },
+  { "id": "crystal-oscillator", "name": "Oscillateur à cristal", "nameEn": "Crystal Oscillator", "category": "Component", "isFluid": false },
 
   { "id": "smart-plating", "name": "Placage intelligent", "nameEn": "Smart Plating", "category": "Component", "isFluid": false },
   { "id": "versatile-framework", "name": "Structure polyvalente", "nameEn": "Versatile Framework", "category": "Component", "isFluid": false },
   { "id": "automated-wiring", "name": "Câblage automatisé", "nameEn": "Automated Wiring", "category": "Component", "isFluid": false },
+  { "id": "modular-engine", "name": "Moteur modulaire", "nameEn": "Modular Engine", "category": "Component", "isFluid": false },
+  { "id": "adaptive-control-unit", "name": "Unité de contrôle adaptative", "nameEn": "Adaptive Control Unit", "category": "Component", "isFluid": false },
+  { "id": "assembly-director-system", "name": "Système directeur d'assemblage", "nameEn": "Assembly Director System", "category": "Component", "isFluid": false },
+  { "id": "magnetic-field-generator", "name": "Générateur de champ magnétique", "nameEn": "Magnetic Field Generator", "category": "Component", "isFluid": false },
+  { "id": "thermal-propulsion-rocket", "name": "Fusée à propulsion thermique", "nameEn": "Thermal Propulsion Rocket", "category": "Component", "isFluid": false },
+  { "id": "nuclear-pasta", "name": "Pâtes nucléaires", "nameEn": "Nuclear Pasta", "category": "Component", "isFluid": false },
 
   { "id": "fuel", "name": "Carburant", "nameEn": "Fuel", "category": "Fuel", "isFluid": true },
+  { "id": "turbofuel", "name": "Turbocarburant", "nameEn": "Turbofuel", "category": "Fuel", "isFluid": true },
   { "id": "heavy-oil-residue", "name": "Résidu d'huile lourde", "nameEn": "Heavy Oil Residue", "category": "Waste", "isFluid": true },
-  { "id": "alumina-solution", "name": "Solution d'alumine", "nameEn": "Alumina Solution", "category": "Component", "isFluid": true }
+  { "id": "alumina-solution", "name": "Solution d'alumine", "nameEn": "Alumina Solution", "category": "Component", "isFluid": true },
+  { "id": "sulfuric-acid", "name": "Acide sulfurique", "nameEn": "Sulfuric Acid", "category": "Component", "isFluid": true },
+  { "id": "nitric-acid", "name": "Acide nitrique", "nameEn": "Nitric Acid", "category": "Component", "isFluid": true }
 ]

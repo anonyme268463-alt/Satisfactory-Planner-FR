@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: '/Satisfactory-Planner-FR',
+  assetPrefix: '/Satisfactory-Planner-FR',
 };
 
 export default nextConfig;

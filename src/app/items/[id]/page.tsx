@@ -3,7 +3,13 @@ import itemsData from '@/data/items.json';
 import recipesData from '@/data/recipes.json';
 import Link from 'next/link';
 
-export default async function ItemDetailPage({ params }: { params: { id: string } }) {
+export function generateStaticParams() {
+  return itemsData.map((item) => ({
+    id: item.id,
+  }));
+}
+
+export default async function ItemDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const item = itemsData.find((i) => i.id === id);
 

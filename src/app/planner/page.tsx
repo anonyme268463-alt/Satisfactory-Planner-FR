@@ -7,10 +7,22 @@ import machinesData from '@/data/machines.json';
 import { solveProduction, ProductionStep } from '@/lib/solver';
 import Link from 'next/link';
 
-function StepCard({ step }: { step: ProductionStep }) {
+function StepCard({
+  step,
+  onOverclockChange,
+  onRecipeChange
+}: {
+  step: ProductionStep,
+  onOverclockChange: (recipeId: string, value: number) => void,
+  onRecipeChange: (itemId: string, recipeId: string) => void
+}) {
   const item = itemsData.find(i => i.id === step.targetItemId);
   const recipe = recipesData.find(r => r.id === step.recipeId);
   const machine = machinesData.find(m => m.id === step.machineId);
+
+  const alternativeRecipes = recipesData.filter(r =>
+    r.products.some(p => p.itemId === step.targetItemId)
+  );
 
   return (
     <div className="border-l-2 border-orange-500/30 pl-6 ml-2 space-y-4">
@@ -27,20 +39,43 @@ function StepCard({ step }: { step: ProductionStep }) {
             <p className="text-[10px] text-zinc-500">{step.powerConsumption.toFixed(2)} MW</p>
           </div>
         </div>
-        <div className="mt-3 flex gap-2">
-           <span className="text-[10px] bg-zinc-800 px-2 py-0.5 rounded text-zinc-400 uppercase tracking-widest border border-zinc-700">
-             {recipe?.name}
-           </span>
-           <span className="text-[10px] bg-zinc-800 px-2 py-0.5 rounded text-orange-500 font-bold border border-orange-500/20">
-             OC: {step.overclock}%
-           </span>
+        <div className="mt-3 flex flex-wrap gap-4 items-center">
+           <div className="flex items-center gap-2">
+              <label className="text-[10px] text-zinc-500 uppercase font-bold">Recette:</label>
+              <select
+                value={step.recipeId}
+                onChange={(e) => onRecipeChange(step.targetItemId, e.target.value)}
+                className="bg-zinc-900 border border-zinc-700 rounded px-1 py-0.5 text-[10px] text-zinc-300 focus:border-orange-500 outline-none"
+              >
+                {alternativeRecipes.map(r => (
+                  <option key={r.id} value={r.id}>{r.name}{r.isAlternate ? ' (Alt)' : ''}</option>
+                ))}
+              </select>
+           </div>
+           <div className="flex items-center gap-2">
+              <label className="text-[10px] text-zinc-500 uppercase font-bold">Surcadencage:</label>
+              <input
+                type="number"
+                min="1"
+                max="250"
+                value={step.overclock}
+                onChange={(e) => onOverclockChange(step.recipeId, Number(e.target.value))}
+                className="bg-zinc-900 border border-zinc-700 rounded px-1 py-0.5 text-[10px] w-12 font-mono text-orange-500"
+              />
+              <span className="text-[10px] text-zinc-500">%</span>
+           </div>
         </div>
       </div>
 
       {step.childSteps.length > 0 && (
         <div className="space-y-4 mt-4">
           {step.childSteps.map((child, i) => (
-            <StepCard key={`${child.targetItemId}-${i}`} step={child} />
+            <StepCard
+              key={`${child.targetItemId}-${i}`}
+              step={child}
+              onOverclockChange={onOverclockChange}
+              onRecipeChange={onRecipeChange}
+            />
           ))}
         </div>
       )}
@@ -52,11 +87,20 @@ export default function ProductionPlanner() {
   const [targetItemId, setTargetItemId] = useState(itemsData.find(i => i.category !== 'Resource')?.id || '');
   const [targetAmount, setTargetAmount] = useState(10);
   const [overclock, setOverclock] = useState<Record<string, number>>({});
+  const [preferredRecipes, setPreferredRecipes] = useState<Record<string, string>>({});
 
   const plan = useMemo(() => {
     if (!targetItemId) return null;
-    return solveProduction(targetItemId, targetAmount, { overclock });
-  }, [targetItemId, targetAmount, overclock]);
+    return solveProduction(targetItemId, targetAmount, { overclock, preferredRecipes });
+  }, [targetItemId, targetAmount, overclock, preferredRecipes]);
+
+  const handleOverclockChange = (recipeId: string, value: number) => {
+    setOverclock(prev => ({ ...prev, [recipeId]: value }));
+  };
+
+  const handleRecipeChange = (itemId: string, recipeId: string) => {
+    setPreferredRecipes(prev => ({ ...prev, [itemId]: recipeId }));
+  };
 
   return (
     <div className="p-8 bg-zinc-900 min-h-screen text-zinc-100">
@@ -135,7 +179,12 @@ export default function ProductionPlanner() {
              {plan && plan.steps.length > 0 ? (
                <div className="space-y-8">
                  {plan.steps.map((step, i) => (
-                   <StepCard key={`${step.targetItemId}-${i}`} step={step} />
+                   <StepCard
+                    key={`${step.targetItemId}-${i}`}
+                    step={step}
+                    onOverclockChange={handleOverclockChange}
+                    onRecipeChange={handleRecipeChange}
+                  />
                  ))}
                </div>
              ) : (

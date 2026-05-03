@@ -10,6 +10,29 @@
     "duration": 2
   },
   {
+    "id": "recipe-copper-ingot",
+    "name": "Lingot de cuivre",
+    "nameEn": "Copper Ingot",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "copper-ore", "amount": 30 }],
+    "products": [{ "itemId": "copper-ingot", "amount": 30 }],
+    "producedIn": "smelter",
+    "duration": 2
+  },
+  {
+    "id": "recipe-steel-ingot",
+    "name": "Lingot d'acier",
+    "nameEn": "Steel Ingot",
+    "isAlternate": false,
+    "ingredients": [
+        { "itemId": "iron-ore", "amount": 45 },
+        { "itemId": "coal", "amount": 45 }
+    ],
+    "products": [{ "itemId": "steel-ingot", "amount": 45 }],
+    "producedIn": "foundry",
+    "duration": 4
+  },
+  {
     "id": "recipe-iron-plate",
     "name": "Plaque de fer",
     "nameEn": "Iron Plate",
@@ -40,6 +63,46 @@
     "duration": 6
   },
   {
+    "id": "recipe-wire",
+    "name": "Fil électrique",
+    "nameEn": "Wire",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "copper-ingot", "amount": 15 }],
+    "products": [{ "itemId": "wire", "amount": 30 }],
+    "producedIn": "constructor",
+    "duration": 4
+  },
+  {
+    "id": "recipe-cable",
+    "name": "Câble",
+    "nameEn": "Cable",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "wire", "amount": 60 }],
+    "products": [{ "itemId": "cable", "amount": 30 }],
+    "producedIn": "constructor",
+    "duration": 2
+  },
+  {
+      "id": "recipe-copper-sheet",
+      "name": "Tôle de cuivre",
+      "nameEn": "Copper Sheet",
+      "isAlternate": false,
+      "ingredients": [{ "itemId": "copper-ingot", "amount": 20 }],
+      "products": [{ "itemId": "copper-sheet", "amount": 10 }],
+      "producedIn": "constructor",
+      "duration": 6
+  },
+  {
+    "id": "recipe-concrete",
+    "name": "Béton",
+    "nameEn": "Concrete",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "limestone", "amount": 45 }],
+    "products": [{ "itemId": "concrete", "amount": 15 }],
+    "producedIn": "constructor",
+    "duration": 4
+  },
+  {
     "id": "recipe-reinforced-iron-plate",
     "name": "Plaque de fer renforcée",
     "nameEn": "Reinforced Iron Plate",
@@ -51,5 +114,134 @@
     "products": [{ "itemId": "reinforced-iron-plate", "amount": 5 }],
     "producedIn": "assembler",
     "duration": 12
+  },
+  {
+    "id": "recipe-modular-frame",
+    "name": "Cadre modulaire",
+    "nameEn": "Modular Frame",
+    "isAlternate": false,
+    "ingredients": [
+      { "itemId": "reinforced-iron-plate", "amount": 3 },
+      { "itemId": "iron-rod", "amount": 12 }
+    ],
+    "products": [{ "itemId": "modular-frame", "amount": 2 }],
+    "producedIn": "assembler",
+    "duration": 60
+  },
+  {
+    "id": "recipe-rotor",
+    "name": "Rotor",
+    "nameEn": "Rotor",
+    "isAlternate": false,
+    "ingredients": [
+      { "itemId": "iron-rod", "amount": 20 },
+      { "itemId": "screw", "amount": 100 }
+    ],
+    "products": [{ "itemId": "rotor", "amount": 4 }],
+    "producedIn": "assembler",
+    "duration": 15
+  },
+  {
+    "id": "recipe-stator",
+    "name": "Stator",
+    "nameEn": "Stator",
+    "isAlternate": false,
+    "ingredients": [
+      { "itemId": "steel-pipe", "amount": 15 },
+      { "itemId": "wire", "amount": 40 }
+    ],
+    "products": [{ "itemId": "stator", "amount": 5 }],
+    "producedIn": "assembler",
+    "duration": 12
+  },
+  {
+    "id": "recipe-motor",
+    "name": "Moteur",
+    "nameEn": "Motor",
+    "isAlternate": false,
+    "ingredients": [
+      { "itemId": "rotor", "amount": 10 },
+      { "itemId": "stator", "amount": 10 }
+    ],
+    "products": [{ "itemId": "motor", "amount": 5 }],
+    "producedIn": "assembler",
+    "duration": 12
+  },
+  {
+    "id": "recipe-plastic",
+    "name": "Plastique",
+    "nameEn": "Plastic",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "crude-oil", "amount": 30 }],
+    "products": [
+      { "itemId": "plastic", "amount": 20 },
+      { "itemId": "heavy-oil-residue", "amount": 10 }
+    ],
+    "producedIn": "refinery",
+    "duration": 6
+  },
+  {
+    "id": "recipe-rubber",
+    "name": "Caoutchouc",
+    "nameEn": "Rubber",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "crude-oil", "amount": 30 }],
+    "products": [
+      { "itemId": "rubber", "amount": 20 },
+      { "itemId": "heavy-oil-residue", "amount": 20 }
+    ],
+    "producedIn": "refinery",
+    "duration": 6
+  },
+  {
+    "id": "recipe-fuel",
+    "name": "Carburant",
+    "nameEn": "Fuel",
+    "isAlternate": false,
+    "ingredients": [{ "itemId": "heavy-oil-residue", "amount": 60 }],
+    "products": [{ "itemId": "fuel", "amount": 40 }],
+    "producedIn": "refinery",
+    "duration": 6
+  },
+  {
+    "id": "recipe-computer",
+    "name": "Ordinateur",
+    "nameEn": "Computer",
+    "isAlternate": false,
+    "ingredients": [
+      { "itemId": "circuit-board", "amount": 10 },
+      { "itemId": "cable", "amount": 9 },
+      { "itemId": "plastic", "amount": 18 },
+      { "itemId": "screw", "amount": 52 }
+    ],
+    "products": [{ "itemId": "computer", "amount": 2.5 }],
+    "producedIn": "manufacturer",
+    "duration": 24
+  },
+  {
+    "id": "recipe-circuit-board",
+    "name": "Circuit imprimé",
+    "nameEn": "Circuit Board",
+    "isAlternate": false,
+    "ingredients": [
+      { "itemId": "copper-sheet", "amount": 15 },
+      { "itemId": "plastic", "amount": 30 }
+    ],
+    "products": [{ "itemId": "circuit-board", "amount": 7.5 }],
+    "producedIn": "assembler",
+    "duration": 8
+  },
+  {
+    "id": "recipe-smart-plating",
+    "name": "Placage intelligent",
+    "nameEn": "Smart Plating",
+    "isAlternate": false,
+    "ingredients": [
+      { "itemId": "reinforced-iron-plate", "amount": 2 },
+      { "itemId": "rotor", "amount": 2 }
+    ],
+    "products": [{ "itemId": "smart-plating", "amount": 2 }],
+    "producedIn": "assembler",
+    "duration": 30
   }
 ]

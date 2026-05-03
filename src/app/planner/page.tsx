@@ -8,6 +8,7 @@ import { solveProduction, ProductionStep } from '@/lib/solver';
 import { generateLayout } from '@/lib/layout';
 import Link from 'next/link';
 import FactoryDiagram from '@/components/FactoryDiagram';
+import Combobox from '@/components/Combobox';
 
 function StepCard({
   step,
@@ -43,6 +44,49 @@ function StepCard({
             <p className="font-black text-orange-400 text-lg leading-none">{step.machineCount.toFixed(2)}x <span className="text-zinc-200">{machine?.name}</span></p>
             <p className="text-[10px] text-zinc-500 font-mono mt-1 italic">{step.powerConsumption.toFixed(2)} MW REQUIS</p>
           </div>
+        </div>
+
+        {step.products.length > 1 && (
+          <div className="mt-4 pt-4 border-t border-zinc-700/30">
+            <p className="text-[9px] text-zinc-500 uppercase font-black tracking-tighter mb-2">Coproduits / Sous-produits</p>
+            <div className="flex flex-wrap gap-3">
+              {step.products.filter(p => p.itemId !== step.targetItemId).map(p => (
+                <div key={p.itemId} className="bg-zinc-900/50 px-2 py-1 rounded border border-zinc-800 flex items-center gap-2">
+                  <span className="text-[10px] text-zinc-300 font-bold">{itemsData.find(i => i.id === p.itemId)?.name}</span>
+                  <span className="text-[10px] text-orange-500 font-mono font-black">{p.amount.toFixed(2)} / min</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="mt-4 flex gap-4">
+            <div className="flex flex-col">
+                <span className="text-[8px] text-zinc-500 uppercase font-black">Logistique Entrée</span>
+                <div className="flex gap-1 mt-1">
+                    {step.ingredients.map(ing => {
+                        const item = itemsData.find(i => i.id === ing.itemId);
+                        const isFluid = item?.isFluid;
+                        const amount = ing.amount;
+                        let tier = "";
+                        if (isFluid) {
+                            tier = amount <= 300 ? "Pipe Mk1" : "Pipe Mk2";
+                        } else {
+                            if (amount <= 60) tier = "Mk1";
+                            else if (amount <= 120) tier = "Mk2";
+                            else if (amount <= 270) tier = "Mk3";
+                            else if (amount <= 480) tier = "Mk4";
+                            else if (amount <= 780) tier = "Mk5";
+                            else tier = "Mk6";
+                        }
+                        return (
+                            <div key={ing.itemId} className="text-[9px] bg-zinc-900 border border-zinc-800 px-1.5 py-0.5 rounded text-zinc-400 font-mono">
+                                {item?.name}: <span className="text-orange-400">{tier}</span>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
         </div>
 
         <div className="mt-6 flex flex-wrap gap-6 items-center pt-4 border-t border-zinc-700/50">
@@ -150,16 +194,12 @@ export default function ProductionPlanner() {
             <div className="space-y-4">
               <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-[0.3em]">Module de Cible</label>
               <div className="relative group">
-                <select
-                    value={targetItemId}
-                    onChange={(e) => setTargetItemId(e.target.value)}
-                    className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:border-orange-500 transition-all appearance-none font-bold text-sm group-hover:border-zinc-700"
-                >
-                    {itemsData.filter(i => i.category !== 'Resource').map(item => (
-                    <option key={item.id} value={item.id}>{item.name}</option>
-                    ))}
-                </select>
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-600">▼</div>
+                <Combobox
+                  options={itemsData.filter(i => i.category !== 'Resource').map(i => ({ id: i.id, name: i.name }))}
+                  value={targetItemId}
+                  onChange={setTargetItemId}
+                  placeholder="Sélectionner un produit..."
+                />
               </div>
             </div>
 

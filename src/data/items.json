@@ -61,6 +61,8 @@
   { "id": "smart-plating", "name": "Placage intelligent", "nameEn": "Smart Plating", "category": "Component", "isFluid": false },
   { "id": "versatile-framework", "name": "Structure polyvalente", "nameEn": "Versatile Framework", "category": "Component", "isFluid": false },
   { "id": "automated-wiring", "name": "Câblage automatisé", "nameEn": "Automated Wiring", "category": "Component", "isFluid": false },
+  { "id": "radio-control-unit", "name": "Unité de contrôle radio", "nameEn": "Radio Control Unit", "category": "Component", "isFluid": false },
+  { "id": "battery", "name": "Batterie", "nameEn": "Battery", "category": "Component", "isFluid": false },
   { "id": "modular-engine", "name": "Moteur modulaire", "nameEn": "Modular Engine", "category": "Component", "isFluid": false },
   { "id": "adaptive-control-unit", "name": "Unité de contrôle adaptative", "nameEn": "Adaptive Control Unit", "category": "Component", "isFluid": false },
   { "id": "assembly-director-system", "name": "Système directeur d'assemblage", "nameEn": "Assembly Director System", "category": "Component", "isFluid": false },

@@ -5,7 +5,9 @@ import itemsData from '@/data/items.json';
 import recipesData from '@/data/recipes.json';
 import machinesData from '@/data/machines.json';
 import { solveProduction, ProductionStep } from '@/lib/solver';
+import { generateLayout } from '@/lib/layout';
 import Link from 'next/link';
+import FactoryDiagram from '@/components/FactoryDiagram';
 
 function StepCard({
   step,
@@ -88,11 +90,17 @@ export default function ProductionPlanner() {
   const [targetAmount, setTargetAmount] = useState(10);
   const [overclock, setOverclock] = useState<Record<string, number>>({});
   const [preferredRecipes, setPreferredRecipes] = useState<Record<string, string>>({});
+  const [view, setView] = useState<'tree' | 'layout'>('tree');
 
   const plan = useMemo(() => {
     if (!targetItemId) return null;
     return solveProduction(targetItemId, targetAmount, { overclock, preferredRecipes });
   }, [targetItemId, targetAmount, overclock, preferredRecipes]);
+
+  const layout = useMemo(() => {
+    if (!plan || plan.steps.length === 0) return null;
+    return generateLayout(plan.steps);
+  }, [plan]);
 
   const handleOverclockChange = (recipeId: string, value: number) => {
     setOverclock(prev => ({ ...prev, [recipeId]: value }));
@@ -114,6 +122,7 @@ export default function ProductionPlanner() {
                 <Link href="/items" className="hover:text-orange-500 transition-colors">Objets</Link>
                 <Link href="/recipes" className="hover:text-orange-500 transition-colors">Recettes</Link>
                 <Link href="/planner" className="text-orange-500">Planificateur</Link>
+                <Link href="/power" className="hover:text-orange-500 transition-colors">Énergie</Link>
             </nav>
         </header>
 
@@ -143,6 +152,21 @@ export default function ProductionPlanner() {
               />
             </div>
 
+            <div className="flex rounded-lg bg-zinc-900 p-1 border border-zinc-700">
+                <button
+                    onClick={() => setView('tree')}
+                    className={`flex-1 py-2 text-xs font-bold uppercase rounded ${view === 'tree' ? 'bg-orange-500 text-zinc-900' : 'text-zinc-500'}`}
+                >
+                    Arbre
+                </button>
+                <button
+                    onClick={() => setView('layout')}
+                    className={`flex-1 py-2 text-xs font-bold uppercase rounded ${view === 'layout' ? 'bg-orange-500 text-zinc-900' : 'text-zinc-500'}`}
+                >
+                    Plan (Vue dessus)
+                </button>
+            </div>
+
             <div className="pt-6 border-t border-zinc-700 space-y-4">
               <h3 className="text-xs font-black text-orange-500 uppercase tracking-[0.2em]">Tableau de Bord</h3>
               {plan && (
@@ -170,27 +194,44 @@ export default function ProductionPlanner() {
 
           {/* Main: Visualization */}
           <div className="lg:col-span-3 space-y-8">
-             <div className="flex items-center gap-4 mb-4">
-                <div className="h-[2px] flex-grow bg-zinc-800"></div>
-                <h2 className="text-xs font-black text-zinc-500 uppercase tracking-[0.3em]">Arbre de Fabrication</h2>
-                <div className="h-[2px] flex-grow bg-zinc-800"></div>
-             </div>
+             {view === 'tree' ? (
+               <>
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="h-[2px] flex-grow bg-zinc-800"></div>
+                    <h2 className="text-xs font-black text-zinc-500 uppercase tracking-[0.3em]">Arbre de Fabrication</h2>
+                    <div className="h-[2px] flex-grow bg-zinc-800"></div>
+                </div>
 
-             {plan && plan.steps.length > 0 ? (
-               <div className="space-y-8">
-                 {plan.steps.map((step, i) => (
-                   <StepCard
-                    key={`${step.targetItemId}-${i}`}
-                    step={step}
-                    onOverclockChange={handleOverclockChange}
-                    onRecipeChange={handleRecipeChange}
-                  />
-                 ))}
-               </div>
+                {plan && plan.steps.length > 0 ? (
+                <div className="space-y-8">
+                    {plan.steps.map((step, i) => (
+                    <StepCard
+                        key={`${step.targetItemId}-${i}`}
+                        step={step}
+                        onOverclockChange={handleOverclockChange}
+                        onRecipeChange={handleRecipeChange}
+                    />
+                    ))}
+                </div>
+                ) : (
+                <div className="flex flex-col items-center justify-center py-20 text-zinc-600 border-2 border-dashed border-zinc-800 rounded-2xl">
+                    <p className="uppercase font-bold tracking-widest">Aucune donnée disponible</p>
+                </div>
+                )}
+               </>
              ) : (
-               <div className="flex flex-col items-center justify-center py-20 text-zinc-600 border-2 border-dashed border-zinc-800 rounded-2xl">
-                  <p className="uppercase font-bold tracking-widest">Aucune donnée disponible</p>
-               </div>
+                <>
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="h-[2px] flex-grow bg-zinc-800"></div>
+                    <h2 className="text-xs font-black text-zinc-500 uppercase tracking-[0.3em]">Plan d'Usine (Vue de dessus)</h2>
+                    <div className="h-[2px] flex-grow bg-zinc-800"></div>
+                </div>
+                {layout ? (
+                    <FactoryDiagram layout={layout} />
+                ) : (
+                    <p className="text-center text-zinc-500 py-20">Générez un plan pour voir le schéma.</p>
+                )}
+                </>
              )}
           </div>
         </div>

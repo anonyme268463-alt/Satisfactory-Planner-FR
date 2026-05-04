@@ -54,6 +54,13 @@ function StepCard({
                 <div key={p.itemId} className="bg-zinc-900/50 px-2 py-1 rounded border border-zinc-800 flex items-center gap-2">
                   <span className="text-[10px] text-zinc-300 font-bold">{itemsData.find(i => i.id === p.itemId)?.name}</span>
                   <span className="text-[10px] text-orange-500 font-mono font-black">{p.amount.toFixed(2)} / min</span>
+                  <div className="flex gap-1 ml-2 border-l border-zinc-700 pl-2">
+                    {p.itemId === 'water' && <span className="text-[8px] text-blue-400 uppercase font-black tracking-tighter">Réinjecter / Jeter</span>}
+                    {p.itemId === 'heavy-oil-residue' && <span className="text-[8px] text-purple-400 uppercase font-black tracking-tighter">Cokéifier / Brûler</span>}
+                    {p.itemId === 'polymer-resin' && <span className="text-[8px] text-pink-400 uppercase font-black tracking-tighter">Plastique / Caoutchouc</span>}
+                    {p.itemId === 'silica' && <span className="text-[8px] text-zinc-400 uppercase font-black tracking-tighter">Béton / Verre / Boucle</span>}
+                    {p.itemId === 'sulfuric-acid' && <span className="text-[8px] text-yellow-400 uppercase font-black tracking-tighter">Boucle Uranium</span>}
+                  </div>
                 </div>
               ))}
             </div>
@@ -152,12 +159,13 @@ export default function ProductionPlanner() {
   const [targetAmount, setTargetAmount] = useState(10);
   const [overclock, setOverclock] = useState<Record<string, number>>({});
   const [preferredRecipes, setPreferredRecipes] = useState<Record<string, string>>({});
+  const [strategy, setStrategy] = useState<'default' | 'min-energy'>('default');
   const [view, setView] = useState<'tree' | 'layout'>('tree');
 
   const plan = useMemo(() => {
     if (!targetItemId) return null;
-    return solveProduction(targetItemId, targetAmount, { overclock, preferredRecipes });
-  }, [targetItemId, targetAmount, overclock, preferredRecipes]);
+    return solveProduction(targetItemId, targetAmount, { overclock, preferredRecipes, strategy });
+  }, [targetItemId, targetAmount, overclock, preferredRecipes, strategy]);
 
   const layout = useMemo(() => {
     if (!plan || plan.steps.length === 0) return null;
@@ -201,6 +209,18 @@ export default function ProductionPlanner() {
                   placeholder="Sélectionner un produit..."
                 />
               </div>
+            </div>
+
+            <div className="space-y-4">
+              <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-[0.3em]">Stratégie Optim.</label>
+              <select
+                value={strategy}
+                onChange={(e) => setStrategy(e.target.value as any)}
+                className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-xs font-black text-orange-500 uppercase tracking-widest focus:border-orange-500 outline-none"
+              >
+                <option value="default">Par Défaut (Standard)</option>
+                <option value="min-energy">Énergie Minimale</option>
+              </select>
             </div>
 
             <div className="space-y-4">

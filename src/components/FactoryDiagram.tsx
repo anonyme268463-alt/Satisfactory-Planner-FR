@@ -4,11 +4,11 @@ import React from 'react';
 import { FactoryLayout } from '@/lib/layout';
 
 export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
-  const scale = 4; // Pixels per meter
-  const padding = 100;
+  const scale = 5; // Slightly larger
+  const padding = 150;
 
   return (
-    <div className="overflow-auto bg-zinc-950 rounded-xl border border-zinc-800 p-8 shadow-2xl relative">
+    <div className="overflow-auto bg-zinc-950 rounded-2xl border border-zinc-800 p-8 shadow-2xl relative custom-scrollbar">
       <div className="absolute top-4 right-4 flex gap-2">
          <div className="flex items-center gap-1">
             <div className="w-3 h-3 bg-orange-500 rounded"></div>
@@ -83,13 +83,22 @@ export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
           })}
 
           {/* Machines */}
-          {layout.elements.map((el) => (
+          {layout.elements.map((el) => {
+            // Assign colors based on machine type
+            let color = "#f97316"; // Default orange
+            if (el.name.includes("Constructeur")) color = "#3b82f6"; // Blue
+            if (el.name.includes("Assembleuse")) color = "#a855f7"; // Purple
+            if (el.name.includes("Façonneuse")) color = "#ec4899"; // Pink
+            if (el.name.includes("Raffinerie")) color = "#10b981"; // Green
+            if (el.name.includes("Fonderie")) color = "#ef4444"; // Red
+
+            return (
             <g key={el.id} transform={`translate(${el.x * scale}, ${el.y * scale})`} className="group cursor-pointer">
               {/* External Shadow/Glow */}
               <rect
                 width={el.width * scale}
                 height={el.length * scale}
-                fill="#f97316"
+                fill={color}
                 className="opacity-0 group-hover:opacity-10 transition-opacity"
                 rx="4"
               />
@@ -99,10 +108,13 @@ export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
                 width={el.width * scale}
                 height={el.length * scale}
                 fill="#18181b"
-                stroke="#f97316"
+                stroke={color}
                 strokeWidth="2"
                 rx="4"
               />
+
+              {/* Status Indicator */}
+              <circle cx="8" cy="8" r="3" fill={color} className="animate-pulse" />
 
               {/* Ports (I/O) */}
               {/* Input (Bottom) */}
@@ -130,7 +142,7 @@ export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
                 x={el.width * scale / 2}
                 y={el.length * scale / 2 - 4}
                 fill="white"
-                fontSize="10"
+                fontSize="9"
                 textAnchor="middle"
                 className="font-black uppercase tracking-tighter"
               >
@@ -140,15 +152,16 @@ export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
               <text
                 x={el.width * scale / 2}
                 y={el.length * scale / 2 + 10}
-                fill="#f97316"
+                fill={color}
                 fontSize="7"
                 textAnchor="middle"
                 className="uppercase font-black"
               >
-                {el.targetItemId}
+                {el.targetItemId.replace(/-/g, ' ')}
               </text>
             </g>
-          ))}
+            );
+          })}
         </g>
       </svg>
     </div>

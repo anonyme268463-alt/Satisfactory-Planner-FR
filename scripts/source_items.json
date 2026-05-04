@@ -1,0 +1,3445 @@
+{
+  "all": [
+    {
+      "name": "AI Expansion Server",
+      "url": "/wiki/AI_Expansion_Server",
+      "producers": [
+        "AI Expansion Server"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "AI Limiter",
+      "url": "/wiki/AI_Limiter",
+      "producers": [
+        "AI Limiter",
+        "Plastic AI LimiterAlternate"
+      ],
+      "consumers": [
+        "Electromagnetic Control Rod",
+        "Insulated Crystal OscillatorAlternate",
+        "Nuke Nobelisk",
+        "Supercomputer"
+      ]
+    },
+    {
+      "name": "AWESOME Shop",
+      "url": "/wiki/AWESOME_Shop",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "AWESOME Sink",
+      "url": "/wiki/AWESOME_Sink",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Adaptive Control Unit",
+      "url": "/wiki/Adaptive_Control_Unit",
+      "producers": [
+        "Adaptive Control Unit"
+      ],
+      "consumers": [
+        "Assembly Director System"
+      ]
+    },
+    {
+      "name": "Alclad Aluminum Sheet",
+      "url": "/wiki/Alclad_Aluminum_Sheet",
+      "producers": [
+        "Alclad Aluminum Sheet"
+      ],
+      "consumers": [
+        "Classic BatteryAlternate",
+        "Hazmat Suit",
+        "Heat Sink",
+        "Hoverpack",
+        "Superposition Oscillator"
+      ]
+    },
+    {
+      "name": "Alien DNA Capsule",
+      "url": "/wiki/Alien_DNA_Capsule",
+      "producers": [
+        "Alien DNA Capsule"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Alien Power Augmenter",
+      "url": "/wiki/Alien_Power_Augmenter",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Alien Power Matrix",
+      "url": "/wiki/Alien_Power_Matrix",
+      "producers": [
+        "Alien Power Matrix"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Alien Protein",
+      "url": "/wiki/Alien_Protein",
+      "producers": [
+        "Hatcher Protein",
+        "Hog Protein",
+        "Spitter Protein",
+        "Stinger Protein"
+      ],
+      "consumers": [
+        "Alien DNA Capsule",
+        "Biomass (Alien Protein)",
+        "Protein Inhaler",
+        "Therapeutic Inhaler"
+      ]
+    },
+    {
+      "name": "Alien Remains",
+      "url": "/wiki/Alien_Remains",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Alumina Solution",
+      "url": "/wiki/Alumina_Solution",
+      "producers": [
+        "Alumina Solution",
+        "Sloppy AluminaAlternate",
+        "Unpackage Alumina Solution"
+      ],
+      "consumers": [
+        "Aluminum Scrap",
+        "Battery",
+        "Electrode Aluminum ScrapAlternate",
+        "Packaged Alumina Solution"
+      ]
+    },
+    {
+      "name": "Aluminum Casing",
+      "url": "/wiki/Aluminum_Casing",
+      "producers": [
+        "Alclad CasingAlternate",
+        "Aluminum Casing"
+      ],
+      "consumers": [
+        "Battery",
+        "Fused Modular Frame",
+        "Heat ExchangerAlternate",
+        "Instant Plutonium CellAlternate",
+        "Iodine-Infused Filter",
+        "Radio Control SystemAlternate",
+        "Radio Control Unit",
+        "Turbo Rifle Ammo"
+      ]
+    },
+    {
+      "name": "Aluminum Ingot",
+      "url": "/wiki/Aluminum_Ingot",
+      "producers": [
+        "Aluminum Ingot",
+        "Pure Aluminum IngotAlternate"
+      ],
+      "consumers": [
+        "Alclad Aluminum Sheet",
+        "Alclad CasingAlternate",
+        "Aluminum BeamAlternate",
+        "Aluminum Casing",
+        "Aluminum RodAlternate",
+        "Empty Fluid Tank",
+        "Ficsite Ingot (Aluminum)",
+        "Heat-Fused FrameAlternate"
+      ]
+    },
+    {
+      "name": "Aluminum Scrap",
+      "url": "/wiki/Aluminum_Scrap",
+      "producers": [
+        "Aluminum Scrap",
+        "Electrode Aluminum ScrapAlternate",
+        "Instant ScrapAlternate"
+      ],
+      "consumers": [
+        "Aluminum Ingot",
+        "Pure Aluminum IngotAlternate"
+      ]
+    },
+    {
+      "name": "Assembler",
+      "url": "/wiki/Assembler",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Assembly Director System",
+      "url": "/wiki/Assembly_Director_System",
+      "producers": [
+        "Assembly Director System"
+      ],
+      "consumers": [
+        "Biochemical Sculptor"
+      ]
+    },
+    {
+      "name": "Automated Gate",
+      "url": "/wiki/Automated_Gate",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Automated Wiring",
+      "url": "/wiki/Automated_Wiring",
+      "producers": [
+        "Automated Speed WiringAlternate",
+        "Automated Wiring"
+      ],
+      "consumers": [
+        "Adaptive Control Unit"
+      ]
+    },
+    {
+      "name": "Bacon Agaric",
+      "url": "/wiki/Bacon_Agaric",
+      "producers": [],
+      "consumers": [
+        "Nutritional Inhaler",
+        "Therapeutic Inhaler"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Ballistic Warp Drive",
+      "url": "/wiki/Ballistic_Warp_Drive",
+      "producers": [
+        "Ballistic Warp Drive"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Battery",
+      "url": "/wiki/Battery",
+      "producers": [
+        "Battery",
+        "Classic BatteryAlternate"
+      ],
+      "consumers": [
+        "Super-State ComputerAlternate"
+      ]
+    },
+    {
+      "name": "Bauxite",
+      "url": "/wiki/Bauxite",
+      "producers": [
+        "Bauxite (Caterium)",
+        "Bauxite (Copper)"
+      ],
+      "consumers": [
+        "Alumina Solution",
+        "Instant ScrapAlternate",
+        "Nitrogen Gas (Bauxite)",
+        "Raw Quartz (Bauxite)",
+        "Sloppy AluminaAlternate",
+        "Uranium Ore (Bauxite)"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Beacon",
+      "url": "/wiki/Beacon",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Beam Connector",
+      "url": "/wiki/Beam_Connector",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Beam Support",
+      "url": "/wiki/Beam_Support",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Beryl Nut",
+      "url": "/wiki/Beryl_Nut",
+      "producers": [],
+      "consumers": [
+        "Nutritional Inhaler",
+        "Protein Inhaler"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Biochemical Sculptor",
+      "url": "/wiki/Biochemical_Sculptor",
+      "producers": [
+        "Biochemical Sculptor"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Biomass",
+      "url": "/wiki/Biomass",
+      "producers": [
+        "Biomass (Alien Protein)",
+        "Biomass (Leaves)",
+        "Biomass (Mycelia)",
+        "Biomass (Wood)"
+      ],
+      "consumers": [
+        "BiocoalAlternate",
+        "Fabric",
+        "Gas Nobelisk",
+        "Solid Biofuel"
+      ]
+    },
+    {
+      "name": "Biomass Burner",
+      "url": "/wiki/Biomass_Burner",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Black Powder",
+      "url": "/wiki/Black_Powder",
+      "producers": [
+        "Black Powder",
+        "Fine Black PowderAlternate"
+      ],
+      "consumers": [
+        "Nobelisk",
+        "Smokeless Powder"
+      ]
+    },
+    {
+      "name": "Blade Runners",
+      "url": "/wiki/Blade_Runners",
+      "producers": [
+        "Blade Runners"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Blender",
+      "url": "/wiki/Blender",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Block Signal",
+      "url": "/wiki/Block_Signal",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Blue Power Slug",
+      "url": "/wiki/Blue_Power_Slug",
+      "producers": [],
+      "consumers": [
+        "Power Shard (1)"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Blueprint Designer Mk.1",
+      "url": "/wiki/Blueprint_Designer_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Blueprint Designer Mk.2",
+      "url": "/wiki/Blueprint_Designer_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Blueprint Designer Mk.3",
+      "url": "/wiki/Blueprint_Designer_Mk.3",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Boom Box",
+      "url": "/wiki/Boom_Box",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Cable",
+      "url": "/wiki/Cable",
+      "producers": [
+        "Cable",
+        "Coated CableAlternate",
+        "Insulated CableAlternate",
+        "Quickwire CableAlternate"
+      ],
+      "consumers": [
+        "Automated Wiring",
+        "Chainsaw",
+        "Computer",
+        "Crystal Oscillator",
+        "High-Speed Connector",
+        "Nobelisk Detonator",
+        "Parachute",
+        "Xeno-Zapper",
+        "Zipline"
+      ]
+    },
+    {
+      "name": "Caterium Ingot",
+      "url": "/wiki/Caterium_Ingot",
+      "producers": [
+        "Caterium Ingot",
+        "Leached Caterium IngotAlternate",
+        "Pure Caterium IngotAlternate",
+        "Tempered Caterium IngotAlternate"
+      ],
+      "consumers": [
+        "Caterium WireAlternate",
+        "Ficsite Ingot (Caterium)",
+        "Fused QuickwireAlternate",
+        "Fused WireAlternate",
+        "Golden Factory Cart™",
+        "Quickwire"
+      ]
+    },
+    {
+      "name": "Caterium Ore",
+      "url": "/wiki/Caterium_Ore",
+      "producers": [
+        "Caterium Ore (Copper)",
+        "Caterium Ore (Quartz)"
+      ],
+      "consumers": [
+        "Bauxite (Caterium)",
+        "Caterium Ingot",
+        "Leached Caterium IngotAlternate",
+        "Nitrogen Gas (Caterium)",
+        "Pure Caterium IngotAlternate",
+        "Tempered Caterium IngotAlternate"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Catwalk Corner",
+      "url": "/wiki/Catwalk_Corner",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Catwalk Intersection",
+      "url": "/wiki/Catwalk_Intersection",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Catwalk Ramp",
+      "url": "/wiki/Catwalk_Ramp",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Catwalk Stairs",
+      "url": "/wiki/Catwalk_Stairs",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Catwalk T-Junction",
+      "url": "/wiki/Catwalk_T-Junction",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Ceiling Light",
+      "url": "/wiki/Ceiling_Light",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/wiki/Chainsaw",
+      "producers": [
+        "Chainsaw"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Circuit Board",
+      "url": "/wiki/Circuit_Board",
+      "producers": [
+        "Caterium Circuit BoardAlternate",
+        "Circuit Board",
+        "Electrode Circuit BoardAlternate",
+        "Silicon Circuit BoardAlternate"
+      ],
+      "consumers": [
+        "Adaptive Control Unit",
+        "Caterium ComputerAlternate",
+        "Computer",
+        "Crystal ComputerAlternate",
+        "High-Speed Connector",
+        "Radio Control SystemAlternate",
+        "Silicon High-Speed ConnectorAlternate"
+      ]
+    },
+    {
+      "name": "Clean Pipeline Mk.1",
+      "url": "/wiki/Clean_Pipeline_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Clean Pipeline Mk.2",
+      "url": "/wiki/Clean_Pipeline_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Cluster Nobelisk",
+      "url": "/wiki/Cluster_Nobelisk",
+      "producers": [
+        "Cluster Nobelisk"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Coal",
+      "url": "/wiki/Coal",
+      "producers": [
+        "BiocoalAlternate",
+        "CharcoalAlternate",
+        "Coal (Iron)",
+        "Coal (Limestone)"
+      ],
+      "consumers": [
+        "Aluminum Scrap",
+        "Black Powder",
+        "Cloudy DiamondsAlternate",
+        "Compacted CoalAlternate",
+        "Diamonds",
+        "Fused Quartz CrystalAlternate",
+        "Gas Filter",
+        "Instant ScrapAlternate",
+        "Nitro Rocket FuelAlternate",
+        "Pink DiamondsAlternate",
+        "Raw Quartz (Coal)",
+        "Solid Steel IngotAlternate",
+        "Steel Ingot",
+        "Sulfur (Coal)",
+        "Turbo DiamondsAlternate"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Coal-Powered Generator",
+      "url": "/wiki/Coal-Powered_Generator",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Color Cartridge",
+      "url": "/wiki/Color_Cartridge",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Compacted Coal",
+      "url": "/wiki/Compacted_Coal",
+      "producers": [
+        "Compacted CoalAlternate",
+        "Dark-Ion FuelAlternate",
+        "Ionized Fuel",
+        "Nitro Rocket FuelAlternate",
+        "Rocket Fuel"
+      ],
+      "consumers": [
+        "Compacted Steel IngotAlternate",
+        "Fine Black PowderAlternate",
+        "Turbo Heavy FuelAlternate",
+        "TurbofuelAlternate"
+      ]
+    },
+    {
+      "name": "Computer",
+      "url": "/wiki/Computer",
+      "producers": [
+        "Caterium ComputerAlternate",
+        "Computer",
+        "Crystal ComputerAlternate"
+      ],
+      "consumers": [
+        "Adaptive Control Unit",
+        "Hoverpack",
+        "Radio Control Unit",
+        "Super-State ComputerAlternate",
+        "Supercomputer"
+      ]
+    },
+    {
+      "name": "Concrete",
+      "url": "/wiki/Concrete",
+      "producers": [
+        "Concrete",
+        "Fine ConcreteAlternate",
+        "Rubber ConcreteAlternate",
+        "Wet ConcreteAlternate"
+      ],
+      "consumers": [
+        "Encased Industrial Beam",
+        "Encased Industrial PipeAlternate",
+        "Encased Plutonium Cell",
+        "Encased Uranium Cell",
+        "Heavy Encased FrameAlternate",
+        "Molded BeamAlternate",
+        "Molded Steel PipeAlternate",
+        "Singularity Cell"
+      ]
+    },
+    {
+      "name": "Construction Fence",
+      "url": "/wiki/Construction_Fence",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Constructor",
+      "url": "/wiki/Constructor",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Converter",
+      "url": "/wiki/Converter",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Belt Mk.1",
+      "url": "/wiki/Conveyor_Belt_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Belt Mk.2",
+      "url": "/wiki/Conveyor_Belt_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Belt Mk.3",
+      "url": "/wiki/Conveyor_Belt_Mk.3",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Belt Mk.4",
+      "url": "/wiki/Conveyor_Belt_Mk.4",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Belt Mk.5",
+      "url": "/wiki/Conveyor_Belt_Mk.5",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Belt Mk.6",
+      "url": "/wiki/Conveyor_Belt_Mk.6",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Ceiling Mount",
+      "url": "/wiki/Conveyor_Ceiling_Mount",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Lift Floor Hole",
+      "url": "/wiki/Conveyor_Lift_Floor_Hole",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Lift Mk.1",
+      "url": "/wiki/Conveyor_Lift_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Lift Mk.2",
+      "url": "/wiki/Conveyor_Lift_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Lift Mk.3",
+      "url": "/wiki/Conveyor_Lift_Mk.3",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Lift Mk.4",
+      "url": "/wiki/Conveyor_Lift_Mk.4",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Lift Mk.5",
+      "url": "/wiki/Conveyor_Lift_Mk.5",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Lift Mk.6",
+      "url": "/wiki/Conveyor_Lift_Mk.6",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Merger",
+      "url": "/wiki/Conveyor_Merger",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Pole",
+      "url": "/wiki/Conveyor_Pole",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Splitter",
+      "url": "/wiki/Conveyor_Splitter",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Conveyor Wall Mount",
+      "url": "/wiki/Conveyor_Wall_Mount",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Cooling System",
+      "url": "/wiki/Cooling_System",
+      "producers": [
+        "Cooling DeviceAlternate",
+        "Cooling System"
+      ],
+      "consumers": [
+        "OC SupercomputerAlternate",
+        "Thermal Propulsion Rocket",
+        "Turbo Motor"
+      ]
+    },
+    {
+      "name": "Copper Ingot",
+      "url": "/wiki/Copper_Ingot",
+      "producers": [
+        "Copper Alloy IngotAlternate",
+        "Copper Ingot",
+        "Leached Copper IngotAlternate",
+        "Pure Copper IngotAlternate",
+        "Tempered Copper IngotAlternate"
+      ],
+      "consumers": [
+        "Alclad Aluminum Sheet",
+        "Alclad CasingAlternate",
+        "Copper Powder",
+        "Copper Sheet",
+        "Fused QuickwireAlternate",
+        "Fused WireAlternate",
+        "Steamed Copper SheetAlternate",
+        "Wire"
+      ]
+    },
+    {
+      "name": "Copper Ore",
+      "url": "/wiki/Copper_Ore",
+      "producers": [
+        "Copper Ore (Quartz)",
+        "Copper Ore (Sulfur)"
+      ],
+      "consumers": [
+        "Bauxite (Copper)",
+        "Caterium Ore (Copper)",
+        "Copper Alloy IngotAlternate",
+        "Copper Ingot",
+        "Iron Alloy IngotAlternate",
+        "Leached Copper IngotAlternate",
+        "Pure Copper IngotAlternate",
+        "Tempered Copper IngotAlternate"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Copper Powder",
+      "url": "/wiki/Copper_Powder",
+      "producers": [
+        "Copper Powder"
+      ],
+      "consumers": [
+        "Nuclear Pasta"
+      ]
+    },
+    {
+      "name": "Copper Sheet",
+      "url": "/wiki/Copper_Sheet",
+      "producers": [
+        "Copper Sheet",
+        "Steamed Copper SheetAlternate"
+      ],
+      "consumers": [
+        "AI Limiter",
+        "Circuit Board",
+        "Coated Iron CanisterAlternate",
+        "Copper RotorAlternate",
+        "Gas Mask",
+        "Heat Sink",
+        "Rifle Ammo",
+        "Silicon Circuit BoardAlternate"
+      ]
+    },
+    {
+      "name": "Crafting Bench",
+      "url": "/wiki/Crafting_Bench",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Crude Oil",
+      "url": "/wiki/Crude_Oil",
+      "producers": [
+        "Unpackage Oil"
+      ],
+      "consumers": [
+        "Fuel",
+        "Heavy Oil ResidueAlternate",
+        "Oil-Based DiamondsAlternate",
+        "Packaged Oil",
+        "Plastic",
+        "Polymer ResinAlternate",
+        "Rubber"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Crystal Oscillator",
+      "url": "/wiki/Crystal_Oscillator",
+      "producers": [
+        "Crystal Oscillator",
+        "Insulated Crystal OscillatorAlternate"
+      ],
+      "consumers": [
+        "Crystal ComputerAlternate",
+        "Pulse Nobelisk",
+        "Radio Control SystemAlternate",
+        "Radio Control Unit",
+        "Rigor MotorAlternate",
+        "Superposition Oscillator",
+        "Uranium Fuel UnitAlternate"
+      ]
+    },
+    {
+      "name": "Cup",
+      "url": "/wiki/Cup",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Cyber Wagon",
+      "url": "/wiki/Cyber_Wagon",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Dark Matter Crystal",
+      "url": "/wiki/Dark_Matter_Crystal",
+      "producers": [
+        "Dark Matter Crystal",
+        "Dark Matter CrystallizationAlternate",
+        "Dark Matter TrapAlternate"
+      ],
+      "consumers": [
+        "Ballistic Warp Drive",
+        "Dark-Ion FuelAlternate",
+        "Singularity Cell",
+        "Superposition Oscillator",
+        "Synthetic Power Shard"
+      ]
+    },
+    {
+      "name": "Dark Matter Residue",
+      "url": "/wiki/Dark_Matter_Residue",
+      "producers": [
+        "AI Expansion Server",
+        "Alien Power Matrix",
+        "Dark Matter Residue",
+        "Ficsonium Fuel Rod",
+        "Neural-Quantum Processor",
+        "Superposition Oscillator",
+        "Synthetic Power Shard"
+      ],
+      "consumers": [
+        "Dark Matter Crystal",
+        "Dark Matter CrystallizationAlternate",
+        "Dark Matter TrapAlternate",
+        "Ficsonium"
+      ]
+    },
+    {
+      "name": "Desc_Stair_Concrete_8x1_C",
+      "url": "/index.php?title=Special:Upload&wpDestFile=Desc_Stair_Concrete_8x1_C.png",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Desc_Stair_GripMetal_8x2_C",
+      "url": "/index.php?title=Special:Upload&wpDestFile=Desc_Stair_GripMetal_8x2_C.png",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Desc_Stair_GripMetal_8x4_C",
+      "url": "/index.php?title=Special:Upload&wpDestFile=Desc_Stair_GripMetal_8x4_C.png",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Desc_XmasBallCluster_C",
+      "url": "/index.php?title=Special:Upload&wpDestFile=Desc_XmasBallCluster_C.png",
+      "producers": [],
+      "consumers": [],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Desc_XmasBranch_C",
+      "url": "/index.php?title=Special:Upload&wpDestFile=Desc_XmasBranch_C.png",
+      "producers": [],
+      "consumers": [],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Diamonds",
+      "url": "/wiki/Diamonds",
+      "producers": [
+        "Cloudy DiamondsAlternate",
+        "Diamonds",
+        "Oil-Based DiamondsAlternate",
+        "Petroleum DiamondsAlternate",
+        "Pink DiamondsAlternate",
+        "Turbo DiamondsAlternate"
+      ],
+      "consumers": [
+        "Dark Matter Crystal",
+        "Time Crystal"
+      ]
+    },
+    {
+      "name": "Dimensional Depot Uploader",
+      "url": "/wiki/Dimensional_Depot_Uploader",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Display Sign",
+      "url": "/wiki/Display_Sign",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Dissolved Silica",
+      "url": "/wiki/Dissolved_Silica",
+      "producers": [
+        "Quartz PurificationAlternate"
+      ],
+      "consumers": [
+        "Distilled SilicaAlternate"
+      ]
+    },
+    {
+      "name": "Double Beam Connector",
+      "url": "/wiki/Double_Beam_Connector",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Double Wall Outlet Mk.1",
+      "url": "/wiki/Double_Wall_Outlet_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Double Wall Outlet Mk.2",
+      "url": "/wiki/Double_Wall_Outlet_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Double Wall Outlet Mk.3",
+      "url": "/wiki/Double_Wall_Outlet_Mk.3",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Drone",
+      "url": "/wiki/Drone",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Drone Port",
+      "url": "/wiki/Drone_Port",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Electric Locomotive",
+      "url": "/wiki/Electric_Locomotive",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Electromagnetic Control Rod",
+      "url": "/wiki/Electromagnetic_Control_Rod",
+      "producers": [
+        "Electromagnetic Connection RodAlternate",
+        "Electromagnetic Control Rod"
+      ],
+      "consumers": [
+        "Electric MotorAlternate",
+        "Ficsonium Fuel Rod",
+        "Magnetic Field Generator",
+        "Plutonium Fuel Rod",
+        "Super-State ComputerAlternate",
+        "Turbo Electric MotorAlternate",
+        "Uranium Fuel Rod",
+        "Uranium Fuel UnitAlternate"
+      ]
+    },
+    {
+      "name": "Empty Canister",
+      "url": "/wiki/Empty_Canister",
+      "producers": [
+        "Coated Iron CanisterAlternate",
+        "Empty Canister",
+        "Steel CanisterAlternate",
+        "Unpackage Alumina Solution",
+        "Unpackage Fuel",
+        "Unpackage Heavy Oil Residue",
+        "Unpackage Liquid Biofuel",
+        "Unpackage Oil",
+        "Unpackage Sulfuric Acid",
+        "Unpackage Turbofuel",
+        "Unpackage Water"
+      ],
+      "consumers": [
+        "Packaged Alumina Solution",
+        "Packaged Fuel",
+        "Packaged Heavy Oil Residue",
+        "Packaged Liquid Biofuel",
+        "Packaged Oil",
+        "Packaged Sulfuric Acid",
+        "Packaged Turbofuel",
+        "Packaged Water"
+      ]
+    },
+    {
+      "name": "Empty Fluid Tank",
+      "url": "/wiki/Empty_Fluid_Tank",
+      "producers": [
+        "Empty Fluid Tank",
+        "Unpackage Ionized Fuel",
+        "Unpackage Nitric Acid",
+        "Unpackage Nitrogen Gas",
+        "Unpackage Rocket Fuel"
+      ],
+      "consumers": [
+        "Packaged Ionized Fuel",
+        "Packaged Nitric Acid",
+        "Packaged Nitrogen Gas",
+        "Packaged Rocket Fuel"
+      ]
+    },
+    {
+      "name": "Empty Platform",
+      "url": "/wiki/Empty_Platform",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Empty Platform With Catwalk",
+      "url": "/wiki/Empty_Platform_With_Catwalk",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Encased Industrial Beam",
+      "url": "/wiki/Encased_Industrial_Beam",
+      "producers": [
+        "Encased Industrial Beam",
+        "Encased Industrial PipeAlternate"
+      ],
+      "consumers": [
+        "Heavy Encased FrameAlternate",
+        "Heavy Flexible FrameAlternate",
+        "Heavy Modular Frame",
+        "Uranium Fuel Rod"
+      ]
+    },
+    {
+      "name": "Encased Plutonium Cell",
+      "url": "/wiki/Encased_Plutonium_Cell",
+      "producers": [
+        "Encased Plutonium Cell",
+        "Instant Plutonium CellAlternate"
+      ],
+      "consumers": [
+        "Plutonium Fuel Rod",
+        "Plutonium Fuel UnitAlternate"
+      ]
+    },
+    {
+      "name": "Encased Uranium Cell",
+      "url": "/wiki/Encased_Uranium_Cell",
+      "producers": [
+        "Encased Uranium Cell",
+        "Infused Uranium CellAlternate"
+      ],
+      "consumers": [
+        "Nuke Nobelisk",
+        "Uranium Fuel Rod",
+        "Uranium Fuel UnitAlternate"
+      ]
+    },
+    {
+      "name": "Equipment Workshop",
+      "url": "/wiki/Equipment_Workshop",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Excited Photonic Matter",
+      "url": "/wiki/Excited_Photonic_Matter",
+      "producers": [
+        "Excited Photonic Matter"
+      ],
+      "consumers": [
+        "AI Expansion Server",
+        "Alien Power Matrix",
+        "Ficsonium Fuel Rod",
+        "Neural-Quantum Processor",
+        "Superposition Oscillator",
+        "Synthetic Power Shard"
+      ]
+    },
+    {
+      "name": "Explorer",
+      "url": "/wiki/Explorer",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Explosive Rebar",
+      "url": "/wiki/Explosive_Rebar",
+      "producers": [
+        "Explosive Rebar"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "FICSIT Coupon",
+      "url": "/wiki/FICSIT_Coupon",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "FICSMAS Power Light",
+      "url": "/wiki/FICSMAS_Power_Light",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Fabric",
+      "url": "/wiki/Fabric",
+      "producers": [
+        "Fabric",
+        "Polyester FabricAlternate"
+      ],
+      "consumers": [
+        "Gas Filter",
+        "Gas Mask",
+        "Hazmat Suit",
+        "Parachute"
+      ]
+    },
+    {
+      "name": "Factory Cart™",
+      "url": "/wiki/Factory_Cart%E2%84%A2",
+      "producers": [
+        "Factory Cart™"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Ficsite Ingot",
+      "url": "/wiki/Ficsite_Ingot",
+      "producers": [
+        "Ficsite Ingot (Aluminum)",
+        "Ficsite Ingot (Caterium)",
+        "Ficsite Ingot (Iron)"
+      ],
+      "consumers": [
+        "Ficsite Trigon"
+      ]
+    },
+    {
+      "name": "Ficsite Trigon",
+      "url": "/wiki/Ficsite_Trigon",
+      "producers": [
+        "Ficsite Trigon"
+      ],
+      "consumers": [
+        "Biochemical Sculptor",
+        "Ficsonium Fuel Rod",
+        "Neural-Quantum Processor"
+      ]
+    },
+    {
+      "name": "Ficsonium",
+      "url": "/wiki/Ficsonium",
+      "producers": [
+        "Ficsonium"
+      ],
+      "consumers": [
+        "Ficsonium Fuel Rod"
+      ]
+    },
+    {
+      "name": "Ficsonium Fuel Rod",
+      "url": "/wiki/Ficsonium_Fuel_Rod",
+      "producers": [
+        "Ficsonium Fuel Rod"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Flood Light Tower",
+      "url": "/wiki/Flood_Light_Tower",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Flower Petals",
+      "url": "/wiki/Flower_Petals",
+      "producers": [],
+      "consumers": [],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Fluid Buffer",
+      "url": "/wiki/Fluid_Buffer",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Fluid Freight Platform",
+      "url": "/wiki/Fluid_Freight_Platform",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Foundry",
+      "url": "/wiki/Foundry",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Frame Floor",
+      "url": "/wiki/Frame_Floor",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Freight Car",
+      "url": "/wiki/Freight_Car",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Freight Platform",
+      "url": "/wiki/Freight_Platform",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Fuel",
+      "url": "/wiki/Fuel",
+      "producers": [
+        "Diluted FuelAlternate",
+        "Fuel",
+        "Residual Fuel",
+        "Unpackage Fuel"
+      ],
+      "consumers": [
+        "Heat-Fused FrameAlternate",
+        "Nitro Rocket FuelAlternate",
+        "Packaged Fuel",
+        "Recycled PlasticAlternate",
+        "Recycled RubberAlternate",
+        "Turbo Blend FuelAlternate",
+        "TurbofuelAlternate"
+      ]
+    },
+    {
+      "name": "Fuel-Powered Generator",
+      "url": "/wiki/Fuel-Powered_Generator",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Fused Modular Frame",
+      "url": "/wiki/Fused_Modular_Frame",
+      "producers": [
+        "Fused Modular Frame",
+        "Heat-Fused FrameAlternate"
+      ],
+      "consumers": [
+        "Pressure Conversion Cube",
+        "Thermal Propulsion Rocket"
+      ]
+    },
+    {
+      "name": "Gas Filter",
+      "url": "/wiki/Gas_Filter",
+      "producers": [
+        "Gas Filter"
+      ],
+      "consumers": [
+        "Iodine-Infused Filter"
+      ]
+    },
+    {
+      "name": "Gas Mask",
+      "url": "/wiki/Gas_Mask",
+      "producers": [
+        "Gas Mask"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Gas Nobelisk",
+      "url": "/wiki/Gas_Nobelisk",
+      "producers": [
+        "Gas Nobelisk"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Geothermal Generator",
+      "url": "/wiki/Geothermal_Generator",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Giant FICSMAS Tree",
+      "url": "/wiki/Giant_FICSMAS_Tree",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Glass Frame Foundation",
+      "url": "/wiki/Glass_Frame_Foundation",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Golden Factory Cart™",
+      "url": "/wiki/Golden_Factory_Cart%E2%84%A2",
+      "producers": [
+        "Golden Factory Cart™"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "HUB Parts",
+      "url": "/wiki/HUB_Parts",
+      "producers": [],
+      "consumers": [],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Hard Drive",
+      "url": "/wiki/Hard_Drive",
+      "producers": [],
+      "consumers": [],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Hatcher Remains",
+      "url": "/wiki/Hatcher_Remains",
+      "producers": [],
+      "consumers": [
+        "Hatcher Protein"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Hazard Storage Box",
+      "url": "/wiki/Hazard_Storage_Box",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Hazmat Suit",
+      "url": "/wiki/Hazmat_Suit",
+      "producers": [
+        "Hazmat Suit"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Heat Sink",
+      "url": "/wiki/Heat_Sink",
+      "producers": [
+        "Heat ExchangerAlternate",
+        "Heat Sink"
+      ],
+      "consumers": [
+        "Cooling DeviceAlternate",
+        "Cooling System",
+        "Plutonium Fuel Rod",
+        "Radio Connection UnitAlternate"
+      ]
+    },
+    {
+      "name": "Heavy Modular Frame",
+      "url": "/wiki/Heavy_Modular_Frame",
+      "producers": [
+        "Heavy Encased FrameAlternate",
+        "Heavy Flexible FrameAlternate",
+        "Heavy Modular Frame"
+      ],
+      "consumers": [
+        "Adaptive Control Unit",
+        "Fused Modular Frame",
+        "Heat-Fused FrameAlternate",
+        "Hoverpack"
+      ]
+    },
+    {
+      "name": "Heavy Oil Residue",
+      "url": "/wiki/Heavy_Oil_Residue",
+      "producers": [
+        "Heavy Oil ResidueAlternate",
+        "Plastic",
+        "Polymer ResinAlternate",
+        "Rubber",
+        "Unpackage Heavy Oil Residue"
+      ],
+      "consumers": [
+        "Coated CableAlternate",
+        "Diluted FuelAlternate",
+        "Diluted Packaged FuelAlternate",
+        "Packaged Heavy Oil Residue",
+        "Petroleum Coke",
+        "Residual Fuel",
+        "Smokeless Powder",
+        "Turbo Blend FuelAlternate",
+        "Turbo Heavy FuelAlternate"
+      ]
+    },
+    {
+      "name": "High Barrier",
+      "url": "/wiki/High_Barrier",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "High-Speed Connector",
+      "url": "/wiki/High-Speed_Connector",
+      "producers": [
+        "High-Speed Connector",
+        "Silicon High-Speed ConnectorAlternate"
+      ],
+      "consumers": [
+        "Automated Speed WiringAlternate",
+        "Electromagnetic Connection RodAlternate",
+        "Homing Rifle Ammo",
+        "Radio Connection UnitAlternate",
+        "Supercomputer"
+      ]
+    },
+    {
+      "name": "Hog Remains",
+      "url": "/wiki/Hog_Remains",
+      "producers": [],
+      "consumers": [
+        "Hog Protein"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Homing Rifle Ammo",
+      "url": "/wiki/Homing_Rifle_Ammo",
+      "producers": [
+        "Homing Rifle Ammo"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Hoverpack",
+      "url": "/wiki/Hoverpack",
+      "producers": [
+        "Hoverpack"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Hypertube",
+      "url": "/wiki/Hypertube",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Hypertube Entrance",
+      "url": "/wiki/Hypertube_Entrance",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Hypertube Floor Hole",
+      "url": "/wiki/Hypertube_Floor_Hole",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Hypertube Support",
+      "url": "/wiki/Hypertube_Support",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Hypertube Wall Hole",
+      "url": "/wiki/Hypertube_Wall_Hole",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Hypertube Wall Support",
+      "url": "/wiki/Hypertube_Wall_Support",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Industrial Fluid Buffer",
+      "url": "/wiki/Industrial_Fluid_Buffer",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Industrial Storage Container",
+      "url": "/wiki/Industrial_Storage_Container",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Iodine-Infused Filter",
+      "url": "/wiki/Iodine-Infused_Filter",
+      "producers": [
+        "Iodine-Infused Filter"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Ionized Fuel",
+      "url": "/wiki/Ionized_Fuel",
+      "producers": [
+        "Dark-Ion FuelAlternate",
+        "Ionized Fuel",
+        "Unpackage Ionized Fuel"
+      ],
+      "consumers": [
+        "Packaged Ionized Fuel"
+      ]
+    },
+    {
+      "name": "Iron Ingot",
+      "url": "/wiki/Iron_Ingot",
+      "producers": [
+        "Basic Iron IngotAlternate",
+        "Iron Alloy IngotAlternate",
+        "Iron Ingot",
+        "Leached Iron ingotAlternate",
+        "Pure Iron IngotAlternate"
+      ],
+      "consumers": [
+        "Cast ScrewAlternate",
+        "Coated Iron PlateAlternate",
+        "Ficsite Ingot (Iron)",
+        "Iron PipeAlternate",
+        "Iron Plate",
+        "Iron Rod",
+        "Iron WireAlternate",
+        "Solid Steel IngotAlternate",
+        "Steel Cast PlateAlternate"
+      ]
+    },
+    {
+      "name": "Iron Ore",
+      "url": "/wiki/Iron_Ore",
+      "producers": [
+        "Iron Ore (Limestone)"
+      ],
+      "consumers": [
+        "Basic Iron IngotAlternate",
+        "Coal (Iron)",
+        "Coke Steel IngotAlternate",
+        "Compacted Steel IngotAlternate",
+        "Copper Alloy IngotAlternate",
+        "Iron Alloy IngotAlternate",
+        "Iron Ingot",
+        "Leached Iron ingotAlternate",
+        "Pure Iron IngotAlternate",
+        "Steel Ingot",
+        "Sulfur (Iron)"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Iron Plate",
+      "url": "/wiki/Iron_Plate",
+      "producers": [
+        "Coated Iron PlateAlternate",
+        "Iron Plate",
+        "Steel Cast PlateAlternate"
+      ],
+      "consumers": [
+        "Adhered Iron PlateAlternate",
+        "Automated MinerAlternate",
+        "Bolted Iron PlateAlternate",
+        "Coated Iron CanisterAlternate",
+        "Gas Filter",
+        "Jetpack",
+        "Nitric Acid",
+        "Portable Miner",
+        "Reinforced Iron Plate",
+        "Singularity Cell",
+        "Stitched Iron PlateAlternate"
+      ]
+    },
+    {
+      "name": "Iron Rebar",
+      "url": "/wiki/Iron_Rebar",
+      "producers": [
+        "Iron Rebar"
+      ],
+      "consumers": [
+        "Explosive Rebar",
+        "Shatter Rebar",
+        "Stun Rebar"
+      ]
+    },
+    {
+      "name": "Iron Rod",
+      "url": "/wiki/Iron_Rod",
+      "producers": [
+        "Aluminum RodAlternate",
+        "Iron Rod",
+        "Steel RodAlternate"
+      ],
+      "consumers": [
+        "Chainsaw",
+        "Factory Cart™",
+        "Golden Factory Cart™",
+        "Iron Rebar",
+        "Modular Frame",
+        "Portable Miner",
+        "Rebar Gun",
+        "Rotor",
+        "Screw",
+        "Xeno-Basher",
+        "Xeno-Zapper",
+        "Zipline"
+      ]
+    },
+    {
+      "name": "Jetpack",
+      "url": "/wiki/Jetpack",
+      "producers": [
+        "Jetpack"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Jump Pad",
+      "url": "/wiki/Jump_Pad",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Label Sign (2 m)",
+      "url": "/wiki/Label_Sign_(2_m)",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Label Sign (3 m)",
+      "url": "/wiki/Label_Sign_(3_m)",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Label Sign (4 m)",
+      "url": "/wiki/Label_Sign_(4_m)",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Ladder",
+      "url": "/wiki/Ladder",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Large Billboard",
+      "url": "/wiki/Large_Billboard",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Leaves",
+      "url": "/wiki/Leaves",
+      "producers": [],
+      "consumers": [
+        "Biomass (Leaves)"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Light Control Panel",
+      "url": "/wiki/Light_Control_Panel",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Limestone",
+      "url": "/wiki/Limestone",
+      "producers": [
+        "Limestone (Sulfur)"
+      ],
+      "consumers": [
+        "Basic Iron IngotAlternate",
+        "Cheap SilicaAlternate",
+        "Cloudy DiamondsAlternate",
+        "Coal (Limestone)",
+        "Concrete",
+        "Distilled SilicaAlternate",
+        "Fine ConcreteAlternate",
+        "Iron Ore (Limestone)",
+        "Rubber ConcreteAlternate",
+        "Wet ConcreteAlternate"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Liquid Biofuel",
+      "url": "/wiki/Liquid_Biofuel",
+      "producers": [
+        "Liquid Biofuel",
+        "Unpackage Liquid Biofuel"
+      ],
+      "consumers": [
+        "Packaged Liquid Biofuel"
+      ]
+    },
+    {
+      "name": "Lookout Tower",
+      "url": "/wiki/Lookout_Tower",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Low Barrier",
+      "url": "/wiki/Low_Barrier",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "MAM",
+      "url": "/wiki/MAM",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Magnetic Field Generator",
+      "url": "/wiki/Magnetic_Field_Generator",
+      "producers": [
+        "Magnetic Field Generator"
+      ],
+      "consumers": [
+        "AI Expansion Server"
+      ]
+    },
+    {
+      "name": "Main Portal",
+      "url": "/wiki/Main_Portal",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Manufacturer",
+      "url": "/wiki/Manufacturer",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Medical Storage Box",
+      "url": "/wiki/Medical_Storage_Box",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Medicinal Inhaler",
+      "url": "/wiki/Medicinal_Inhaler",
+      "producers": [
+        "Nutritional Inhaler",
+        "Protein Inhaler",
+        "Therapeutic Inhaler",
+        "Vitamin Inhaler"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Mercer Sphere",
+      "url": "/wiki/Mercer_Sphere",
+      "producers": [],
+      "consumers": [],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Metal Beam",
+      "url": "/wiki/Metal_Beam",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Miner",
+      "url": "/wiki/Miner",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Miner Mk.1",
+      "url": "/wiki/Miner_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Miner Mk.2",
+      "url": "/wiki/Miner_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Miner Mk.3",
+      "url": "/wiki/Miner_Mk.3",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Modern Railing",
+      "url": "/wiki/Modern_Railing",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Modular Engine",
+      "url": "/wiki/Modular_Engine",
+      "producers": [
+        "Modular Engine"
+      ],
+      "consumers": [
+        "Thermal Propulsion Rocket"
+      ]
+    },
+    {
+      "name": "Modular Frame",
+      "url": "/wiki/Modular_Frame",
+      "producers": [
+        "Bolted FrameAlternate",
+        "Modular Frame",
+        "Steeled FrameAlternate"
+      ],
+      "consumers": [
+        "Blade Runners",
+        "Flexible FrameworkAlternate",
+        "Heavy Encased FrameAlternate",
+        "Heavy Flexible FrameAlternate",
+        "Heavy Modular Frame",
+        "Versatile Framework",
+        "Xeno-Basher"
+      ]
+    },
+    {
+      "name": "Motor",
+      "url": "/wiki/Motor",
+      "producers": [
+        "Electric MotorAlternate",
+        "Motor",
+        "Rigor MotorAlternate"
+      ],
+      "consumers": [
+        "Cooling DeviceAlternate",
+        "Hoverpack",
+        "Jetpack",
+        "Modular Engine",
+        "Rifle",
+        "Turbo Electric MotorAlternate",
+        "Turbo Motor",
+        "Turbo Pressure MotorAlternate"
+      ]
+    },
+    {
+      "name": "Mycelia",
+      "url": "/wiki/Mycelia",
+      "producers": [],
+      "consumers": [
+        "Biomass (Mycelia)",
+        "Fabric",
+        "Therapeutic Inhaler",
+        "Vitamin Inhaler"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Neural-Quantum Processor",
+      "url": "/wiki/Neural-Quantum_Processor",
+      "producers": [
+        "Neural-Quantum Processor"
+      ],
+      "consumers": [
+        "AI Expansion Server"
+      ]
+    },
+    {
+      "name": "Nitric Acid",
+      "url": "/wiki/Nitric_Acid",
+      "producers": [
+        "Nitric Acid",
+        "Unpackage Nitric Acid"
+      ],
+      "consumers": [
+        "Fertile UraniumAlternate",
+        "Heat-Fused FrameAlternate",
+        "Non-Fissile Uranium",
+        "Packaged Nitric Acid",
+        "Quartz PurificationAlternate",
+        "Rocket Fuel"
+      ]
+    },
+    {
+      "name": "Nitrogen Gas",
+      "url": "/wiki/Nitrogen_Gas",
+      "producers": [
+        "Nitrogen Gas (Bauxite)",
+        "Nitrogen Gas (Caterium)",
+        "Unpackage Nitrogen Gas"
+      ],
+      "consumers": [
+        "Cooling DeviceAlternate",
+        "Cooling System",
+        "Fused Modular Frame",
+        "Nitric Acid",
+        "Nitro Rocket FuelAlternate",
+        "Packaged Nitrogen Gas"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Nobelisk",
+      "url": "/wiki/Nobelisk",
+      "producers": [
+        "Nobelisk"
+      ],
+      "consumers": [
+        "Cluster Nobelisk",
+        "Gas Nobelisk",
+        "Nuke Nobelisk",
+        "Pulse Nobelisk"
+      ]
+    },
+    {
+      "name": "Nobelisk Detonator",
+      "url": "/wiki/Nobelisk_Detonator",
+      "producers": [
+        "Nobelisk Detonator"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Non-Fissile Uranium",
+      "url": "/wiki/Non-Fissile_Uranium",
+      "producers": [
+        "Fertile UraniumAlternate",
+        "Non-Fissile Uranium"
+      ],
+      "consumers": [
+        "Instant Plutonium CellAlternate",
+        "Plutonium Pellet"
+      ]
+    },
+    {
+      "name": "Nuclear Pasta",
+      "url": "/wiki/Nuclear_Pasta",
+      "producers": [
+        "Nuclear Pasta"
+      ],
+      "consumers": [
+        "Singularity Cell"
+      ]
+    },
+    {
+      "name": "Nuclear Power Plant",
+      "url": "/wiki/Nuclear_Power_Plant",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Nuke Nobelisk",
+      "url": "/wiki/Nuke_Nobelisk",
+      "producers": [
+        "Nuke Nobelisk"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Object Scanner",
+      "url": "/wiki/Object_Scanner",
+      "producers": [
+        "Object Scanner"
+      ],
+      "consumers": [
+        "Nobelisk Detonator"
+      ]
+    },
+    {
+      "name": "Oil Extractor",
+      "url": "/wiki/Oil_Extractor",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Packaged Alumina Solution",
+      "url": "/wiki/Packaged_Alumina_Solution",
+      "producers": [
+        "Packaged Alumina Solution"
+      ],
+      "consumers": [
+        "Unpackage Alumina Solution"
+      ]
+    },
+    {
+      "name": "Packaged Fuel",
+      "url": "/wiki/Packaged_Fuel",
+      "producers": [
+        "Diluted Packaged FuelAlternate",
+        "Packaged Fuel"
+      ],
+      "consumers": [
+        "Unpackage Fuel"
+      ]
+    },
+    {
+      "name": "Packaged Heavy Oil Residue",
+      "url": "/wiki/Packaged_Heavy_Oil_Residue",
+      "producers": [
+        "Packaged Heavy Oil Residue"
+      ],
+      "consumers": [
+        "Unpackage Heavy Oil Residue"
+      ]
+    },
+    {
+      "name": "Packaged Ionized Fuel",
+      "url": "/wiki/Packaged_Ionized_Fuel",
+      "producers": [
+        "Packaged Ionized Fuel"
+      ],
+      "consumers": [
+        "Unpackage Ionized Fuel"
+      ]
+    },
+    {
+      "name": "Packaged Liquid Biofuel",
+      "url": "/wiki/Packaged_Liquid_Biofuel",
+      "producers": [
+        "Packaged Liquid Biofuel"
+      ],
+      "consumers": [
+        "Unpackage Liquid Biofuel"
+      ]
+    },
+    {
+      "name": "Packaged Nitric Acid",
+      "url": "/wiki/Packaged_Nitric_Acid",
+      "producers": [
+        "Packaged Nitric Acid"
+      ],
+      "consumers": [
+        "Unpackage Nitric Acid"
+      ]
+    },
+    {
+      "name": "Packaged Nitrogen Gas",
+      "url": "/wiki/Packaged_Nitrogen_Gas",
+      "producers": [
+        "Packaged Nitrogen Gas"
+      ],
+      "consumers": [
+        "Turbo Pressure MotorAlternate",
+        "Unpackage Nitrogen Gas"
+      ]
+    },
+    {
+      "name": "Packaged Oil",
+      "url": "/wiki/Packaged_Oil",
+      "producers": [
+        "Packaged Oil"
+      ],
+      "consumers": [
+        "Unpackage Oil"
+      ]
+    },
+    {
+      "name": "Packaged Rocket Fuel",
+      "url": "/wiki/Packaged_Rocket_Fuel",
+      "producers": [
+        "Packaged Rocket Fuel"
+      ],
+      "consumers": [
+        "Dark-Ion FuelAlternate",
+        "Unpackage Rocket Fuel"
+      ]
+    },
+    {
+      "name": "Packaged Sulfuric Acid",
+      "url": "/wiki/Packaged_Sulfuric_Acid",
+      "producers": [
+        "Packaged Sulfuric Acid"
+      ],
+      "consumers": [
+        "Unpackage Sulfuric Acid"
+      ]
+    },
+    {
+      "name": "Packaged Turbofuel",
+      "url": "/wiki/Packaged_Turbofuel",
+      "producers": [
+        "Packaged Turbofuel"
+      ],
+      "consumers": [
+        "Turbo DiamondsAlternate",
+        "Turbo Rifle Ammo",
+        "Unpackage Turbofuel"
+      ]
+    },
+    {
+      "name": "Packaged Water",
+      "url": "/wiki/Packaged_Water",
+      "producers": [
+        "Packaged Water"
+      ],
+      "consumers": [
+        "Diluted Packaged FuelAlternate",
+        "Unpackage Water"
+      ]
+    },
+    {
+      "name": "Packager",
+      "url": "/wiki/Packager",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Painted Beam",
+      "url": "/wiki/Painted_Beam",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Paleberry",
+      "url": "/wiki/Paleberry",
+      "producers": [],
+      "consumers": [
+        "Nutritional Inhaler",
+        "Vitamin Inhaler"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Parachute",
+      "url": "/wiki/Parachute",
+      "producers": [
+        "Parachute"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Particle Accelerator",
+      "url": "/wiki/Particle_Accelerator",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Path Signal",
+      "url": "/wiki/Path_Signal",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Personal Storage Box",
+      "url": "/wiki/Personal_Storage_Box",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Petroleum Coke",
+      "url": "/wiki/Petroleum_Coke",
+      "producers": [
+        "Petroleum Coke"
+      ],
+      "consumers": [
+        "Coke Steel IngotAlternate",
+        "Electrode Aluminum ScrapAlternate",
+        "Electrode Circuit BoardAlternate",
+        "Petroleum DiamondsAlternate",
+        "Tempered Caterium IngotAlternate",
+        "Tempered Copper IngotAlternate",
+        "Turbo Blend FuelAlternate"
+      ]
+    },
+    {
+      "name": "Pipeline Floor Hole",
+      "url": "/wiki/Pipeline_Floor_Hole",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pipeline Junction",
+      "url": "/wiki/Pipeline_Junction",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pipeline Mk.1",
+      "url": "/wiki/Pipeline_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pipeline Mk.2",
+      "url": "/wiki/Pipeline_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pipeline Pump Mk.1",
+      "url": "/wiki/Pipeline_Pump_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pipeline Pump Mk.2",
+      "url": "/wiki/Pipeline_Pump_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pipeline Support",
+      "url": "/wiki/Pipeline_Support",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pipeline Wall Hole",
+      "url": "/wiki/Pipeline_Wall_Hole",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pipeline Wall Support",
+      "url": "/wiki/Pipeline_Wall_Support",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Plastic",
+      "url": "/wiki/Plastic",
+      "producers": [
+        "Plastic",
+        "Recycled PlasticAlternate",
+        "Residual Plastic"
+      ],
+      "consumers": [
+        "Caterium Circuit BoardAlternate",
+        "Circuit Board",
+        "Classic BatteryAlternate",
+        "Coated Iron PlateAlternate",
+        "Computer",
+        "Empty Canister",
+        "Hazmat Suit",
+        "Plastic AI LimiterAlternate",
+        "Plastic Smart PlatingAlternate",
+        "Recycled RubberAlternate",
+        "Supercomputer"
+      ]
+    },
+    {
+      "name": "Plutonium Fuel Rod",
+      "url": "/wiki/Plutonium_Fuel_Rod",
+      "producers": [
+        "Plutonium Fuel Rod",
+        "Plutonium Fuel UnitAlternate"
+      ],
+      "consumers": [
+        "Plutonium Fuel Rod (burning)"
+      ]
+    },
+    {
+      "name": "Plutonium Pellet",
+      "url": "/wiki/Plutonium_Pellet",
+      "producers": [
+        "Plutonium Pellet"
+      ],
+      "consumers": [
+        "Encased Plutonium Cell"
+      ]
+    },
+    {
+      "name": "Plutonium Waste",
+      "url": "/wiki/Plutonium_Waste",
+      "producers": [
+        "Plutonium Fuel Rod (burning)"
+      ],
+      "consumers": [
+        "Ficsonium"
+      ]
+    },
+    {
+      "name": "Polymer Resin",
+      "url": "/wiki/Polymer_Resin",
+      "producers": [
+        "Fuel",
+        "Heavy Oil ResidueAlternate",
+        "Polymer ResinAlternate"
+      ],
+      "consumers": [
+        "Polyester FabricAlternate",
+        "Residual Plastic",
+        "Residual Rubber"
+      ]
+    },
+    {
+      "name": "Portable Miner",
+      "url": "/wiki/Portable_Miner",
+      "producers": [
+        "Automated MinerAlternate",
+        "Portable Miner"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Portrait Sign",
+      "url": "/wiki/Portrait_Sign",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Line",
+      "url": "/wiki/Power_Line",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Pole Mk.1",
+      "url": "/wiki/Power_Pole_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Pole Mk.2",
+      "url": "/wiki/Power_Pole_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Pole Mk.3",
+      "url": "/wiki/Power_Pole_Mk.3",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Shard",
+      "url": "/wiki/Power_Shard",
+      "producers": [
+        "Power Shard (1)",
+        "Power Shard (2)",
+        "Power Shard (5)",
+        "Synthetic Power Shard"
+      ],
+      "consumers": [
+        "Alien Power Matrix",
+        "Ionized Fuel"
+      ]
+    },
+    {
+      "name": "Power Slug",
+      "url": "/wiki/Power_Slug",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Storage",
+      "url": "/wiki/Power_Storage",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Switch",
+      "url": "/wiki/Power_Switch",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Tower",
+      "url": "/wiki/Power_Tower",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Power Tower Platform",
+      "url": "/wiki/Power_Tower_Platform",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pressure Conversion Cube",
+      "url": "/wiki/Pressure_Conversion_Cube",
+      "producers": [
+        "Pressure Conversion Cube"
+      ],
+      "consumers": [
+        "Nuclear Pasta",
+        "Plutonium Fuel UnitAlternate",
+        "Turbo Pressure MotorAlternate"
+      ]
+    },
+    {
+      "name": "Priority Power Switch",
+      "url": "/wiki/Priority_Power_Switch",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Programmable Splitter",
+      "url": "/wiki/Programmable_Splitter",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Pulse Nobelisk",
+      "url": "/wiki/Pulse_Nobelisk",
+      "producers": [
+        "Pulse Nobelisk"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Purple Power Slug",
+      "url": "/wiki/Purple_Power_Slug",
+      "producers": [],
+      "consumers": [
+        "Power Shard (5)"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Quantum Encoder",
+      "url": "/wiki/Quantum_Encoder",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Quartz Crystal",
+      "url": "/wiki/Quartz_Crystal",
+      "producers": [
+        "Fused Quartz CrystalAlternate",
+        "Pure Quartz CrystalAlternate",
+        "Quartz Crystal",
+        "Quartz PurificationAlternate"
+      ],
+      "consumers": [
+        "Crystal Oscillator",
+        "Insulated Crystal OscillatorAlternate",
+        "Pink DiamondsAlternate",
+        "Radio Connection UnitAlternate",
+        "Shatter Rebar",
+        "Synthetic Power Shard"
+      ]
+    },
+    {
+      "name": "Quickwire",
+      "url": "/wiki/Quickwire",
+      "producers": [
+        "Fused QuickwireAlternate",
+        "Quickwire"
+      ],
+      "consumers": [
+        "AI Limiter",
+        "Caterium Circuit BoardAlternate",
+        "Caterium ComputerAlternate",
+        "High-Speed Connector",
+        "Infused Uranium CellAlternate",
+        "Iodine-Infused Filter",
+        "Plastic AI LimiterAlternate",
+        "Quickwire CableAlternate",
+        "Quickwire StatorAlternate",
+        "Silicon High-Speed ConnectorAlternate",
+        "Stun Rebar",
+        "Zipline"
+      ]
+    },
+    {
+      "name": "Radar Tower",
+      "url": "/wiki/Radar_Tower",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Radio Control Unit",
+      "url": "/wiki/Radio_Control_Unit",
+      "producers": [
+        "Radio Connection UnitAlternate",
+        "Radio Control SystemAlternate",
+        "Radio Control Unit"
+      ],
+      "consumers": [
+        "OC SupercomputerAlternate",
+        "Pressure Conversion Cube",
+        "Turbo Electric MotorAlternate",
+        "Turbo Motor"
+      ]
+    },
+    {
+      "name": "Railway",
+      "url": "/wiki/Railway",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Raw Quartz",
+      "url": "/wiki/Raw_Quartz",
+      "producers": [
+        "Raw Quartz (Bauxite)",
+        "Raw Quartz (Coal)"
+      ],
+      "consumers": [
+        "Caterium Ore (Quartz)",
+        "Cheap SilicaAlternate",
+        "Copper Ore (Quartz)",
+        "Fused Quartz CrystalAlternate",
+        "Pure Quartz CrystalAlternate",
+        "Quartz Crystal",
+        "Quartz PurificationAlternate",
+        "Silica"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Reanimated SAM",
+      "url": "/wiki/Reanimated_SAM",
+      "producers": [
+        "Reanimated SAM"
+      ],
+      "consumers": [
+        "Bauxite (Caterium)",
+        "Bauxite (Copper)",
+        "Caterium Ore (Copper)",
+        "Caterium Ore (Quartz)",
+        "Coal (Iron)",
+        "Coal (Limestone)",
+        "Copper Ore (Quartz)",
+        "Copper Ore (Sulfur)",
+        "Dark Matter Residue",
+        "Ficsite Ingot (Aluminum)",
+        "Ficsite Ingot (Caterium)",
+        "Ficsite Ingot (Iron)",
+        "Iron Ore (Limestone)",
+        "Limestone (Sulfur)",
+        "Nitrogen Gas (Bauxite)",
+        "Nitrogen Gas (Caterium)",
+        "Raw Quartz (Bauxite)",
+        "Raw Quartz (Coal)",
+        "SAM Fluctuator",
+        "Sulfur (Coal)",
+        "Sulfur (Iron)",
+        "Uranium Ore (Bauxite)"
+      ]
+    },
+    {
+      "name": "Rebar Gun",
+      "url": "/wiki/Rebar_Gun",
+      "producers": [
+        "Rebar Gun"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Refinery",
+      "url": "/wiki/Refinery",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Reinforced Iron Plate",
+      "url": "/wiki/Reinforced_Iron_Plate",
+      "producers": [
+        "Adhered Iron PlateAlternate",
+        "Bolted Iron PlateAlternate",
+        "Reinforced Iron Plate",
+        "Stitched Iron PlateAlternate"
+      ],
+      "consumers": [
+        "Bolted FrameAlternate",
+        "Chainsaw",
+        "Crystal Oscillator",
+        "Factory Cart™",
+        "Modular Frame",
+        "Object Scanner",
+        "Plastic Smart PlatingAlternate",
+        "Rebar Gun",
+        "Smart Plating",
+        "Steeled FrameAlternate",
+        "Xeno-Zapper"
+      ]
+    },
+    {
+      "name": "Resource Well Extractor",
+      "url": "/wiki/Resource_Well_Extractor",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Resource Well Pressurizer",
+      "url": "/wiki/Resource_Well_Pressurizer",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Rifle",
+      "url": "/wiki/Rifle",
+      "producers": [
+        "Rifle"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Rifle Ammo",
+      "url": "/wiki/Rifle_Ammo",
+      "producers": [
+        "Rifle Ammo"
+      ],
+      "consumers": [
+        "Homing Rifle Ammo",
+        "Turbo Rifle Ammo"
+      ]
+    },
+    {
+      "name": "Road Barrier",
+      "url": "/wiki/Road_Barrier",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Rocket Fuel",
+      "url": "/wiki/Rocket_Fuel",
+      "producers": [
+        "Nitro Rocket FuelAlternate",
+        "Rocket Fuel",
+        "Unpackage Rocket Fuel"
+      ],
+      "consumers": [
+        "Ionized Fuel",
+        "Packaged Rocket Fuel"
+      ]
+    },
+    {
+      "name": "Rotor",
+      "url": "/wiki/Rotor",
+      "producers": [
+        "Copper RotorAlternate",
+        "Rotor",
+        "Steel RotorAlternate"
+      ],
+      "consumers": [
+        "Blade Runners",
+        "Electric MotorAlternate",
+        "Factory Cart™",
+        "Golden Factory Cart™",
+        "Motor",
+        "Plastic Smart PlatingAlternate",
+        "Rigor MotorAlternate",
+        "Smart Plating",
+        "Turbo Electric MotorAlternate",
+        "Uranium Fuel UnitAlternate"
+      ]
+    },
+    {
+      "name": "Rubber",
+      "url": "/wiki/Rubber",
+      "producers": [
+        "Recycled RubberAlternate",
+        "Residual Rubber",
+        "Rubber"
+      ],
+      "consumers": [
+        "Adhered Iron PlateAlternate",
+        "Caterium ComputerAlternate",
+        "Cooling System",
+        "Electrode Circuit BoardAlternate",
+        "Flexible FrameworkAlternate",
+        "Hazmat Suit",
+        "Heat ExchangerAlternate",
+        "Heavy Flexible FrameAlternate",
+        "Insulated CableAlternate",
+        "Insulated Crystal OscillatorAlternate",
+        "Modular Engine",
+        "Quickwire CableAlternate",
+        "Radio Control SystemAlternate",
+        "Recycled PlasticAlternate",
+        "Rifle",
+        "Rubber ConcreteAlternate",
+        "Turbo Motor"
+      ]
+    },
+    {
+      "name": "SAM",
+      "url": "/wiki/SAM",
+      "producers": [],
+      "consumers": [
+        "Reanimated SAM"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "SAM Fluctuator",
+      "url": "/wiki/SAM_Fluctuator",
+      "producers": [
+        "SAM Fluctuator"
+      ],
+      "consumers": [
+        "Alien Power Matrix"
+      ]
+    },
+    {
+      "name": "Satellite Portal",
+      "url": "/wiki/Satellite_Portal",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Screw",
+      "url": "/wiki/Screw",
+      "producers": [
+        "Cast ScrewAlternate",
+        "Screw",
+        "Steel ScrewAlternate"
+      ],
+      "consumers": [
+        "Bolted FrameAlternate",
+        "Bolted Iron PlateAlternate",
+        "Chainsaw",
+        "Copper RotorAlternate",
+        "Heavy Flexible FrameAlternate",
+        "Heavy Modular Frame",
+        "Object Scanner",
+        "Rebar Gun",
+        "Reinforced Iron Plate",
+        "Rifle",
+        "Rotor"
+      ]
+    },
+    {
+      "name": "Shatter Rebar",
+      "url": "/wiki/Shatter_Rebar",
+      "producers": [
+        "Shatter Rebar"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Silica",
+      "url": "/wiki/Silica",
+      "producers": [
+        "Alumina Solution",
+        "Cheap SilicaAlternate",
+        "Distilled SilicaAlternate",
+        "Silica"
+      ],
+      "consumers": [
+        "Aluminum Ingot",
+        "Blade Runners",
+        "Fine ConcreteAlternate",
+        "Infused Uranium CellAlternate",
+        "Non-Fissile Uranium",
+        "Silicon Circuit BoardAlternate",
+        "Silicon High-Speed ConnectorAlternate"
+      ]
+    },
+    {
+      "name": "Singularity Cell",
+      "url": "/wiki/Singularity_Cell",
+      "producers": [
+        "Singularity Cell"
+      ],
+      "consumers": [
+        "Ballistic Warp Drive",
+        "Ficsonium"
+      ]
+    },
+    {
+      "name": "Small Billboard",
+      "url": "/wiki/Small_Billboard",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Smart Plating",
+      "url": "/wiki/Smart_Plating",
+      "producers": [
+        "Plastic Smart PlatingAlternate",
+        "Smart Plating"
+      ],
+      "consumers": [
+        "Modular Engine"
+      ]
+    },
+    {
+      "name": "Smart Splitter",
+      "url": "/wiki/Smart_Splitter",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Smelter",
+      "url": "/wiki/Smelter",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Smokeless Powder",
+      "url": "/wiki/Smokeless_Powder",
+      "producers": [
+        "Smokeless Powder"
+      ],
+      "consumers": [
+        "Cluster Nobelisk",
+        "Explosive Rebar",
+        "Nuke Nobelisk",
+        "Rifle Ammo"
+      ]
+    },
+    {
+      "name": "Solid Biofuel",
+      "url": "/wiki/Solid_Biofuel",
+      "producers": [
+        "Solid Biofuel"
+      ],
+      "consumers": [
+        "Liquid Biofuel"
+      ]
+    },
+    {
+      "name": "Somersloop",
+      "url": "/wiki/Somersloop",
+      "producers": [],
+      "consumers": [],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Space Elevator",
+      "url": "/wiki/Space_Elevator",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Spitter Remains",
+      "url": "/wiki/Spitter_Remains",
+      "producers": [],
+      "consumers": [
+        "Spitter Protein"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Square Sign (0.5 m)",
+      "url": "/wiki/Square_Sign_(0.5_m)",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Square Sign (1 m)",
+      "url": "/wiki/Square_Sign_(1_m)",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Square Sign (2 m)",
+      "url": "/wiki/Square_Sign_(2_m)",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Stackable Conveyor Pole",
+      "url": "/wiki/Stackable_Conveyor_Pole",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Stackable Hypertube Support",
+      "url": "/wiki/Stackable_Hypertube_Support",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Stackable Pipeline Support",
+      "url": "/wiki/Stackable_Pipeline_Support",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Stator",
+      "url": "/wiki/Stator",
+      "producers": [
+        "Quickwire StatorAlternate",
+        "Stator"
+      ],
+      "consumers": [
+        "Automated Speed WiringAlternate",
+        "Automated Wiring",
+        "Electromagnetic Connection RodAlternate",
+        "Electromagnetic Control Rod",
+        "Motor",
+        "Rigor MotorAlternate",
+        "Turbo Pressure MotorAlternate"
+      ]
+    },
+    {
+      "name": "Statues",
+      "url": "/wiki/Statues",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Steel Beam",
+      "url": "/wiki/Steel_Beam",
+      "producers": [
+        "Aluminum BeamAlternate",
+        "Molded BeamAlternate",
+        "Steel Beam"
+      ],
+      "consumers": [
+        "Encased Industrial Beam",
+        "Flexible FrameworkAlternate",
+        "Nobelisk Detonator",
+        "Plutonium Fuel Rod",
+        "Steel ScrewAlternate",
+        "Versatile Framework"
+      ]
+    },
+    {
+      "name": "Steel Ingot",
+      "url": "/wiki/Steel_Ingot",
+      "producers": [
+        "Coke Steel IngotAlternate",
+        "Compacted Steel IngotAlternate",
+        "Solid Steel IngotAlternate",
+        "Steel Ingot"
+      ],
+      "consumers": [
+        "Molded BeamAlternate",
+        "Molded Steel PipeAlternate",
+        "Steel Beam",
+        "Steel CanisterAlternate",
+        "Steel Cast PlateAlternate",
+        "Steel Pipe",
+        "Steel RodAlternate"
+      ]
+    },
+    {
+      "name": "Steel Pipe",
+      "url": "/wiki/Steel_Pipe",
+      "producers": [
+        "Iron PipeAlternate",
+        "Molded Steel PipeAlternate",
+        "Steel Pipe"
+      ],
+      "consumers": [
+        "Automated MinerAlternate",
+        "Encased Industrial PipeAlternate",
+        "Explosive Rebar",
+        "Gas Mask",
+        "Heavy Encased FrameAlternate",
+        "Heavy Modular Frame",
+        "Jetpack",
+        "Nobelisk",
+        "Quickwire StatorAlternate",
+        "Rifle",
+        "SAM Fluctuator",
+        "Stator",
+        "Steel RotorAlternate",
+        "Steeled FrameAlternate"
+      ]
+    },
+    {
+      "name": "Stinger Remains",
+      "url": "/wiki/Stinger_Remains",
+      "producers": [],
+      "consumers": [
+        "Stinger Protein"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Storage Container",
+      "url": "/wiki/Storage_Container",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Straight Catwalk",
+      "url": "/wiki/Straight_Catwalk",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Street Light",
+      "url": "/wiki/Street_Light",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Stun Rebar",
+      "url": "/wiki/Stun_Rebar",
+      "producers": [
+        "Stun Rebar"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Sulfur",
+      "url": "/wiki/Sulfur",
+      "producers": [
+        "Sulfur (Coal)",
+        "Sulfur (Iron)"
+      ],
+      "consumers": [
+        "Black Powder",
+        "Classic BatteryAlternate",
+        "Compacted CoalAlternate",
+        "Copper Ore (Sulfur)",
+        "Fine Black PowderAlternate",
+        "Infused Uranium CellAlternate",
+        "Limestone (Sulfur)",
+        "Nitro Rocket FuelAlternate",
+        "Sulfuric Acid",
+        "Turbo Blend FuelAlternate"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Sulfuric Acid",
+      "url": "/wiki/Sulfuric_Acid",
+      "producers": [
+        "Encased Uranium Cell",
+        "Sulfuric Acid",
+        "Unpackage Sulfuric Acid"
+      ],
+      "consumers": [
+        "Battery",
+        "Encased Uranium Cell",
+        "Fertile UraniumAlternate",
+        "Instant ScrapAlternate",
+        "Leached Caterium IngotAlternate",
+        "Leached Copper IngotAlternate",
+        "Leached Iron ingotAlternate",
+        "Non-Fissile Uranium",
+        "Packaged Sulfuric Acid"
+      ]
+    },
+    {
+      "name": "Supercomputer",
+      "url": "/wiki/Supercomputer",
+      "producers": [
+        "OC SupercomputerAlternate",
+        "Super-State ComputerAlternate",
+        "Supercomputer"
+      ],
+      "consumers": [
+        "Assembly Director System",
+        "Neural-Quantum Processor"
+      ]
+    },
+    {
+      "name": "Superposition Oscillator",
+      "url": "/wiki/Superposition_Oscillator",
+      "producers": [
+        "Superposition Oscillator"
+      ],
+      "consumers": [
+        "AI Expansion Server",
+        "Alien Power Matrix",
+        "Ballistic Warp Drive"
+      ]
+    },
+    {
+      "name": "Tarp Construction Fence",
+      "url": "/wiki/Tarp_Construction_Fence",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "The HUB",
+      "url": "/wiki/The_HUB",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Thermal Propulsion Rocket",
+      "url": "/wiki/Thermal_Propulsion_Rocket",
+      "producers": [
+        "Thermal Propulsion Rocket"
+      ],
+      "consumers": [
+        "Ballistic Warp Drive"
+      ]
+    },
+    {
+      "name": "Time Crystal",
+      "url": "/wiki/Time_Crystal",
+      "producers": [
+        "Time Crystal"
+      ],
+      "consumers": [
+        "Dark Matter TrapAlternate",
+        "Neural-Quantum Processor",
+        "Synthetic Power Shard"
+      ]
+    },
+    {
+      "name": "Tractor",
+      "url": "/wiki/Tractor",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Train Station",
+      "url": "/wiki/Train_Station",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Truck",
+      "url": "/wiki/Truck",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Truck Station",
+      "url": "/wiki/Truck_Station",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Turbo Motor",
+      "url": "/wiki/Turbo_Motor",
+      "producers": [
+        "Turbo Electric MotorAlternate",
+        "Turbo Motor",
+        "Turbo Pressure MotorAlternate"
+      ],
+      "consumers": [
+        "Thermal Propulsion Rocket"
+      ]
+    },
+    {
+      "name": "Turbo Rifle Ammo",
+      "url": "/wiki/Turbo_Rifle_Ammo",
+      "producers": [
+        "Turbo Rifle Ammo"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Turbofuel",
+      "url": "/wiki/Turbofuel",
+      "producers": [
+        "Turbo Blend FuelAlternate",
+        "Turbo Heavy FuelAlternate",
+        "TurbofuelAlternate",
+        "Unpackage Turbofuel"
+      ],
+      "consumers": [
+        "Packaged Turbofuel",
+        "Rocket Fuel"
+      ]
+    },
+    {
+      "name": "U-Jelly Landing Pad",
+      "url": "/wiki/U-Jelly_Landing_Pad",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Uranium",
+      "url": "/wiki/Uranium",
+      "producers": [
+        "Uranium Ore (Bauxite)"
+      ],
+      "consumers": [
+        "Encased Uranium Cell",
+        "Fertile UraniumAlternate",
+        "Infused Uranium CellAlternate"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Uranium Fuel Rod",
+      "url": "/wiki/Uranium_Fuel_Rod",
+      "producers": [
+        "Uranium Fuel Rod",
+        "Uranium Fuel UnitAlternate"
+      ],
+      "consumers": [
+        "Uranium Fuel Rod (burning)"
+      ]
+    },
+    {
+      "name": "Uranium Waste",
+      "url": "/wiki/Uranium_Waste",
+      "producers": [
+        "Uranium Fuel Rod (burning)"
+      ],
+      "consumers": [
+        "Fertile UraniumAlternate",
+        "Non-Fissile Uranium",
+        "Plutonium Pellet"
+      ]
+    },
+    {
+      "name": "Valve",
+      "url": "/wiki/Valve",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Versatile Framework",
+      "url": "/wiki/Versatile_Framework",
+      "producers": [
+        "Flexible FrameworkAlternate",
+        "Versatile Framework"
+      ],
+      "consumers": [
+        "Magnetic Field Generator"
+      ]
+    },
+    {
+      "name": "Vines",
+      "url": "/wiki/Vines",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Wall Outlet Mk.1",
+      "url": "/wiki/Wall_Outlet_Mk.1",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Wall Outlet Mk.2",
+      "url": "/wiki/Wall_Outlet_Mk.2",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Wall Outlet Mk.3",
+      "url": "/wiki/Wall_Outlet_Mk.3",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Wall-Mounted Flood Light",
+      "url": "/wiki/Wall-Mounted_Flood_Light",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Water",
+      "url": "/wiki/Water",
+      "producers": [
+        "Aluminum Scrap",
+        "Battery",
+        "Distilled SilicaAlternate",
+        "Electrode Aluminum ScrapAlternate",
+        "Fertile UraniumAlternate",
+        "Instant ScrapAlternate",
+        "Non-Fissile Uranium",
+        "Unpackage Water"
+      ],
+      "consumers": [
+        "Alumina Solution",
+        "Biochemical Sculptor",
+        "Cooling System",
+        "Diluted FuelAlternate",
+        "Distilled SilicaAlternate",
+        "Instant ScrapAlternate",
+        "Liquid Biofuel",
+        "Nitric Acid",
+        "Packaged Water",
+        "Plutonium Fuel Rod (burning)",
+        "Polyester FabricAlternate",
+        "Pure Caterium IngotAlternate",
+        "Pure Copper IngotAlternate",
+        "Pure Iron IngotAlternate",
+        "Pure Quartz CrystalAlternate",
+        "Residual Plastic",
+        "Residual Rubber",
+        "Sloppy AluminaAlternate",
+        "Steamed Copper SheetAlternate",
+        "Sulfuric Acid",
+        "Uranium Fuel Rod (burning)",
+        "Wet ConcreteAlternate"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Water Extractor",
+      "url": "/wiki/Water_Extractor",
+      "producers": [],
+      "consumers": []
+    },
+    {
+      "name": "Wire",
+      "url": "/wiki/Wire",
+      "producers": [
+        "Caterium WireAlternate",
+        "Fused WireAlternate",
+        "Iron WireAlternate",
+        "Wire"
+      ],
+      "consumers": [
+        "Automated Speed WiringAlternate",
+        "Cable",
+        "Classic BatteryAlternate",
+        "Coated CableAlternate",
+        "Insulated CableAlternate",
+        "Jetpack",
+        "Object Scanner",
+        "SAM Fluctuator",
+        "Stator",
+        "Steel RotorAlternate",
+        "Stitched Iron PlateAlternate",
+        "Super-State ComputerAlternate",
+        "Xeno-Basher",
+        "Xeno-Zapper"
+      ]
+    },
+    {
+      "name": "Wood",
+      "url": "/wiki/Wood",
+      "producers": [],
+      "consumers": [
+        "Biomass (Wood)",
+        "CharcoalAlternate"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Xeno-Basher",
+      "url": "/wiki/Xeno-Basher",
+      "producers": [
+        "Xeno-Basher"
+      ],
+      "consumers": []
+    },
+    {
+      "name": "Xeno-Zapper",
+      "url": "/wiki/Xeno-Zapper",
+      "producers": [
+        "Xeno-Zapper"
+      ],
+      "consumers": [
+        "Xeno-Basher",
+        "Zipline"
+      ]
+    },
+    {
+      "name": "Yellow Power Slug",
+      "url": "/wiki/Yellow_Power_Slug",
+      "producers": [],
+      "consumers": [
+        "Power Shard (2)"
+      ],
+      "level": 0,
+      "type": "ore"
+    },
+    {
+      "name": "Zipline",
+      "url": "/wiki/Zipline",
+      "producers": [
+        "Zipline"
+      ],
+      "consumers": []
+    }
+  ]
+}

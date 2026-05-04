@@ -1,79 +1,2459 @@
 [
-  { "id": "iron-ore", "name": "Minerai de fer", "nameEn": "Iron Ore", "category": "Resource", "isFluid": false },
-  { "id": "copper-ore", "name": "Minerai de cuivre", "nameEn": "Copper Ore", "category": "Resource", "isFluid": false },
-  { "id": "limestone", "name": "Calcaire", "nameEn": "Limestone", "category": "Resource", "isFluid": false },
-  { "id": "coal", "name": "Charbon", "nameEn": "Coal", "category": "Resource", "isFluid": false },
-  { "id": "caterium-ore", "name": "Minerai de caterium", "nameEn": "Caterium Ore", "category": "Resource", "isFluid": false },
-  { "id": "raw-quartz", "name": "Quartz brut", "nameEn": "Raw Quartz", "category": "Resource", "isFluid": false },
-  { "id": "sulfur", "name": "Soufre", "nameEn": "Sulfur", "category": "Resource", "isFluid": false },
-  { "id": "bauxite", "name": "Bauxite", "nameEn": "Bauxite", "category": "Resource", "isFluid": false },
-  { "id": "uranium", "name": "Uranium", "nameEn": "Uranium", "category": "Resource", "isFluid": false },
-  { "id": "sam-ore", "name": "Minerai de SAM", "nameEn": "SAM Ore", "category": "Resource", "isFluid": false },
-  { "id": "water", "name": "Eau", "nameEn": "Water", "category": "Resource", "isFluid": true },
-  { "id": "crude-oil", "name": "Pétrole brut", "nameEn": "Crude Oil", "category": "Resource", "isFluid": true },
-  { "id": "nitrogen-gas", "name": "Azote gazeux", "nameEn": "Nitrogen Gas", "category": "Resource", "isFluid": true },
-
-  { "id": "iron-ingot", "name": "Lingot de fer", "nameEn": "Iron Ingot", "category": "Component", "isFluid": false },
-  { "id": "copper-ingot", "name": "Lingot de cuivre", "nameEn": "Copper Ingot", "category": "Component", "isFluid": false },
-  { "id": "caterium-ingot", "name": "Lingot de caterium", "nameEn": "Caterium Ingot", "category": "Component", "isFluid": false },
-  { "id": "steel-ingot", "name": "Lingot d'acier", "nameEn": "Steel Ingot", "category": "Component", "isFluid": false },
-  { "id": "aluminum-ingot", "name": "Lingot d'aluminium", "nameEn": "Aluminum Ingot", "category": "Component", "isFluid": false },
-  { "id": "ficsite-ingot", "name": "Lingot de ficsite", "nameEn": "Ficsite Ingot", "category": "Component", "isFluid": false },
-
-  { "id": "iron-plate", "name": "Plaque de fer", "nameEn": "Iron Plate", "category": "Component", "isFluid": false },
-  { "id": "iron-rod", "name": "Tige de fer", "nameEn": "Iron Rod", "category": "Component", "isFluid": false },
-  { "id": "screw", "name": "Vis", "nameEn": "Screw", "category": "Component", "isFluid": false },
-  { "id": "reinforced-iron-plate", "name": "Plaque de fer renforcée", "nameEn": "Reinforced Iron Plate", "category": "Component", "isFluid": false },
-  { "id": "modular-frame", "name": "Cadre modulaire", "nameEn": "Modular Frame", "category": "Component", "isFluid": false },
-  { "id": "heavy-modular-frame", "name": "Cadre modulaire lourd", "nameEn": "Heavy Modular Frame", "category": "Component", "isFluid": false },
-  { "id": "fused-modular-frame", "name": "Cadre modulaire fusionné", "nameEn": "Fused Modular Frame", "category": "Component", "isFluid": false },
-  { "id": "steel-beam", "name": "Poutre en acier", "nameEn": "Steel Beam", "category": "Component", "isFluid": false },
-  { "id": "steel-pipe", "name": "Tuyau en acier", "nameEn": "Steel Pipe", "category": "Component", "isFluid": false },
-  { "id": "copper-sheet", "name": "Tôle de cuivre", "nameEn": "Copper Sheet", "category": "Component", "isFluid": false },
-  { "id": "encased-industrial-beam", "name": "Poutre industrielle encastrée", "nameEn": "Encased Industrial Beam", "category": "Component", "isFluid": false },
-  { "id": "rotor", "name": "Rotor", "nameEn": "Rotor", "category": "Component", "isFluid": false },
-  { "id": "stator", "name": "Stator", "nameEn": "Stator", "category": "Component", "isFluid": false },
-  { "id": "motor", "name": "Moteur", "nameEn": "Motor", "category": "Component", "isFluid": false },
-
-  { "id": "plastic", "name": "Plastique", "nameEn": "Plastic", "category": "Component", "isFluid": false },
-  { "id": "rubber", "name": "Caoutchouc", "nameEn": "Rubber", "category": "Component", "isFluid": false },
-  { "id": "polymer-resin", "name": "Résine polymère", "nameEn": "Polymer Resin", "category": "Component", "isFluid": false },
-  { "id": "petroleum-coke", "name": "Coke de pétrole", "nameEn": "Petroleum Coke", "category": "Component", "isFluid": false },
-
-  { "id": "wire", "name": "Fil électrique", "nameEn": "Wire", "category": "Component", "isFluid": false },
-  { "id": "cable", "name": "Câble", "nameEn": "Cable", "category": "Component", "isFluid": false },
-  { "id": "quickwire", "name": "Fil actif", "nameEn": "Quickwire", "category": "Component", "isFluid": false },
-  { "id": "circuit-board", "name": "Circuit imprimé", "nameEn": "Circuit Board", "category": "Component", "isFluid": false },
-  { "id": "ai-limiter", "name": "Limiteur d'IA", "nameEn": "AI Limiter", "category": "Component", "isFluid": false },
-  { "id": "high-speed-connector", "name": "Connecteur haute vitesse", "nameEn": "High-Speed Connector", "category": "Component", "isFluid": false },
-  { "id": "computer", "name": "Ordinateur", "nameEn": "Computer", "category": "Component", "isFluid": false },
-  { "id": "supercomputer", "name": "Supercalculateur", "nameEn": "Supercomputer", "category": "Component", "isFluid": false },
-
-  { "id": "alclad-aluminum-sheet", "name": "Tôle d'aluminium Alclad", "nameEn": "Alclad Aluminum Sheet", "category": "Component", "isFluid": false },
-  { "id": "aluminum-casing", "name": "Boîtier en aluminium", "nameEn": "Aluminum Casing", "category": "Component", "isFluid": false },
-  { "id": "aluminum-scrap", "name": "Ressuage d'aluminium", "nameEn": "Aluminum Scrap", "category": "Component", "isFluid": false },
-
-  { "id": "concrete", "name": "Béton", "nameEn": "Concrete", "category": "Component", "isFluid": false },
-  { "id": "quartz-crystal", "name": "Cristal de quartz", "nameEn": "Quartz Crystal", "category": "Component", "isFluid": false },
-  { "id": "silica", "name": "Silice", "nameEn": "Silica", "category": "Component", "isFluid": false },
-  { "id": "crystal-oscillator", "name": "Oscillateur à cristal", "nameEn": "Crystal Oscillator", "category": "Component", "isFluid": false },
-
-  { "id": "smart-plating", "name": "Placage intelligent", "nameEn": "Smart Plating", "category": "Component", "isFluid": false },
-  { "id": "versatile-framework", "name": "Structure polyvalente", "nameEn": "Versatile Framework", "category": "Component", "isFluid": false },
-  { "id": "automated-wiring", "name": "Câblage automatisé", "nameEn": "Automated Wiring", "category": "Component", "isFluid": false },
-  { "id": "radio-control-unit", "name": "Unité de contrôle radio", "nameEn": "Radio Control Unit", "category": "Component", "isFluid": false },
-  { "id": "battery", "name": "Batterie", "nameEn": "Battery", "category": "Component", "isFluid": false },
-  { "id": "modular-engine", "name": "Moteur modulaire", "nameEn": "Modular Engine", "category": "Component", "isFluid": false },
-  { "id": "adaptive-control-unit", "name": "Unité de contrôle adaptative", "nameEn": "Adaptive Control Unit", "category": "Component", "isFluid": false },
-  { "id": "assembly-director-system", "name": "Système directeur d'assemblage", "nameEn": "Assembly Director System", "category": "Component", "isFluid": false },
-  { "id": "magnetic-field-generator", "name": "Générateur de champ magnétique", "nameEn": "Magnetic Field Generator", "category": "Component", "isFluid": false },
-  { "id": "thermal-propulsion-rocket", "name": "Fusée à propulsion thermique", "nameEn": "Thermal Propulsion Rocket", "category": "Component", "isFluid": false },
-  { "id": "nuclear-pasta", "name": "Pâtes nucléaires", "nameEn": "Nuclear Pasta", "category": "Component", "isFluid": false },
-
-  { "id": "fuel", "name": "Carburant", "nameEn": "Fuel", "category": "Fuel", "isFluid": true },
-  { "id": "turbofuel", "name": "Turbocarburant", "nameEn": "Turbofuel", "category": "Fuel", "isFluid": true },
-  { "id": "heavy-oil-residue", "name": "Résidu d'huile lourde", "nameEn": "Heavy Oil Residue", "category": "Waste", "isFluid": true },
-  { "id": "alumina-solution", "name": "Solution d'alumine", "nameEn": "Alumina Solution", "category": "Component", "isFluid": true },
-  { "id": "sulfuric-acid", "name": "Acide sulfurique", "nameEn": "Sulfuric Acid", "category": "Component", "isFluid": true },
-  { "id": "nitric-acid", "name": "Acide nitrique", "nameEn": "Nitric Acid", "category": "Component", "isFluid": true }
+  {
+    "id": "ai-expansion-server",
+    "name": "Serveur d'extension d'IA",
+    "nameEn": "AI Expansion Server",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ai-limiter",
+    "name": "Limiteur d'IA",
+    "nameEn": "AI Limiter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "awesome-shop",
+    "name": "Magasin AWESOME",
+    "nameEn": "AWESOME Shop",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "awesome-sink",
+    "name": "Broyeur AWESOME",
+    "nameEn": "AWESOME Sink",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "adaptive-control-unit",
+    "name": "Unité de contrôle adaptative",
+    "nameEn": "Adaptive Control Unit",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "alclad-aluminum-sheet",
+    "name": "Tôle d'aluminium alclad",
+    "nameEn": "Alclad Aluminum Sheet",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "alien-dna-capsule",
+    "name": "Capsule d'ADN étranger",
+    "nameEn": "Alien DNA Capsule",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "alien-power-augmenter",
+    "name": "Augmenteur de puissance étranger",
+    "nameEn": "Alien Power Augmenter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "alien-power-matrix",
+    "name": "Matrice de puissance étrangère",
+    "nameEn": "Alien Power Matrix",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "alien-protein",
+    "name": "Protéine étrangère",
+    "nameEn": "Alien Protein",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "alien-remains",
+    "name": "Restes étrangers",
+    "nameEn": "Alien Remains",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "alumina-solution",
+    "name": "Solution d'alumine",
+    "nameEn": "Alumina Solution",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "aluminum-casing",
+    "name": "Boîtier en aluminium",
+    "nameEn": "Aluminum Casing",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "aluminum-ingot",
+    "name": "Lingot d'aluminium",
+    "nameEn": "Aluminum Ingot",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "aluminum-scrap",
+    "name": "Débris d'aluminium",
+    "nameEn": "Aluminum Scrap",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "assembler",
+    "name": "Assembleuse",
+    "nameEn": "Assembler",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "assembly-director-system",
+    "name": "Système de directeur d'assemblage",
+    "nameEn": "Assembly Director System",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "automated-gate",
+    "name": "Portail automatisé",
+    "nameEn": "Automated Gate",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "automated-wiring",
+    "name": "Câblage automatisé",
+    "nameEn": "Automated Wiring",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "bacon-agaric",
+    "name": "Agaric de bacon",
+    "nameEn": "Bacon Agaric",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "ballistic-warp-drive",
+    "name": "Propulseur à distorsion balistique",
+    "nameEn": "Ballistic Warp Drive",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "battery",
+    "name": "Batterie",
+    "nameEn": "Battery",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "bauxite",
+    "name": "Bauxite",
+    "nameEn": "Bauxite",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "beacon",
+    "name": "Balise",
+    "nameEn": "Beacon",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "beam-connector",
+    "name": "Connecteur de poutre",
+    "nameEn": "Beam Connector",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "beam-support",
+    "name": "Support de poutre",
+    "nameEn": "Beam Support",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "beryl-nut",
+    "name": "Noisette de béryl",
+    "nameEn": "Beryl Nut",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "biochemical-sculptor",
+    "name": "Sculpteur biochimique",
+    "nameEn": "Biochemical Sculptor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "biomass",
+    "name": "Biomasse",
+    "nameEn": "Biomass",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "biomass-burner",
+    "name": "Brûleur de biomasse",
+    "nameEn": "Biomass Burner",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "black-powder",
+    "name": "Poudre noire",
+    "nameEn": "Black Powder",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "blade-runners",
+    "name": "Exosquelette",
+    "nameEn": "Blade Runners",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "blender",
+    "name": "Mélangeuse",
+    "nameEn": "Blender",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "block-signal",
+    "name": "Signal de bloc",
+    "nameEn": "Block Signal",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "blue-power-slug",
+    "name": "Limace de puissance bleue",
+    "nameEn": "Blue Power Slug",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "blueprint-designer-mk-1",
+    "name": "Concepteur de plans Mk.1",
+    "nameEn": "Blueprint Designer Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "blueprint-designer-mk-2",
+    "name": "Concepteur de plans Mk.2",
+    "nameEn": "Blueprint Designer Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "blueprint-designer-mk-3",
+    "name": "Concepteur de plans Mk.3",
+    "nameEn": "Blueprint Designer Mk.3",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "boom-box",
+    "name": "Boom Box",
+    "nameEn": "Boom Box",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "cable",
+    "name": "Câble",
+    "nameEn": "Cable",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "caterium-ingot",
+    "name": "Lingot de caterium",
+    "nameEn": "Caterium Ingot",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "caterium-ore",
+    "name": "Minerai de caterium",
+    "nameEn": "Caterium Ore",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "catwalk-corner",
+    "name": "Passerelle - Angle",
+    "nameEn": "Catwalk Corner",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "catwalk-intersection",
+    "name": "Passerelle - Intersection",
+    "nameEn": "Catwalk Intersection",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "catwalk-ramp",
+    "name": "Passerelle - Rampe",
+    "nameEn": "Catwalk Ramp",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "catwalk-stairs",
+    "name": "Passerelle - Escalier",
+    "nameEn": "Catwalk Stairs",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "catwalk-t-junction",
+    "name": "Passerelle - Jonction en T",
+    "nameEn": "Catwalk T-Junction",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ceiling-light",
+    "name": "Plafonnier",
+    "nameEn": "Ceiling Light",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "chainsaw",
+    "name": "Tronçonneuse",
+    "nameEn": "Chainsaw",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "circuit-board",
+    "name": "Circuit imprimé",
+    "nameEn": "Circuit Board",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "clean-pipeline-mk-1",
+    "name": "Pipeline propre Mk.1",
+    "nameEn": "Clean Pipeline Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "clean-pipeline-mk-2",
+    "name": "Pipeline propre Mk.2",
+    "nameEn": "Clean Pipeline Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "cluster-nobelisk",
+    "name": "Nobelisk à fragmentation",
+    "nameEn": "Cluster Nobelisk",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "coal",
+    "name": "Charbon",
+    "nameEn": "Coal",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "coal-powered-generator",
+    "name": "Générateur à charbon",
+    "nameEn": "Coal-Powered Generator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "color-cartridge",
+    "name": "Cartouche de couleur",
+    "nameEn": "Color Cartridge",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "compacted-coal",
+    "name": "Charbon compacté",
+    "nameEn": "Compacted Coal",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "computer",
+    "name": "Ordinateur",
+    "nameEn": "Computer",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "concrete",
+    "name": "Béton",
+    "nameEn": "Concrete",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "construction-fence",
+    "name": "Barrière de chantier",
+    "nameEn": "Construction Fence",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "constructor",
+    "name": "Constructeur",
+    "nameEn": "Constructor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "converter",
+    "name": "Convertisseur",
+    "nameEn": "Converter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-belt-mk-1",
+    "name": "Convoyeur Mk.1",
+    "nameEn": "Conveyor Belt Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-belt-mk-2",
+    "name": "Convoyeur Mk.2",
+    "nameEn": "Conveyor Belt Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-belt-mk-3",
+    "name": "Convoyeur Mk.3",
+    "nameEn": "Conveyor Belt Mk.3",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-belt-mk-4",
+    "name": "Convoyeur Mk.4",
+    "nameEn": "Conveyor Belt Mk.4",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-belt-mk-5",
+    "name": "Convoyeur Mk.5",
+    "nameEn": "Conveyor Belt Mk.5",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-belt-mk-6",
+    "name": "Convoyeur Mk.6",
+    "nameEn": "Conveyor Belt Mk.6",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-ceiling-mount",
+    "name": "Support de convoyeur de plafond",
+    "nameEn": "Conveyor Ceiling Mount",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-lift-floor-hole",
+    "name": "Passage de convoyeur vertical pour sol",
+    "nameEn": "Conveyor Lift Floor Hole",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-lift-mk-1",
+    "name": "Convoyeur vertical Mk.1",
+    "nameEn": "Conveyor Lift Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-lift-mk-2",
+    "name": "Convoyeur vertical Mk.2",
+    "nameEn": "Conveyor Lift Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-lift-mk-3",
+    "name": "Convoyeur vertical Mk.3",
+    "nameEn": "Conveyor Lift Mk.3",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-lift-mk-4",
+    "name": "Convoyeur vertical Mk.4",
+    "nameEn": "Conveyor Lift Mk.4",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-lift-mk-5",
+    "name": "Convoyeur vertical Mk.5",
+    "nameEn": "Conveyor Lift Mk.5",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-lift-mk-6",
+    "name": "Convoyeur vertical Mk.6",
+    "nameEn": "Conveyor Lift Mk.6",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-merger",
+    "name": "Groupeur de convoyeurs",
+    "nameEn": "Conveyor Merger",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-pole",
+    "name": "Poteau de convoyeur",
+    "nameEn": "Conveyor Pole",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-splitter",
+    "name": "Répartiteur de convoyeur",
+    "nameEn": "Conveyor Splitter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "conveyor-wall-mount",
+    "name": "Support de convoyeur mural",
+    "nameEn": "Conveyor Wall Mount",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "cooling-system",
+    "name": "Système de refroidissement",
+    "nameEn": "Cooling System",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "copper-ingot",
+    "name": "Lingot de cuivre",
+    "nameEn": "Copper Ingot",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "copper-ore",
+    "name": "Minerai de cuivre",
+    "nameEn": "Copper Ore",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "copper-powder",
+    "name": "Poudre de cuivre",
+    "nameEn": "Copper Powder",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "copper-sheet",
+    "name": "Tôle de cuivre",
+    "nameEn": "Copper Sheet",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "crafting-bench",
+    "name": "Atelier",
+    "nameEn": "Crafting Bench",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "crude-oil",
+    "name": "Pétrole brut",
+    "nameEn": "Crude Oil",
+    "category": "Resource",
+    "isFluid": true
+  },
+  {
+    "id": "crystal-oscillator",
+    "name": "Oscillateur à cristal",
+    "nameEn": "Crystal Oscillator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "cup",
+    "name": "Tasse",
+    "nameEn": "Cup",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "cyber-wagon",
+    "name": "Cyber-wagon",
+    "nameEn": "Cyber Wagon",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "dark-matter-crystal",
+    "name": "Cristal de matière noire",
+    "nameEn": "Dark Matter Crystal",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "dark-matter-residue",
+    "name": "Résidu de matière noire",
+    "nameEn": "Dark Matter Residue",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "desc-stair-concrete-8x1-c",
+    "name": "Desc_Stair_Concrete_8x1_C",
+    "nameEn": "Desc_Stair_Concrete_8x1_C",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "desc-stair-gripmetal-8x2-c",
+    "name": "Desc_Stair_GripMetal_8x2_C",
+    "nameEn": "Desc_Stair_GripMetal_8x2_C",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "desc-stair-gripmetal-8x4-c",
+    "name": "Desc_Stair_GripMetal_8x4_C",
+    "nameEn": "Desc_Stair_GripMetal_8x4_C",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "desc-xmasballcluster-c",
+    "name": "Desc_XmasBallCluster_C",
+    "nameEn": "Desc_XmasBallCluster_C",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "desc-xmasbranch-c",
+    "name": "Desc_XmasBranch_C",
+    "nameEn": "Desc_XmasBranch_C",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "diamonds",
+    "name": "Diamants",
+    "nameEn": "Diamonds",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "dimensional-depot-uploader",
+    "name": "Téléchargeur de dépôt dimensionnel",
+    "nameEn": "Dimensional Depot Uploader",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "display-sign",
+    "name": "Panneau d'affichage",
+    "nameEn": "Display Sign",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "dissolved-silica",
+    "name": "Silice dissoute",
+    "nameEn": "Dissolved Silica",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "double-beam-connector",
+    "name": "Connecteur de poutre double",
+    "nameEn": "Double Beam Connector",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "double-wall-outlet-mk-1",
+    "name": "Prise murale double Mk.1",
+    "nameEn": "Double Wall Outlet Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "double-wall-outlet-mk-2",
+    "name": "Prise murale double Mk.2",
+    "nameEn": "Double Wall Outlet Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "double-wall-outlet-mk-3",
+    "name": "Prise murale double Mk.3",
+    "nameEn": "Double Wall Outlet Mk.3",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "drone",
+    "name": "Drone",
+    "nameEn": "Drone",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "drone-port",
+    "name": "Port de drones",
+    "nameEn": "Drone Port",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "electric-locomotive",
+    "name": "Locomotive électrique",
+    "nameEn": "Electric Locomotive",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "electromagnetic-control-rod",
+    "name": "Tige de contrôle électromagnétique",
+    "nameEn": "Electromagnetic Control Rod",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "empty-canister",
+    "name": "Bidon vide",
+    "nameEn": "Empty Canister",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "empty-fluid-tank",
+    "name": "Réservoir de fluide vide",
+    "nameEn": "Empty Fluid Tank",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "empty-platform",
+    "name": "Quai vide",
+    "nameEn": "Empty Platform",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "empty-platform-with-catwalk",
+    "name": "Quai vide avec passerelle",
+    "nameEn": "Empty Platform With Catwalk",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "encased-industrial-beam",
+    "name": "Poutre industrielle encastrée",
+    "nameEn": "Encased Industrial Beam",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "encased-plutonium-cell",
+    "name": "Cellule de plutonium encastrée",
+    "nameEn": "Encased Plutonium Cell",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "encased-uranium-cell",
+    "name": "Cellule d'uranium encastrée",
+    "nameEn": "Encased Uranium Cell",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "equipment-workshop",
+    "name": "Atelier d'équipement",
+    "nameEn": "Equipment Workshop",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "excited-photonic-matter",
+    "name": "Matière photonique excitée",
+    "nameEn": "Excited Photonic Matter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "explorer",
+    "name": "Explorateur",
+    "nameEn": "Explorer",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "explosive-rebar",
+    "name": "Barre d'armature explosive",
+    "nameEn": "Explosive Rebar",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ficsit-coupon",
+    "name": "Coupon FICSIT",
+    "nameEn": "FICSIT Coupon",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ficsmas-power-light",
+    "name": "Lumière de Noël FICSIT",
+    "nameEn": "FICSMAS Power Light",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "fabric",
+    "name": "Tissu",
+    "nameEn": "Fabric",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "factory-cart",
+    "name": "Chariot de l'usine",
+    "nameEn": "Factory Cart™",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ficsite-ingot",
+    "name": "Lingot de ficsite",
+    "nameEn": "Ficsite Ingot",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ficsite-trigon",
+    "name": "Trigone de ficsite",
+    "nameEn": "Ficsite Trigon",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ficsonium",
+    "name": "Ficsonium",
+    "nameEn": "Ficsonium",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ficsonium-fuel-rod",
+    "name": "Barre de ficsonium",
+    "nameEn": "Ficsonium Fuel Rod",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "flood-light-tower",
+    "name": "Pylône d'éclairage",
+    "nameEn": "Flood Light Tower",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "flower-petals",
+    "name": "Pétales de fleurs",
+    "nameEn": "Flower Petals",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "fluid-buffer",
+    "name": "Réservoir de fluide",
+    "nameEn": "Fluid Buffer",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "fluid-freight-platform",
+    "name": "Quai de chargement de fluides",
+    "nameEn": "Fluid Freight Platform",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "foundry",
+    "name": "Foundry",
+    "nameEn": "Foundry",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "frame-floor",
+    "name": "Frame Floor",
+    "nameEn": "Frame Floor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "freight-car",
+    "name": "Freight Car",
+    "nameEn": "Freight Car",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "freight-platform",
+    "name": "Freight Platform",
+    "nameEn": "Freight Platform",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "fuel",
+    "name": "Carburant",
+    "nameEn": "Fuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "fuel-powered-generator",
+    "name": "Fuel-Powered Generator",
+    "nameEn": "Fuel-Powered Generator",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "fused-modular-frame",
+    "name": "Cadre modulaire fusionné",
+    "nameEn": "Fused Modular Frame",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "gas-filter",
+    "name": "Filtre à gaz",
+    "nameEn": "Gas Filter",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "gas-mask",
+    "name": "Masque à gaz",
+    "nameEn": "Gas Mask",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "gas-nobelisk",
+    "name": "Nobelisk à gaz",
+    "nameEn": "Gas Nobelisk",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "geothermal-generator",
+    "name": "Générateur géothermique",
+    "nameEn": "Geothermal Generator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "giant-ficsmas-tree",
+    "name": "Arbre de Noël géant",
+    "nameEn": "Giant FICSMAS Tree",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "glass-frame-foundation",
+    "name": "Fondation en verre à cadre",
+    "nameEn": "Glass Frame Foundation",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "golden-factory-cart",
+    "name": "Chariot d'usine doré",
+    "nameEn": "Golden Factory Cart™",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hub-parts",
+    "name": "HUB Parts",
+    "nameEn": "HUB Parts",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "hard-drive",
+    "name": "Hard Drive",
+    "nameEn": "Hard Drive",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "hatcher-remains",
+    "name": "Restes de pondeur",
+    "nameEn": "Hatcher Remains",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "hazard-storage-box",
+    "name": "Coffre de stockage des matières dangereuses",
+    "nameEn": "Hazard Storage Box",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hazmat-suit",
+    "name": "Combinaison antiradiation",
+    "nameEn": "Hazmat Suit",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "heat-sink",
+    "name": "Dissipateur thermique",
+    "nameEn": "Heat Sink",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "heavy-modular-frame",
+    "name": "Cadre modulaire lourd",
+    "nameEn": "Heavy Modular Frame",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "heavy-oil-residue",
+    "name": "Résidu d'huile lourde",
+    "nameEn": "Heavy Oil Residue",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "high-barrier",
+    "name": "Barrière haute",
+    "nameEn": "High Barrier",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "high-speed-connector",
+    "name": "Connecteur haute vitesse",
+    "nameEn": "High-Speed Connector",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hog-remains",
+    "name": "Restes de sanglier",
+    "nameEn": "Hog Remains",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "homing-rifle-ammo",
+    "name": "Munition de fusil à tête chercheuse",
+    "nameEn": "Homing Rifle Ammo",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hoverpack",
+    "name": "Turbo-propulseur",
+    "nameEn": "Hoverpack",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hypertube",
+    "name": "Hypertube",
+    "nameEn": "Hypertube",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hypertube-entrance",
+    "name": "Entrée d'hypertube",
+    "nameEn": "Hypertube Entrance",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hypertube-floor-hole",
+    "name": "Passage d'hypertube pour sol",
+    "nameEn": "Hypertube Floor Hole",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hypertube-support",
+    "name": "Support d'hypertube",
+    "nameEn": "Hypertube Support",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hypertube-wall-hole",
+    "name": "Passage d'hypertube mural",
+    "nameEn": "Hypertube Wall Hole",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "hypertube-wall-support",
+    "name": "Support d'hypertube mural",
+    "nameEn": "Hypertube Wall Support",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "industrial-fluid-buffer",
+    "name": "Réservoir de fluide industriel",
+    "nameEn": "Industrial Fluid Buffer",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "industrial-storage-container",
+    "name": "Conteneur de stockage industriel",
+    "nameEn": "Industrial Storage Container",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "iodine-infused-filter",
+    "name": "Filtre infusé à l'iode",
+    "nameEn": "Iodine-Infused Filter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ionized-fuel",
+    "name": "Carburant ionisé",
+    "nameEn": "Ionized Fuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "iron-ingot",
+    "name": "Lingot de fer",
+    "nameEn": "Iron Ingot",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "iron-ore",
+    "name": "Minerai de fer",
+    "nameEn": "Iron Ore",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "iron-plate",
+    "name": "Plaque de fer",
+    "nameEn": "Iron Plate",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "iron-rebar",
+    "name": "Barre d'armature en fer",
+    "nameEn": "Iron Rebar",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "iron-rod",
+    "name": "Tige de fer",
+    "nameEn": "Iron Rod",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "jetpack",
+    "name": "Jetpack",
+    "nameEn": "Jetpack",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "jump-pad",
+    "name": "Plaque de saut",
+    "nameEn": "Jump Pad",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "label-sign-2-m",
+    "name": "Label Sign (2 m)",
+    "nameEn": "Label Sign (2 m)",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "label-sign-3-m",
+    "name": "Label Sign (3 m)",
+    "nameEn": "Label Sign (3 m)",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "label-sign-4-m",
+    "name": "Label Sign (4 m)",
+    "nameEn": "Label Sign (4 m)",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "ladder",
+    "name": "Échelle",
+    "nameEn": "Ladder",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "large-billboard",
+    "name": "Grand panneau publicitaire",
+    "nameEn": "Large Billboard",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "leaves",
+    "name": "Feuilles",
+    "nameEn": "Leaves",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "light-control-panel",
+    "name": "Panneau de contrôle de l'éclairage",
+    "nameEn": "Light Control Panel",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "limestone",
+    "name": "Calcaire",
+    "nameEn": "Limestone",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "liquid-biofuel",
+    "name": "Biocarburant liquide",
+    "nameEn": "Liquid Biofuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "lookout-tower",
+    "name": "Tour de guet",
+    "nameEn": "Lookout Tower",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "low-barrier",
+    "name": "Barrière basse",
+    "nameEn": "Low Barrier",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "mam",
+    "name": "M.A.M.",
+    "nameEn": "MAM",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "magnetic-field-generator",
+    "name": "Générateur de champ magnétique",
+    "nameEn": "Magnetic Field Generator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "main-portal",
+    "name": "Portail principal",
+    "nameEn": "Main Portal",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "manufacturer",
+    "name": "Façonneuse",
+    "nameEn": "Manufacturer",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "medical-storage-box",
+    "name": "Coffre médical",
+    "nameEn": "Medical Storage Box",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "medicinal-inhaler",
+    "name": "Inhalateur médicinal",
+    "nameEn": "Medicinal Inhaler",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "mercer-sphere",
+    "name": "Sphère de Mercer",
+    "nameEn": "Mercer Sphere",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "metal-beam",
+    "name": "Poutre métallique",
+    "nameEn": "Metal Beam",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "miner",
+    "name": "Miner",
+    "nameEn": "Miner",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "miner-mk-1",
+    "name": "Foreuse Mk.1",
+    "nameEn": "Miner Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "miner-mk-2",
+    "name": "Foreuse Mk.2",
+    "nameEn": "Miner Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "miner-mk-3",
+    "name": "Foreuse Mk.3",
+    "nameEn": "Miner Mk.3",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "modern-railing",
+    "name": "Garde-corps moderne",
+    "nameEn": "Modern Railing",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "modular-engine",
+    "name": "Moteur modulaire",
+    "nameEn": "Modular Engine",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "modular-frame",
+    "name": "Cadre modulaire",
+    "nameEn": "Modular Frame",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "motor",
+    "name": "Moteur",
+    "nameEn": "Motor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "mycelia",
+    "name": "Mycélium",
+    "nameEn": "Mycelia",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "neural-quantum-processor",
+    "name": "Processeur neuro-quantique",
+    "nameEn": "Neural-Quantum Processor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "nitric-acid",
+    "name": "Acide nitrique",
+    "nameEn": "Nitric Acid",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "nitrogen-gas",
+    "name": "Azote gazeux",
+    "nameEn": "Nitrogen Gas",
+    "category": "Resource",
+    "isFluid": true
+  },
+  {
+    "id": "nobelisk",
+    "name": "Nobelisk",
+    "nameEn": "Nobelisk",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "nobelisk-detonator",
+    "name": "Détonateur de Nobelisk",
+    "nameEn": "Nobelisk Detonator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "non-fissile-uranium",
+    "name": "Uranium non fissile",
+    "nameEn": "Non-Fissile Uranium",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "nuclear-pasta",
+    "name": "Pâtes nucléaires",
+    "nameEn": "Nuclear Pasta",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "nuclear-power-plant",
+    "name": "Centrale nucléaire",
+    "nameEn": "Nuclear Power Plant",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "nuke-nobelisk",
+    "name": "Nobelisk nucléaire",
+    "nameEn": "Nuke Nobelisk",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "object-scanner",
+    "name": "Scanner d'objets",
+    "nameEn": "Object Scanner",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "oil-extractor",
+    "name": "Extracteur de pétrole",
+    "nameEn": "Oil Extractor",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-alumina-solution",
+    "name": "Solution d'alumine emballée",
+    "nameEn": "Packaged Alumina Solution",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-fuel",
+    "name": "Carburant emballé",
+    "nameEn": "Packaged Fuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-heavy-oil-residue",
+    "name": "Résidu d'huile lourde emballé",
+    "nameEn": "Packaged Heavy Oil Residue",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-ionized-fuel",
+    "name": "Carburant ionisé emballé",
+    "nameEn": "Packaged Ionized Fuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-liquid-biofuel",
+    "name": "Biocarburant liquide emballé",
+    "nameEn": "Packaged Liquid Biofuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-nitric-acid",
+    "name": "Acide nitrique emballé",
+    "nameEn": "Packaged Nitric Acid",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-nitrogen-gas",
+    "name": "Azote gazeux emballé",
+    "nameEn": "Packaged Nitrogen Gas",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-oil",
+    "name": "Pétrole emballé",
+    "nameEn": "Packaged Oil",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-rocket-fuel",
+    "name": "Carburant de fusée emballé",
+    "nameEn": "Packaged Rocket Fuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-sulfuric-acid",
+    "name": "Acide sulfurique emballé",
+    "nameEn": "Packaged Sulfuric Acid",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-turbofuel",
+    "name": "Turbocarburant emballé",
+    "nameEn": "Packaged Turbofuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packaged-water",
+    "name": "Eau emballée",
+    "nameEn": "Packaged Water",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "packager",
+    "name": "Emballeuse",
+    "nameEn": "Packager",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "painted-beam",
+    "name": "Poutre peinte",
+    "nameEn": "Painted Beam",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "paleberry",
+    "name": "Baie pâle",
+    "nameEn": "Paleberry",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "parachute",
+    "name": "Parachute",
+    "nameEn": "Parachute",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "particle-accelerator",
+    "name": "Accélérateur de particules",
+    "nameEn": "Particle Accelerator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "path-signal",
+    "name": "Signal de chemin",
+    "nameEn": "Path Signal",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "personal-storage-box",
+    "name": "Coffre de stockage personnel",
+    "nameEn": "Personal Storage Box",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "petroleum-coke",
+    "name": "Coke de pétrole",
+    "nameEn": "Petroleum Coke",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-floor-hole",
+    "name": "Passage de pipeline pour sol",
+    "nameEn": "Pipeline Floor Hole",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-junction",
+    "name": "Jonction de pipeline",
+    "nameEn": "Pipeline Junction",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-mk-1",
+    "name": "Pipeline Mk.1",
+    "nameEn": "Pipeline Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-mk-2",
+    "name": "Pipeline Mk.2",
+    "nameEn": "Pipeline Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-pump-mk-1",
+    "name": "Pompe de pipeline Mk.1",
+    "nameEn": "Pipeline Pump Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-pump-mk-2",
+    "name": "Pompe de pipeline Mk.2",
+    "nameEn": "Pipeline Pump Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-support",
+    "name": "Support de pipeline",
+    "nameEn": "Pipeline Support",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-wall-hole",
+    "name": "Passage de pipeline mural",
+    "nameEn": "Pipeline Wall Hole",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pipeline-wall-support",
+    "name": "Support de pipeline mural",
+    "nameEn": "Pipeline Wall Support",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "plastic",
+    "name": "Plastique",
+    "nameEn": "Plastic",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "plutonium-fuel-rod",
+    "name": "Barre de plutonium",
+    "nameEn": "Plutonium Fuel Rod",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "plutonium-pellet",
+    "name": "Boulette de plutonium",
+    "nameEn": "Plutonium Pellet",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "plutonium-waste",
+    "name": "Déchets de plutonium",
+    "nameEn": "Plutonium Waste",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "polymer-resin",
+    "name": "Résine polymère",
+    "nameEn": "Polymer Resin",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "portable-miner",
+    "name": "Foreuse portable",
+    "nameEn": "Portable Miner",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "portrait-sign",
+    "name": "Panneau portrait",
+    "nameEn": "Portrait Sign",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-line",
+    "name": "Ligne électrique",
+    "nameEn": "Power Line",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-pole-mk-1",
+    "name": "Poteau électrique Mk.1",
+    "nameEn": "Power Pole Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-pole-mk-2",
+    "name": "Poteau électrique Mk.2",
+    "nameEn": "Power Pole Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-pole-mk-3",
+    "name": "Poteau électrique Mk.3",
+    "nameEn": "Power Pole Mk.3",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-shard",
+    "name": "Éclat de puissance",
+    "nameEn": "Power Shard",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-slug",
+    "name": "Limace de puissance",
+    "nameEn": "Power Slug",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-storage",
+    "name": "Accumulateur électrique",
+    "nameEn": "Power Storage",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-switch",
+    "name": "Interrupteur électrique",
+    "nameEn": "Power Switch",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-tower",
+    "name": "Pylône électrique",
+    "nameEn": "Power Tower",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "power-tower-platform",
+    "name": "Pylône électrique avec plateforme",
+    "nameEn": "Power Tower Platform",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pressure-conversion-cube",
+    "name": "Cube de conversion de pression",
+    "nameEn": "Pressure Conversion Cube",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "priority-power-switch",
+    "name": "Interrupteur électrique prioritaire",
+    "nameEn": "Priority Power Switch",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "programmable-splitter",
+    "name": "Répartiteur programmable",
+    "nameEn": "Programmable Splitter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "pulse-nobelisk",
+    "name": "Nobelisk à impulsion",
+    "nameEn": "Pulse Nobelisk",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "purple-power-slug",
+    "name": "Limace de puissance violette",
+    "nameEn": "Purple Power Slug",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "quantum-encoder",
+    "name": "Encodeur quantique",
+    "nameEn": "Quantum Encoder",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "quartz-crystal",
+    "name": "Cristal de quartz",
+    "nameEn": "Quartz Crystal",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "quickwire",
+    "name": "Fil actif",
+    "nameEn": "Quickwire",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "radar-tower",
+    "name": "Tour radar",
+    "nameEn": "Radar Tower",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "radio-control-unit",
+    "name": "Unité de contrôle radio",
+    "nameEn": "Radio Control Unit",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "railway",
+    "name": "Chemin de fer",
+    "nameEn": "Railway",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "raw-quartz",
+    "name": "Quartz brut",
+    "nameEn": "Raw Quartz",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "reanimated-sam",
+    "name": "SAM réanimé",
+    "nameEn": "Reanimated SAM",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "rebar-gun",
+    "name": "Lance-barres d'armature",
+    "nameEn": "Rebar Gun",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "refinery",
+    "name": "Raffinerie",
+    "nameEn": "Refinery",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "reinforced-iron-plate",
+    "name": "Plaque de fer renforcée",
+    "nameEn": "Reinforced Iron Plate",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "resource-well-extractor",
+    "name": "Resource Well Extractor",
+    "nameEn": "Resource Well Extractor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "resource-well-pressurizer",
+    "name": "Resource Well Pressurizer",
+    "nameEn": "Resource Well Pressurizer",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "rifle",
+    "name": "Fusil",
+    "nameEn": "Rifle",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "rifle-ammo",
+    "name": "Munition de fusil",
+    "nameEn": "Rifle Ammo",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "road-barrier",
+    "name": "Barrière de route",
+    "nameEn": "Road Barrier",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "rocket-fuel",
+    "name": "Carburant de fusée",
+    "nameEn": "Rocket Fuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "rotor",
+    "name": "Rotor",
+    "nameEn": "Rotor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "rubber",
+    "name": "Caoutchouc",
+    "nameEn": "Rubber",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "sam",
+    "name": "SAM",
+    "nameEn": "SAM",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "sam-fluctuator",
+    "name": "Fluctuateur SAM",
+    "nameEn": "SAM Fluctuator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "satellite-portal",
+    "name": "Portail satellite",
+    "nameEn": "Satellite Portal",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "screw",
+    "name": "Vis",
+    "nameEn": "Screw",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "shatter-rebar",
+    "name": "Barre d'armature à fragmentation",
+    "nameEn": "Shatter Rebar",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "silica",
+    "name": "Silice",
+    "nameEn": "Silica",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "singularity-cell",
+    "name": "Cellule de singularité",
+    "nameEn": "Singularity Cell",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "small-billboard",
+    "name": "Petit panneau publicitaire",
+    "nameEn": "Small Billboard",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "smart-plating",
+    "name": "Placage intelligent",
+    "nameEn": "Smart Plating",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "smart-splitter",
+    "name": "Répartiteur intelligent",
+    "nameEn": "Smart Splitter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "smelter",
+    "name": "Fonderie",
+    "nameEn": "Smelter",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "smokeless-powder",
+    "name": "Poudre sans fumée",
+    "nameEn": "Smokeless Powder",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "solid-biofuel",
+    "name": "Biocarburant solide",
+    "nameEn": "Solid Biofuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "somersloop",
+    "name": "Somersloop",
+    "nameEn": "Somersloop",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "space-elevator",
+    "name": "Ascenseur orbital",
+    "nameEn": "Space Elevator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "spitter-remains",
+    "name": "Spitter Remains",
+    "nameEn": "Spitter Remains",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "square-sign-0-5-m",
+    "name": "Panneau carré (0,5 m)",
+    "nameEn": "Square Sign (0.5 m)",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "square-sign-1-m",
+    "name": "Panneau carré (1 m)",
+    "nameEn": "Square Sign (1 m)",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "square-sign-2-m",
+    "name": "Panneau carré (2 m)",
+    "nameEn": "Square Sign (2 m)",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "stackable-conveyor-pole",
+    "name": "Poteau de convoyeur empilable",
+    "nameEn": "Stackable Conveyor Pole",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "stackable-hypertube-support",
+    "name": "Support d'hypertube empilable",
+    "nameEn": "Stackable Hypertube Support",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "stackable-pipeline-support",
+    "name": "Support de pipeline empilable",
+    "nameEn": "Stackable Pipeline Support",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "stator",
+    "name": "Stator",
+    "nameEn": "Stator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "statues",
+    "name": "Statues",
+    "nameEn": "Statues",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "steel-beam",
+    "name": "Poutre d'acier",
+    "nameEn": "Steel Beam",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "steel-ingot",
+    "name": "Lingot d'acier",
+    "nameEn": "Steel Ingot",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "steel-pipe",
+    "name": "Tuyau d'acier",
+    "nameEn": "Steel Pipe",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "stinger-remains",
+    "name": "Stinger Remains",
+    "nameEn": "Stinger Remains",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "storage-container",
+    "name": "Conteneur de stockage",
+    "nameEn": "Storage Container",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "straight-catwalk",
+    "name": "Passerelle droite",
+    "nameEn": "Straight Catwalk",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "street-light",
+    "name": "Réverbère",
+    "nameEn": "Street Light",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "stun-rebar",
+    "name": "Barre d'armature étourdissante",
+    "nameEn": "Stun Rebar",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "sulfur",
+    "name": "Soufre",
+    "nameEn": "Sulfur",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "sulfuric-acid",
+    "name": "Acide sulfurique",
+    "nameEn": "Sulfuric Acid",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "supercomputer",
+    "name": "Superordinateur",
+    "nameEn": "Supercomputer",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "superposition-oscillator",
+    "name": "Oscillateur de superposition",
+    "nameEn": "Superposition Oscillator",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "tarp-construction-fence",
+    "name": "Bâche de chantier",
+    "nameEn": "Tarp Construction Fence",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "the-hub",
+    "name": "Le HUB",
+    "nameEn": "The HUB",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "thermal-propulsion-rocket",
+    "name": "Fusée à propulsion thermique",
+    "nameEn": "Thermal Propulsion Rocket",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "time-crystal",
+    "name": "Cristal temporel",
+    "nameEn": "Time Crystal",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "tractor",
+    "name": "Tracteur",
+    "nameEn": "Tractor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "train-station",
+    "name": "Gare ferroviaire",
+    "nameEn": "Train Station",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "truck",
+    "name": "Camion",
+    "nameEn": "Truck",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "truck-station",
+    "name": "Station de camions",
+    "nameEn": "Truck Station",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "turbo-motor",
+    "name": "Turbomoteur",
+    "nameEn": "Turbo Motor",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "turbo-rifle-ammo",
+    "name": "Munition de fusil turbo",
+    "nameEn": "Turbo Rifle Ammo",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "turbofuel",
+    "name": "Turbocarburant",
+    "nameEn": "Turbofuel",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "u-jelly-landing-pad",
+    "name": "Plateforme d'atterrissage Jelly",
+    "nameEn": "U-Jelly Landing Pad",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "uranium",
+    "name": "Uranium",
+    "nameEn": "Uranium",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "uranium-fuel-rod",
+    "name": "Barre d'uranium",
+    "nameEn": "Uranium Fuel Rod",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "uranium-waste",
+    "name": "Déchets d'uranium",
+    "nameEn": "Uranium Waste",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "valve",
+    "name": "Valve",
+    "nameEn": "Valve",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "versatile-framework",
+    "name": "Ossature polyvalente",
+    "nameEn": "Versatile Framework",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "vines",
+    "name": "Lianes",
+    "nameEn": "Vines",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "wall-outlet-mk-1",
+    "name": "Prise murale Mk.1",
+    "nameEn": "Wall Outlet Mk.1",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "wall-outlet-mk-2",
+    "name": "Prise murale Mk.2",
+    "nameEn": "Wall Outlet Mk.2",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "wall-outlet-mk-3",
+    "name": "Prise murale Mk.3",
+    "nameEn": "Wall Outlet Mk.3",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "wall-mounted-flood-light",
+    "name": "Pylône d'éclairage mural",
+    "nameEn": "Wall-Mounted Flood Light",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "water",
+    "name": "Eau",
+    "nameEn": "Water",
+    "category": "Resource",
+    "isFluid": true
+  },
+  {
+    "id": "water-extractor",
+    "name": "Extracteur d'eau",
+    "nameEn": "Water Extractor",
+    "category": "Component",
+    "isFluid": true
+  },
+  {
+    "id": "wire",
+    "name": "Fil électrique",
+    "nameEn": "Wire",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "wood",
+    "name": "Bois",
+    "nameEn": "Wood",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "xeno-basher",
+    "name": "Xéno-basheur",
+    "nameEn": "Xeno-Basher",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "xeno-zapper",
+    "name": "Xéno-zappeur",
+    "nameEn": "Xeno-Zapper",
+    "category": "Component",
+    "isFluid": false
+  },
+  {
+    "id": "yellow-power-slug",
+    "name": "Limace de puissance jaune",
+    "nameEn": "Yellow Power Slug",
+    "category": "Resource",
+    "isFluid": false
+  },
+  {
+    "id": "zipline",
+    "name": "Tyrolienne",
+    "nameEn": "Zipline",
+    "category": "Component",
+    "isFluid": false
+  }
 ]

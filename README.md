@@ -1,58 +1,37 @@
-# Satisfactory Planner FR
+# Satisfactory Factory Planner FR
 
-## Présentation
-Satisfactory Planner FR est un outil complet dédié à Satisfactory 1.0, conçu pour centraliser les données du jeu et offrir une aide avancée à la conception, la planification et l’optimisation d’usines.
+Base de données complète, simulateur et outil d’optimisation pour **Satisfactory 1.0 / 1.2**, conçu pour aider à planifier, dimensionner et optimiser des usines de manière claire, précise et exploitable.
 
-Le projet combine :
-- Base de données objets
-- Recettes (base + alternatives)
-- Machines et coûts énergétiques
-- Ressources naturelles
-- Logistique (convoyeurs / pipelines)
-- Production électrique
-- Simulation d’usine
+## Objectifs
 
-## Objectif
-Permettre à tout joueur de :
-- Planifier une chaîne de production
-- Calculer les besoins en ressources
-- Déterminer le nombre exact de machines
-- Optimiser l’énergie
-- Adapter la logistique
-- Comparer différentes recettes
+Ce projet centralise une base de données structurée et un système de simulation permettant de :
 
-## Fonctionnalités
-### Base de données :
-- 313 recettes
-- 191+ objets
-- Machines complètes
-- Références techniques
-- Électricité
+- Planifier une production cible en objets / minute.
+- Calculer automatiquement les machines nécessaires.
+- Comparer recettes normales et **alternatives (M.A.M.)**.
+- Optimiser l’usage des ressources.
+- Gérer le **surcadencage** (overclocking) et la pureté.
+- Visualiser un **plan d'usine optimisé (vue de dessus)**.
+- Estimer la consommation électrique totale.
+- Intégrer les moyens de production énergétique.
 
-### Simulation :
-- Choix du produit final
-- Débit cible / min
-- Sélection de recette
-- Calcul machines
-- Intrants / extrants
-- Consommation énergétique
-- Convoyeurs et pipelines
+## Fonctionnalités Clés
 
-## Technologies
-- HTML / CSS / JavaScript
-- Google Sheets (base de données initiale)
-- GitHub Pages (hébergement)
+- **Planificateur Interactif** : Choisissez votre produit et votre taux de production, le système s'occupe du reste.
+- **Vue de dessus (Layout)** : Un schéma SVG généré dynamiquement pour vous aider à placer vos machines.
+- **Base de données complète** : Référence technique des objets et recettes en Français.
+- **Calcul d'énergie** : Gestion fine de la consommation et de la production (Générateurs).
 
-## Roadmap
-### Version actuelle :
-- Base de données FR
-- Simulateur direct
-- Électricité
-- Logistique
+## Tech Stack
 
-### Versions futures :
-- Simulation multi-niveaux
-- Arbre de production complet
-- Comparateur de recettes
-- Sauvegarde de projets
-- Dashboard énergétique
+- **Next.js 15** (App Router)
+- **TypeScript**
+- **Tailwind CSS 4**
+- **SVG** pour la visualisation des plans
+
+## Déploiement
+
+Le site est configuré pour un déploiement automatique sur **GitHub Pages**.
+
+---
+*FICSIT Inc. © 2024 - Engineering Division*

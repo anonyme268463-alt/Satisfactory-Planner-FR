@@ -32,6 +32,7 @@ export interface SolverOptions {
   preferredRecipes?: Record<ItemId, RecipeId>;
   overclock?: Record<RecipeId, number>; // recipeId -> percentage (default 100)
   resourcePurity?: Record<ItemId, 'Impure' | 'Normal' | 'Pure'>;
+  strategy?: 'default' | 'min-energy';
 }
 
 export function solveProduction(
@@ -39,11 +40,17 @@ export function solveProduction(
   targetAmount: number,
   options: SolverOptions = {}
 ): FactoryPlan {
-  const { preferredRecipes = {}, overclock = {} } = options;
+  const { preferredRecipes = {}, overclock = {}, strategy = 'default' } = options;
   const rawResources: Record<ItemId, number> = {};
   let totalPower = 0;
+  const activeSteps = new Set<ItemId>();
 
   function getStep(itemId: ItemId, amount: number): ProductionStep | null {
+    if (activeSteps.has(itemId)) {
+        rawResources[itemId] = (rawResources[itemId] || 0) + amount;
+        return null;
+    }
+
     const item = items.find(i => i.id === itemId);
     if (!item || item.category === 'Resource') {
       rawResources[itemId] = (rawResources[itemId] || 0) + amount;
@@ -51,10 +58,30 @@ export function solveProduction(
     }
 
     // Find recipe
-    const recipeId = preferredRecipes[itemId];
-    const recipe = recipeId
-      ? recipes.find(r => r.id === recipeId)
-      : recipes.find(r => r.products.some(p => p.itemId === itemId));
+    let recipe: Recipe | undefined;
+    const preferredId = preferredRecipes[itemId];
+
+    if (preferredId) {
+        recipe = recipes.find(r => r.id === preferredId);
+    } else if (strategy === 'min-energy') {
+        const potentialRecipes = recipes.filter(r => r.products.some(p => p.itemId === itemId));
+        if (potentialRecipes.length > 0) {
+            recipe = potentialRecipes.reduce((best, current) => {
+                const bestProduct = best.products.find(p => p.itemId === itemId)!;
+                const currentProduct = current.products.find(p => p.itemId === itemId)!;
+
+                const bestMachine = machines.find(m => m.id === best.producedIn);
+                const currentMachine = machines.find(m => m.id === current.producedIn);
+
+                const bestEnergyPerUnit = (bestMachine?.powerConsumption || 0) / bestProduct.amount;
+                const currentEnergyPerUnit = (currentMachine?.powerConsumption || 0) / currentProduct.amount;
+
+                return currentEnergyPerUnit < bestEnergyPerUnit ? current : best;
+            });
+        }
+    } else {
+        recipe = recipes.find(r => r.products.some(p => p.itemId === itemId));
+    }
 
     if (!recipe) {
       rawResources[itemId] = (rawResources[itemId] || 0) + amount;
@@ -87,6 +114,8 @@ export function solveProduction(
     const power = powerPerMachine * machineCount;
     totalPower += power;
 
+    activeSteps.add(itemId);
+
     const step: ProductionStep = {
       recipeId: recipe.id,
       targetItemId: itemId,
@@ -113,6 +142,7 @@ export function solveProduction(
       }
     });
 
+    activeSteps.delete(itemId);
     return step;
   }
 

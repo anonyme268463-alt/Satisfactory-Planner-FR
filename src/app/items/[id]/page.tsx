@@ -49,14 +49,28 @@ export default async function ItemDetailPage({ params }: { params: Promise<{ id:
       </Link>
 
       <div className="bg-zinc-800 p-8 rounded-xl border border-zinc-700 mt-4">
-        <div className="flex justify-between items-center mb-6">
-          <div>
-            <h1 className="text-4xl font-bold text-orange-500 uppercase">{item.name}</h1>
-            <p className="text-xl text-zinc-400 italic">{item.nameEn}</p>
+        <div className="flex justify-between items-start mb-8 gap-6">
+          <div className="flex items-center gap-6">
+            <div className="w-24 h-24 bg-zinc-900 rounded-2xl flex items-center justify-center border border-zinc-700 shadow-inner">
+                {/* Real image would go here: <img src={item.imageUrl} alt={item.name} /> */}
+                <div className="text-5xl opacity-20">📦</div>
+            </div>
+            <div>
+              <h1 className="text-4xl font-black text-white uppercase tracking-tighter">{item.name}</h1>
+              <p className="text-xl text-zinc-400 italic font-medium">{item.nameEn}</p>
+              <div className="flex gap-2 mt-2">
+                <span className="bg-zinc-700 text-zinc-300 text-xs px-2 py-1 rounded-md uppercase font-bold tracking-wider">
+                  {item.category}
+                </span>
+                <span className="bg-orange-500/10 text-orange-500 text-xs px-2 py-1 rounded-md uppercase font-bold tracking-wider border border-orange-500/20">
+                  Tier {item.tier}
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="text-right">
-            <p className="text-sm text-zinc-500 uppercase">Catégorie</p>
-            <p className="text-lg font-semibold">{item.category}</p>
+          <div className="text-right hidden sm:block">
+            <p className="text-[10px] text-zinc-500 uppercase font-black tracking-[0.2em]">Identifiant</p>
+            <p className="text-sm font-mono text-zinc-400">{item.id}</p>
           </div>
         </div>
 

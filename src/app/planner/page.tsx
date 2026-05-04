@@ -32,12 +32,18 @@ function StepCard({
       <div className="bg-zinc-800/40 p-5 rounded-xl border border-zinc-700/50 backdrop-blur-sm relative overflow-hidden group hover:border-orange-500/50 transition-all duration-300">
         <div className="absolute top-0 left-0 w-1 h-full bg-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div>
         <div className="flex justify-between items-start">
-          <div>
-            <h4 className="font-black text-xl tracking-tight">{item?.name}</h4>
-            <p className="text-xs text-zinc-500 font-mono flex items-center gap-1">
-                <span className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse"></span>
-                {step.targetAmount.toFixed(2)} UNITÉS / MIN
-            </p>
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center border border-zinc-700/50 shadow-inner shrink-0">
+                {/* Real icon: <img src={item?.imageUrl} alt="" className="w-8 h-8 opacity-90" /> */}
+                <div className="text-2xl opacity-20">📦</div>
+            </div>
+            <div>
+              <h4 className="font-black text-xl tracking-tight">{item?.name}</h4>
+              <p className="text-xs text-zinc-500 font-mono flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse"></span>
+                  {step.targetAmount.toFixed(2)} UNITÉS / MIN
+              </p>
+            </div>
           </div>
           <div className="text-right">
             <p className="text-[10px] text-zinc-500 uppercase font-black tracking-widest mb-1">Infrastructure</p>

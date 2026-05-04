@@ -17,8 +17,8 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ i
     notFound();
   }
 
-  const getItemName = (itemId: string) => {
-    return itemsData.find(i => i.id === itemId)?.name || itemId;
+  const getItem = (itemId: string) => {
+    return itemsData.find(i => i.id === itemId);
   };
 
   return (
@@ -52,14 +52,22 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ i
               <span className="w-2 h-6 bg-red-500 inline-block"></span> Ingrédients (Entrée)
             </h2>
             <ul className="space-y-3">
-              {recipe.ingredients.map((ing) => (
-                <li key={ing.itemId} className="flex justify-between items-center bg-zinc-700/30 p-4 rounded border border-zinc-600/50">
-                  <Link href={`/items/${ing.itemId}`} className="font-semibold hover:text-orange-400">
-                    {getItemName(ing.itemId)}
-                  </Link>
-                  <span className="text-orange-500 font-mono font-bold">{ing.amount} / min</span>
-                </li>
-              ))}
+              {recipe.ingredients.map((ing) => {
+                const item = getItem(ing.itemId);
+                return (
+                  <li key={ing.itemId} className="flex justify-between items-center bg-zinc-700/30 p-4 rounded border border-zinc-600/50">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-zinc-900 rounded flex items-center justify-center border border-zinc-700">
+                        <div className="text-sm opacity-20">📦</div>
+                      </div>
+                      <Link href={`/items/${ing.itemId}`} className="font-semibold hover:text-orange-400">
+                        {item?.name || ing.itemId}
+                      </Link>
+                    </div>
+                    <span className="text-orange-500 font-mono font-bold">{ing.amount} / min</span>
+                  </li>
+                );
+              })}
             </ul>
           </section>
 
@@ -68,14 +76,22 @@ export default async function RecipeDetailPage({ params }: { params: Promise<{ i
               <span className="w-2 h-6 bg-green-500 inline-block"></span> Produits (Sortie)
             </h2>
             <ul className="space-y-3">
-              {recipe.products.map((p) => (
-                <li key={p.itemId} className="flex justify-between items-center bg-zinc-700/30 p-4 rounded border border-zinc-600/50">
-                  <Link href={`/items/${p.itemId}`} className="font-semibold hover:text-orange-400">
-                    {getItemName(p.itemId)}
-                  </Link>
-                  <span className="text-green-500 font-mono font-bold">{p.amount} / min</span>
-                </li>
-              ))}
+              {recipe.products.map((p) => {
+                const item = getItem(p.itemId);
+                return (
+                  <li key={p.itemId} className="flex justify-between items-center bg-zinc-700/30 p-4 rounded border border-zinc-600/50">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-zinc-900 rounded flex items-center justify-center border border-zinc-700">
+                        <div className="text-sm opacity-20">📦</div>
+                      </div>
+                      <Link href={`/items/${p.itemId}`} className="font-semibold hover:text-orange-400">
+                        {item?.name || p.itemId}
+                      </Link>
+                    </div>
+                    <span className="text-green-500 font-mono font-bold">{p.amount} / min</span>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         </div>

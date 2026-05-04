@@ -1,0 +1,164 @@
+[
+  {
+    "id": "smelter",
+    "name": "Fonderie",
+    "nameEn": "Smelter",
+    "powerConsumption": 4,
+    "baseSpeed": 1.0,
+    "width": 6,
+    "length": 9
+  },
+  {
+    "id": "constructor",
+    "name": "Constructeur",
+    "nameEn": "Constructor",
+    "powerConsumption": 4,
+    "baseSpeed": 1.0,
+    "width": 8,
+    "length": 10
+  },
+  {
+    "id": "assembler",
+    "name": "Assembleuse",
+    "nameEn": "Assembler",
+    "powerConsumption": 15,
+    "baseSpeed": 1.0,
+    "width": 10,
+    "length": 15
+  },
+  {
+    "id": "foundry",
+    "name": "Fonderie avancée",
+    "nameEn": "Foundry",
+    "powerConsumption": 16,
+    "baseSpeed": 1.0,
+    "width": 10,
+    "length": 16
+  },
+  {
+    "id": "manufacturer",
+    "name": "Façonneuse",
+    "nameEn": "Manufacturer",
+    "powerConsumption": 55,
+    "baseSpeed": 1.0,
+    "width": 18,
+    "length": 19
+  },
+  {
+    "id": "refinery",
+    "name": "Raffinerie",
+    "nameEn": "Refinery",
+    "powerConsumption": 30,
+    "baseSpeed": 1.0,
+    "width": 10,
+    "length": 20
+  },
+  {
+    "id": "blender",
+    "name": "Mélangeuse",
+    "nameEn": "Blender",
+    "powerConsumption": 75,
+    "baseSpeed": 1.0,
+    "width": 18,
+    "length": 16
+  },
+  {
+    "id": "particle-accelerator",
+    "name": "Accélérateur de particules",
+    "nameEn": "Particle Accelerator",
+    "powerConsumption": 500,
+    "baseSpeed": 1.0,
+    "width": 46,
+    "length": 50
+  },
+  {
+    "id": "miner-mk1",
+    "name": "Foreuse Mk1",
+    "nameEn": "Miner Mk1",
+    "powerConsumption": 5,
+    "baseSpeed": 1.0,
+    "width": 6,
+    "length": 10
+  },
+  {
+    "id": "miner-mk2",
+    "name": "Foreuse Mk2",
+    "nameEn": "Miner Mk2",
+    "powerConsumption": 12,
+    "baseSpeed": 2.0,
+    "width": 6,
+    "length": 10
+  },
+  {
+    "id": "miner-mk3",
+    "name": "Foreuse Mk3",
+    "nameEn": "Miner Mk3",
+    "powerConsumption": 30,
+    "baseSpeed": 4.0,
+    "width": 6,
+    "length": 10
+  },
+  {
+    "id": "water-extractor",
+    "name": "Extracteur d'eau",
+    "nameEn": "Water Extractor",
+    "powerConsumption": 20,
+    "baseSpeed": 1.0,
+    "width": 20,
+    "length": 20
+  },
+  {
+    "id": "oil-extractor",
+    "name": "Extracteur de pétrole",
+    "nameEn": "Oil Extractor",
+    "powerConsumption": 40,
+    "baseSpeed": 1.0,
+    "width": 14,
+    "length": 14
+  },
+  {
+    "id": "packager",
+    "name": "Emballeuse",
+    "nameEn": "Packager",
+    "powerConsumption": 10,
+    "baseSpeed": 1.0,
+    "width": 8,
+    "length": 12
+  },
+  {
+    "id": "converter",
+    "name": "Convertisseur",
+    "nameEn": "Converter",
+    "powerConsumption": 250,
+    "baseSpeed": 1.0,
+    "width": 20,
+    "length": 24
+  },
+  {
+    "id": "quantum-encoder",
+    "name": "Encodeur quantique",
+    "nameEn": "Quantum Encoder",
+    "powerConsumption": 1000,
+    "baseSpeed": 1.0,
+    "width": 30,
+    "length": 30
+  },
+  {
+    "id": "equipment-workshop",
+    "name": "Atelier d'équipement",
+    "nameEn": "Equipment Workshop",
+    "powerConsumption": 0,
+    "baseSpeed": 1.0,
+    "width": 0,
+    "length": 0
+  },
+  {
+    "id": "nuclear-power-plant",
+    "name": "Centrale nucléaire",
+    "nameEn": "Nuclear Power Plant",
+    "powerConsumption": 0,
+    "baseSpeed": 1.0,
+    "width": 0,
+    "length": 0
+  }
+]

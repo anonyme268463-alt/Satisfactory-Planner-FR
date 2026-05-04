@@ -1,0 +1,52 @@
+[
+  {
+    "id": "biomass-burner",
+    "name": "Brûleur de biomasse",
+    "nameEn": "Biomass Burner",
+    "powerProduction": 30,
+    "fuels": [
+      { "itemId": "solid-biofuel", "rate": 7.2 },
+      { "itemId": "biomass", "rate": 15 }
+    ]
+  },
+  {
+    "id": "coal-generator",
+    "name": "Générateur à charbon",
+    "nameEn": "Coal Generator",
+    "powerProduction": 75,
+    "fuels": [
+      { "itemId": "coal", "rate": 15 },
+      { "itemId": "compacted-coal", "rate": 7.14 }
+    ],
+    "waterRate": 45
+  },
+  {
+    "id": "fuel-generator",
+    "name": "Générateur à carburant",
+    "nameEn": "Fuel Generator",
+    "powerProduction": 250,
+    "fuels": [
+      { "itemId": "fuel", "rate": 20 },
+      { "itemId": "turbofuel", "rate": 7.5 },
+      { "itemId": "rocket-fuel", "rate": 4.16 }
+    ]
+  },
+  {
+    "id": "nuclear-power-plant",
+    "name": "Centrale nucléaire",
+    "nameEn": "Nuclear Power Plant",
+    "powerProduction": 2500,
+    "fuels": [
+      { "itemId": "uranium-fuel-rod", "rate": 0.2 },
+      { "itemId": "plutonium-fuel-rod", "rate": 0.1 }
+    ],
+    "waterRate": 240
+  },
+  {
+    "id": "geothermal-generator",
+    "name": "Générateur géothermique",
+    "nameEn": "Geothermal Generator",
+    "powerProduction": 450,
+    "fuels": []
+  }
+]

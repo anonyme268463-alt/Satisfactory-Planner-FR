@@ -16,11 +16,40 @@ const DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-// Satisfactory map coordinates to Leaflet lat/lng
-// Total game area is roughly 8km x 8km
-// Map bounds: X[-300000, 450000], Y[-300000, 450000] approx
-const gameToLat = (y: number) => y / 2000;
-const gameToLng = (x: number) => x / 2000;
+// Satisfactory map coordinates to Leaflet
+// Satisfactory coords are in cm. We scale them for Leaflet Simple CRS.
+// Game Y is North, which in Leaflet L.CRS.Simple is actually negative Y.
+const gameToMap = (x: number, y: number): [number, number] => {
+  return [-y / 1000, x / 1000];
+};
+
+const getMarkerIcon = (purity: string) => {
+  let color = '#22c55e'; // Pure
+  if (purity === 'Normal' || purity === 'Normale') color = '#eab308';
+  if (purity === 'Impure') color = '#ef4444';
+
+  return L.divIcon({
+    className: 'custom-marker',
+    html: `<div style="
+      background-color: ${color};
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 3px solid #18181b;
+      box-shadow: 0 0 15px ${color}aa, inset 0 0 5px rgba(0,0,0,0.5);
+    "></div>`,
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
+  });
+};
+
+function MapResizer() {
+  const map = useMap();
+  useEffect(() => {
+    map.invalidateSize();
+  }, [map]);
+  return null;
+}
 
 export default function SatisfactoryMap() {
   const [mounted, setMounted] = useState(false);
@@ -40,10 +69,10 @@ export default function SatisfactoryMap() {
 
   return (
     <div className="space-y-4">
-      <div className="flex gap-2 overflow-x-auto pb-2">
+      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
         <button
           onClick={() => setFilter(null)}
-          className={`px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest transition-all ${!filter ? 'bg-orange-500 text-zinc-950' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700'}`}
+          className={`px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest transition-all shrink-0 border border-transparent ${!filter ? 'bg-orange-500 text-zinc-950 shadow-[0_0_20px_rgba(249,115,22,0.4)]' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:border-zinc-600'}`}
         >
           Tous
         </button>
@@ -51,24 +80,35 @@ export default function SatisfactoryMap() {
           <button
             key={type}
             onClick={() => setFilter(type)}
-            className={`px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest whitespace-nowrap transition-all ${filter === type ? 'bg-orange-500 text-zinc-950' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700'}`}
+            className={`px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest whitespace-nowrap transition-all shrink-0 border border-transparent ${filter === type ? 'bg-orange-500 text-zinc-950 shadow-[0_0_20px_rgba(249,115,22,0.4)]' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:border-zinc-600'}`}
           >
             {itemsData.find(i => i.id === type)?.name || type}
           </button>
         ))}
       </div>
 
-      <div className="h-[700px] w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative">
+      <div className="h-[700px] w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative bg-zinc-950 group">
         <MapContainer
           center={[0, 0]}
-          zoom={3}
+          zoom={1}
+          minZoom={0}
+          maxZoom={5}
           scrollWheelZoom={true}
-          style={{ height: '100%', width: '100%', background: '#18181b' }}
+          crs={L.CRS.Simple}
+          style={{ height: '100%', width: '100%', background: '#09090b' }}
         >
-          {/* Using a topographical-style tile layer */}
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=f031023709b14c778a8764b84b72782b"
+          <MapResizer />
+
+          {/* Enhanced Grid Background */}
+          <div className="absolute inset-0 pointer-events-none"
+               style={{
+                 backgroundImage: `
+                   radial-gradient(circle, #222 1px, transparent 1px),
+                   linear-gradient(to right, #111 1px, transparent 1px),
+                   linear-gradient(to bottom, #111 1px, transparent 1px)
+                 `,
+                 backgroundSize: '40px 40px, 200px 200px, 200px 200px'
+               }}
           />
 
           {filteredNodes.map((node: any) => {
@@ -76,13 +116,23 @@ export default function SatisfactoryMap() {
             return (
               <Marker
                 key={node.id}
-                position={[gameToLat(node.coords.y), gameToLng(node.coords.x)]}
+                position={gameToMap(node.coords.x, node.coords.y)}
+                icon={getMarkerIcon(node.purity)}
               >
                 <Popup>
-                  <div className="p-1 font-sans">
-                    <h3 className="font-black text-zinc-900 uppercase leading-tight">{item?.name}</h3>
-                    <p className="text-xs font-bold text-orange-600 uppercase tracking-tighter">Pureté: {node.purity}</p>
-                    <p className="text-[10px] text-zinc-500 font-mono mt-1">X: {node.coords.x} Y: {node.coords.y}</p>
+                  <div className="p-2 min-w-[120px]">
+                    <h3 className="font-black text-zinc-900 uppercase leading-tight text-sm mb-1">{item?.name}</h3>
+                    <div className="flex items-center gap-1.5">
+                      <div className={`w-2 h-2 rounded-full ${
+                        node.purity === 'Pure' ? 'bg-green-500' :
+                        (node.purity === 'Normal' || node.purity === 'Normale') ? 'bg-yellow-500' : 'bg-red-500'
+                      }`}></div>
+                      <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-wider">{node.purity}</p>
+                    </div>
+                    <div className="mt-2 pt-2 border-t border-zinc-100 flex justify-between text-[9px] font-mono text-zinc-400">
+                      <span>X: {node.coords.x}</span>
+                      <span>Y: {node.coords.y}</span>
+                    </div>
                   </div>
                 </Popup>
               </Marker>

@@ -7,8 +7,10 @@ export interface Item {
   name: string; // Nom en français
   nameEn: string;
   description?: string;
-  category: 'Resource' | 'Component' | 'Fuel' | 'Waste';
+  category: 'Resource' | 'Component' | 'Fuel' | 'Waste' | 'Consumable' | 'Equipment';
   isFluid: boolean;
+  tier?: number;
+  imageUrl?: string;
 }
 
 export interface Ingredient {
@@ -35,8 +37,25 @@ export interface Machine {
   baseSpeed: number; // 1.0 par défaut
 }
 
+export interface MapPoint {
+  x: number;
+  y: number;
+}
+
 export interface ResourceNode {
+  id: string;
   itemId: ItemId;
   purity: 'Impure' | 'Normal' | 'Pure';
-  baseRate: number; // Taux de base par minute
+  coords: MapPoint;
+}
+
+export interface MapConfig {
+  width: number;
+  height: number;
+  bounds: {
+    minX: number;
+    minY: number;
+    maxX: number;
+    maxY: number;
+  };
 }

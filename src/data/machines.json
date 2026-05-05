@@ -6,7 +6,11 @@
     "powerConsumption": 4,
     "baseSpeed": 1.0,
     "width": 6,
-    "length": 9
+    "length": 9,
+    "cost": [
+      { "itemId": "iron-rod", "amount": 5 },
+      { "itemId": "wire", "amount": 8 }
+    ]
   },
   {
     "id": "constructor",
@@ -15,7 +19,11 @@
     "powerConsumption": 4,
     "baseSpeed": 1.0,
     "width": 8,
-    "length": 10
+    "length": 10,
+    "cost": [
+      { "itemId": "reinforced-iron-plate", "amount": 2 },
+      { "itemId": "cable", "amount": 8 }
+    ]
   },
   {
     "id": "assembler",
@@ -24,7 +32,12 @@
     "powerConsumption": 15,
     "baseSpeed": 1.0,
     "width": 10,
-    "length": 15
+    "length": 15,
+    "cost": [
+      { "itemId": "reinforced-iron-plate", "amount": 8 },
+      { "itemId": "rotor", "amount": 4 },
+      { "itemId": "cable", "amount": 10 }
+    ]
   },
   {
     "id": "foundry",
@@ -33,7 +46,12 @@
     "powerConsumption": 16,
     "baseSpeed": 1.0,
     "width": 10,
-    "length": 16
+    "length": 16,
+    "cost": [
+      { "itemId": "modular-frame", "amount": 10 },
+      { "itemId": "rotor", "amount": 10 },
+      { "itemId": "cable", "amount": 20 }
+    ]
   },
   {
     "id": "manufacturer",
@@ -42,7 +60,12 @@
     "powerConsumption": 55,
     "baseSpeed": 1.0,
     "width": 18,
-    "length": 19
+    "length": 19,
+    "cost": [
+      { "itemId": "motor", "amount": 10 },
+      { "itemId": "heavy-modular-frame", "amount": 10 },
+      { "itemId": "cable", "amount": 50 }
+    ]
   },
   {
     "id": "refinery",
@@ -51,7 +74,12 @@
     "powerConsumption": 30,
     "baseSpeed": 1.0,
     "width": 10,
-    "length": 20
+    "length": 20,
+    "cost": [
+      { "itemId": "motor", "amount": 10 },
+      { "itemId": "steel-pipe", "amount": 30 },
+      { "itemId": "copper-sheet", "amount": 20 }
+    ]
   },
   {
     "id": "blender",
@@ -60,7 +88,13 @@
     "powerConsumption": 75,
     "baseSpeed": 1.0,
     "width": 18,
-    "length": 16
+    "length": 16,
+    "cost": [
+      { "itemId": "motor", "amount": 10 },
+      { "itemId": "heavy-modular-frame", "amount": 10 },
+      { "itemId": "aluminum-casing", "amount": 50 },
+      { "itemId": "radio-control-unit", "amount": 5 }
+    ]
   },
   {
     "id": "particle-accelerator",
@@ -69,7 +103,14 @@
     "powerConsumption": 500,
     "baseSpeed": 1.0,
     "width": 46,
-    "length": 50
+    "length": 50,
+    "cost": [
+      { "itemId": "radio-control-unit", "amount": 50 },
+      { "itemId": "cooling-system", "amount": 50 },
+      { "itemId": "fused-modular-frame", "amount": 50 },
+      { "itemId": "turbo-motor", "amount": 50 },
+      { "itemId": "electromagnetic-control-rod", "amount": 50 }
+    ]
   },
   {
     "id": "miner-mk1",
@@ -78,7 +119,12 @@
     "powerConsumption": 5,
     "baseSpeed": 1.0,
     "width": 6,
-    "length": 10
+    "length": 10,
+    "cost": [
+      { "itemId": "portable-miner", "amount": 1 },
+      { "itemId": "iron-plate", "amount": 10 },
+      { "itemId": "concrete", "amount": 10 }
+    ]
   },
   {
     "id": "miner-mk2",
@@ -87,7 +133,12 @@
     "powerConsumption": 12,
     "baseSpeed": 2.0,
     "width": 6,
-    "length": 10
+    "length": 10,
+    "cost": [
+      { "itemId": "portable-miner", "amount": 2 },
+      { "itemId": "encased-industrial-beam", "amount": 10 },
+      { "itemId": "steel-pipe", "amount": 20 }
+    ]
   },
   {
     "id": "miner-mk3",
@@ -96,7 +147,13 @@
     "powerConsumption": 30,
     "baseSpeed": 4.0,
     "width": 6,
-    "length": 10
+    "length": 10,
+    "cost": [
+      { "itemId": "portable-miner", "amount": 3 },
+      { "itemId": "steel-beam", "amount": 50 },
+      { "itemId": "concrete", "amount": 50 },
+      { "itemId": "fused-modular-frame", "amount": 10 }
+    ]
   },
   {
     "id": "water-extractor",
@@ -105,7 +162,12 @@
     "powerConsumption": 20,
     "baseSpeed": 1.0,
     "width": 20,
-    "length": 20
+    "length": 20,
+    "cost": [
+      { "itemId": "copper-sheet", "amount": 20 },
+      { "itemId": "reinforced-iron-plate", "amount": 10 },
+      { "itemId": "cable", "amount": 10 }
+    ]
   },
   {
     "id": "oil-extractor",
@@ -114,7 +176,12 @@
     "powerConsumption": 40,
     "baseSpeed": 1.0,
     "width": 14,
-    "length": 14
+    "length": 14,
+    "cost": [
+      { "itemId": "motor", "amount": 15 },
+      { "itemId": "heavy-modular-frame", "amount": 10 },
+      { "itemId": "cable", "amount": 60 }
+    ]
   },
   {
     "id": "packager",
@@ -123,7 +190,12 @@
     "powerConsumption": 10,
     "baseSpeed": 1.0,
     "width": 8,
-    "length": 12
+    "length": 12,
+    "cost": [
+      { "itemId": "aluminum-casing", "amount": 20 },
+      { "itemId": "rubber", "amount": 10 },
+      { "itemId": "cable", "amount": 20 }
+    ]
   },
   {
     "id": "converter",
@@ -132,7 +204,12 @@
     "powerConsumption": 250,
     "baseSpeed": 1.0,
     "width": 20,
-    "length": 24
+    "length": 24,
+    "cost": [
+      { "itemId": "ficsite-trigon", "amount": 50 },
+      { "itemId": "cooling-system", "amount": 20 },
+      { "itemId": "supercomputer", "amount": 10 }
+    ]
   },
   {
     "id": "quantum-encoder",
@@ -141,24 +218,9 @@
     "powerConsumption": 1000,
     "baseSpeed": 1.0,
     "width": 30,
-    "length": 30
-  },
-  {
-    "id": "equipment-workshop",
-    "name": "Atelier d'équipement",
-    "nameEn": "Equipment Workshop",
-    "powerConsumption": 0,
-    "baseSpeed": 1.0,
-    "width": 0,
-    "length": 0
-  },
-  {
-    "id": "nuclear-power-plant",
-    "name": "Centrale nucléaire",
-    "nameEn": "Nuclear Power Plant",
-    "powerConsumption": 0,
-    "baseSpeed": 1.0,
-    "width": 0,
-    "length": 0
+    "length": 30,
+    "cost": [
+      { "itemId": "quantum-encoder", "amount": 1 }
+    ]
   }
 ]

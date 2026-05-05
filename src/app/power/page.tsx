@@ -2,144 +2,144 @@
 
 import React, { useState } from 'react';
 import generatorsData from '@/data/generators.json';
-import Link from 'next/link';
+import itemsData from '@/data/items.json';
+import { Zap, Fuel, Droplet, Wind, Info, Trash2, Plus } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import ItemImage from '@/components/ItemImage';
 
-export default function PowerPlanner() {
-  const [counts, setCounts] = useState<Record<string, number>>({});
-  const [selectedFuels, setSelectedFuels] = useState<Record<string, string>>({});
-  const [targetConsumption, setTargetConsumption] = useState(100);
+export default function PowerPage() {
+  const [grid, setGrid] = useState<Array<{ id: string, count: number }>>([
+    { id: 'coal-generator', count: 8 },
+    { id: 'fuel-generator', count: 0 }
+  ]);
 
-  const totalProduction = Object.entries(counts).reduce((acc, [id, count]) => {
-    const gen = (generatorsData as any[]).find(g => g.id === id);
-    return acc + (gen?.powerProduction || 0) * count;
+  const totalPower = grid.reduce((acc, entry) => {
+    const gen = generatorsData.find(g => g.id === entry.id);
+    return acc + (gen?.powerProduction || 0) * entry.count;
   }, 0);
 
-  const resourceNeeds = Object.entries(counts).reduce((acc, [id, count]) => {
-    if (count <= 0) return acc;
-    const gen = (generatorsData as any[]).find(g => g.id === id);
-    if (!gen) return acc;
-
-    if (gen.waterRate) {
-        acc['water'] = (acc['water'] || 0) + gen.waterRate * count;
-    }
-
-    if (gen.fuels && gen.fuels.length > 0) {
-        const fuelId = selectedFuels[id] || gen.fuels[0].itemId;
-        const fuel = gen.fuels.find((f: any) => f.itemId === fuelId);
-        if (fuel) {
-            acc[fuelId] = (acc[fuelId] || 0) + fuel.rate * count;
-        }
-    }
-
-    return acc;
-  }, {} as Record<string, number>);
-
-  const balance = totalProduction - targetConsumption;
+  const updateCount = (id: string, count: number) => {
+    setGrid(prev => prev.map(item => item.id === id ? { ...item, count: Math.max(0, count) } : item));
+  };
 
   return (
-    <div className="p-8 bg-zinc-900 min-h-screen text-zinc-100">
-      <div className="max-w-6xl mx-auto">
-        <header className="flex justify-between items-center mb-16">
-            <h1 className="text-5xl font-black text-orange-500 uppercase tracking-tighter flex items-center gap-4 italic">
-                <span className="bg-orange-500 text-zinc-950 px-3 py-1 rounded-sm not-italic">E</span>
-                Energy Center
-            </h1>
-            <nav className="flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-zinc-500">
-                <Link href="/items" className="hover:text-orange-500 transition-colors py-2 border-b-2 border-transparent hover:border-orange-500">Objets</Link>
-                <Link href="/recipes" className="hover:text-orange-500 transition-colors py-2 border-b-2 border-transparent hover:border-orange-500">Recettes</Link>
-                <Link href="/planner" className="hover:text-orange-500 transition-colors py-2 border-b-2 border-transparent hover:border-orange-500">Planificateur</Link>
-                <Link href="/power" className="text-orange-500 py-2 border-b-2 border-orange-500">Énergie</Link>
-            </nav>
+    <div className="p-8 bg-zinc-950 min-h-screen text-zinc-100 pb-32">
+      <div className="max-w-7xl mx-auto space-y-12">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 border-b border-white/5 pb-8">
+            <div className="space-y-2">
+                <h1 className="text-5xl font-black uppercase tracking-tighter text-zinc-100 flex items-center gap-4">
+                    <Zap className="text-orange-500" size={40} />
+                    Grille <span className="text-orange-500 italic">Énergétique</span>
+                </h1>
+                <p className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.4em]">Gestion des flux de puissance et charges thermiques</p>
+            </div>
+
+            <div className="glass-panel px-8 py-4 rounded-3xl border-orange-500/20 text-right">
+                <p className="text-[9px] font-black text-orange-500 uppercase tracking-widest mb-1">Production Totale</p>
+                <p className="text-4xl font-black text-white tracking-tighter">{totalPower.toLocaleString()} <small className="text-sm text-zinc-500 font-mono">MW</small></p>
+            </div>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2 space-y-6 bg-zinc-900 p-8 rounded-2xl border border-zinc-800 shadow-xl">
-                <h2 className="text-xs font-black uppercase tracking-[0.3em] text-orange-500 mb-8 flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
-                    Unités de Production
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {generatorsData.map(gen => (
-                        <div key={gen.id} className="bg-zinc-950 p-6 rounded-xl border border-zinc-800 hover:border-orange-500/50 transition-all group">
-                            <div className="flex justify-between items-start mb-4">
-                                <div>
-                                    <p className="font-black text-lg tracking-tight">{gen.name}</p>
-                                    <p className="text-[10px] text-zinc-500 font-mono uppercase">{gen.powerProduction} MW UNITAIRE</p>
-                                </div>
-                                <input
-                                    type="number"
-                                    min="0"
-                                    value={counts[gen.id] || 0}
-                                    onChange={(e) => setCounts({...counts, [gen.id]: Math.max(0, Number(e.target.value))})}
-                                    className="w-20 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-center font-mono font-black text-orange-500 focus:border-orange-500 outline-none"
-                                />
-                            </div>
+            <div className="lg:col-span-2 space-y-6">
+                <div className="flex items-center gap-4">
+                    <h2 className="text-[11px] font-black text-zinc-500 uppercase tracking-[0.5em] italic">Unités de Production</h2>
+                    <div className="flex-grow h-px bg-white/5"></div>
+                </div>
 
-                            {(gen as any).fuels && (gen as any).fuels.length > 0 && (
-                                <div className="space-y-2">
-                                    <label className="text-[9px] text-zinc-600 uppercase font-black">Combustible</label>
-                                    <select
-                                        value={selectedFuels[gen.id] || (gen as any).fuels[0].itemId}
-                                        onChange={(e) => setSelectedFuels({...selectedFuels, [gen.id]: e.target.value})}
-                                        className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1.5 text-xs text-zinc-400 font-bold focus:border-orange-500 outline-none"
-                                    >
-                                        {(gen as any).fuels.map((f: any) => (
-                                            <option key={f.itemId} value={f.itemId}>{f.itemId.replace(/-/g, ' ').toUpperCase()}</option>
-                                        ))}
-                                    </select>
+                <div className="space-y-4">
+                    {generatorsData.map((gen, i) => {
+                        const entry = grid.find(e => e.id === gen.id) || { count: 0 };
+                        return (
+                            <motion.div
+                                key={gen.id}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                className="glass-panel p-6 rounded-3xl flex flex-col md:flex-row justify-between items-center gap-6 group hover:border-white/20 transition-all duration-500"
+                            >
+                                <div className="flex items-center gap-5">
+                                    <div className="w-14 h-14 bg-zinc-950/50 rounded-2xl flex items-center justify-center border border-white/5 text-orange-500 group-hover:scale-110 transition-transform duration-500">
+                                        {gen.id.includes('coal') ? <Wind size={24} /> : <Zap size={24} />}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-black text-white leading-tight">{gen.name}</h3>
+                                        <div className="flex items-center gap-3 mt-1">
+                                            <span className="text-[10px] font-black text-orange-500 uppercase">{gen.powerProduction} MW / Unité</span>
+                                            <span className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">{gen.nameEn}</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+
+                                <div className="flex items-center gap-8">
+                                    <div className="text-right">
+                                        <p className="text-[9px] font-black text-zinc-500 uppercase tracking-widest mb-1">Capacité</p>
+                                        <p className="text-xl font-black text-white">{(gen.powerProduction * entry.count).toLocaleString()} <small className="text-[10px] text-zinc-500">MW</small></p>
+                                    </div>
+
+                                    <div className="flex items-center gap-3 bg-zinc-950/50 px-4 py-2 rounded-2xl border border-white/5">
+                                        <button
+                                            onClick={() => updateCount(gen.id, entry.count - 1)}
+                                            className="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-500 hover:text-white hover:border-zinc-600 transition-all"
+                                        >-</button>
+                                        <input
+                                            type="number" value={entry.count} onChange={(e) => updateCount(gen.id, Number(e.target.value))}
+                                            className="w-12 bg-transparent text-center font-black text-orange-500 focus:outline-none"
+                                        />
+                                        <button
+                                            onClick={() => updateCount(gen.id, entry.count + 1)}
+                                            className="w-8 h-8 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-zinc-950 transition-all"
+                                        >+</button>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </div>
 
             <div className="space-y-8">
-                <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 shadow-xl space-y-6">
-                    <h2 className="text-xs font-black uppercase tracking-[0.3em] text-orange-500 mb-4">Analyse du Réseau</h2>
+                <div className="flex items-center gap-4">
+                    <h2 className="text-[11px] font-black text-zinc-500 uppercase tracking-[0.5em] italic">Besoins en Carburant</h2>
+                    <div className="flex-grow h-px bg-white/5"></div>
+                </div>
 
-                    <div className="space-y-4">
-                        <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest">Charge Demandée (MW)</label>
-                        <input
-                            type="number"
-                            value={targetConsumption}
-                            onChange={(e) => setTargetConsumption(Number(e.target.value))}
-                            className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-2xl font-mono text-orange-500 focus:border-orange-500 outline-none font-black"
-                        />
-                    </div>
+                <div className="glass-panel rounded-3xl p-8 space-y-8">
+                    {grid.filter(e => e.count > 0).map(entry => {
+                        const gen = generatorsData.find(g => g.id === entry.id)!;
+                        return (
+                            <div key={entry.id} className="space-y-4">
+                                <h4 className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em] flex items-center gap-2">
+                                    <Fuel size={12} className="text-orange-500" /> {gen.name}
+                                </h4>
+                                <div className="space-y-2">
+                                    {gen.fuels.map(fuel => (
+                                        <div key={fuel.itemId} className="flex justify-between items-center bg-zinc-950/30 p-3 rounded-xl border border-white/5">
+                                            <div className="flex items-center gap-3">
+                                                <ItemImage itemId={fuel.itemId} size={24} />
+                                                <span className="text-[11px] font-bold text-zinc-300">{itemsData.find(it => it.id === fuel.itemId)?.name}</span>
+                                            </div>
+                                            <span className="text-xs font-black text-orange-500 font-mono">{(fuel.rate * entry.count).toFixed(1)}/m</span>
+                                        </div>
+                                    ))}
+                                    {gen.waterRate && (
+                                        <div className="flex justify-between items-center bg-blue-500/5 p-3 rounded-xl border border-blue-500/10">
+                                            <div className="flex items-center gap-3 text-blue-500">
+                                                <Droplet size={14} />
+                                                <span className="text-[11px] font-bold">Eau</span>
+                                            </div>
+                                            <span className="text-xs font-black text-blue-500 font-mono">{(gen.waterRate * entry.count).toFixed(1)}/m</span>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        );
+                    })}
 
-                    <div className={`p-6 rounded-2xl border ${balance >= 0 ? 'bg-green-500/5 border-green-500/20' : 'bg-red-500/5 border-red-500/20'}`}>
-                        <div className="flex justify-between items-center mb-4">
-                            <span className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Status</span>
-                            <span className={`px-2 py-0.5 rounded text-[8px] font-black uppercase ${balance >= 0 ? 'bg-green-500 text-zinc-950' : 'bg-red-500 text-white animate-pulse'}`}>
-                                {balance >= 0 ? 'Stable' : 'Critique'}
-                            </span>
-                        </div>
-                        <div className="space-y-4">
-                            <div className="flex justify-between items-baseline">
-                                <span className="text-[10px] font-bold text-zinc-400 uppercase">Production Totale</span>
-                                <span className="text-2xl font-black font-mono text-green-500">{totalProduction} <small className="text-[10px]">MW</small></span>
-                            </div>
-                            <div className="flex justify-between items-baseline border-t border-zinc-800 pt-4">
-                                <span className="text-[10px] font-bold text-zinc-400 uppercase">Bilan Réseau</span>
-                                <span className={`text-2xl font-black font-mono ${balance >= 0 ? 'text-green-500' : 'text-red-500'}`}>
-                                    {balance > 0 ? '+' : ''}{balance.toFixed(1)} <small className="text-[10px]">MW</small>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    {Object.keys(resourceNeeds).length > 0 && (
-                        <div className="bg-zinc-950 p-6 rounded-2xl border border-zinc-800">
-                            <h3 className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-4 text-center border-b border-zinc-800 pb-2">Ressources Requises</h3>
-                            <div className="space-y-3">
-                                {Object.entries(resourceNeeds).map(([id, rate]) => (
-                                    <div key={id} className="flex justify-between items-center">
-                                        <span className="text-[10px] font-black text-zinc-400 uppercase tracking-tighter">{id.replace(/-/g, ' ')}</span>
-                                        <span className="text-sm text-orange-400 font-black font-mono">{rate.toFixed(2)}<small className="text-[8px] ml-1 text-zinc-600">/min</small></span>
-                                    </div>
-                                ))}
-                            </div>
+                    {grid.every(e => e.count === 0) && (
+                        <div className="py-20 text-center space-y-4">
+                            <Trash2 size={40} className="mx-auto text-zinc-800" />
+                            <p className="text-[10px] font-black text-zinc-600 uppercase tracking-widest leading-relaxed">Aucun générateur actif sur le réseau.</p>
                         </div>
                     )}
                 </div>

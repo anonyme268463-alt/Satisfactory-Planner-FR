@@ -1,0 +1,26 @@
+{
+  "foundations": [
+    {
+      "id": "foundation-8x4",
+      "name": "Fondation 8x4m",
+      "width": 8,
+      "length": 8,
+      "cost": [
+        { "itemId": "concrete", "amount": 5 },
+        { "itemId": "iron-plate", "amount": 2 }
+      ]
+    }
+  ],
+  "belts": [
+    { "tier": 1, "speed": 60, "cost": [{ "itemId": "iron-plate", "amount": 1 }] },
+    { "tier": 2, "speed": 120, "cost": [{ "itemId": "reinforced-iron-plate", "amount": 1 }] },
+    { "tier": 3, "speed": 270, "cost": [{ "itemId": "steel-beam", "amount": 1 }] },
+    { "tier": 4, "speed": 480, "cost": [{ "itemId": "encased-industrial-beam", "amount": 1 }] },
+    { "tier": 5, "speed": 780, "cost": [{ "itemId": "aluminum-alclad-sheet", "amount": 1 }] },
+    { "tier": 6, "speed": 1200, "cost": [{ "itemId": "ficsite-trigon", "amount": 1 }] }
+  ],
+  "pipes": [
+    { "tier": 1, "speed": 300, "cost": [{ "itemId": "copper-sheet", "amount": 2 }] },
+    { "tier": 2, "speed": 600, "cost": [{ "itemId": "steel-pipe", "amount": 2 }] }
+  ]
+}

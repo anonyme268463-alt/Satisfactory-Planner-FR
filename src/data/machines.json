@@ -220,7 +220,39 @@
     "width": 30,
     "length": 30,
     "cost": [
-      { "itemId": "quantum-encoder", "amount": 1 }
+      { "itemId": "supercomputer", "amount": 5 },
+      { "itemId": "processor", "amount": 10 },
+      { "itemId": "aluminum-casing", "amount": 20 },
+      { "itemId": "ficsite-trigon", "amount": 50 }
+    ]
+  },
+  {
+    "id": "equipment-workshop",
+    "name": "Atelier d'équipement",
+    "nameEn": "Equipment Workshop",
+    "powerConsumption": 0,
+    "baseSpeed": 1.0,
+    "width": 8,
+    "length": 8,
+    "cost": [
+      { "itemId": "iron-plate", "amount": 50 },
+      { "itemId": "iron-rod", "amount": 50 }
+    ]
+  },
+  {
+    "id": "nuclear-power-plant",
+    "name": "Centrale nucléaire",
+    "nameEn": "Nuclear Power Plant",
+    "powerConsumption": 0,
+    "baseSpeed": 1.0,
+    "width": 44,
+    "length": 36,
+    "cost": [
+      { "itemId": "concrete", "amount": 250 },
+      { "itemId": "heavy-modular-frame", "amount": 100 },
+      { "itemId": "supercomputer", "amount": 100 },
+      { "itemId": "cable", "amount": 100 },
+      { "itemId": "aluminum-alclad-sheet", "amount": 100 }
     ]
   }
 ]

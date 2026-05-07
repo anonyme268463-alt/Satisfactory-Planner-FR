@@ -52,8 +52,8 @@ export function solveProduction(
   options: SolverOptions = {}
 ): FactoryPlan {
   const { preferredRecipes = {}, overclock = {}, strategy = 'default' } = options;
-  const rawResources: Record<ItemId, number> = {};
-  const machineTotals: Record<string, number> = {};
+  const rawResources: Record<ItemId, number> = Object.create(null);
+  const machineTotals: Record<string, number> = Object.create(null);
   let totalPower = 0;
   const activeSteps = new Set<ItemId>();
 
@@ -161,7 +161,7 @@ export function solveProduction(
   const rootStep = getStep(targetItemId, targetAmount);
 
   // Calculate construction costs
-  const constructionCosts: Record<ItemId, number> = {};
+  const constructionCosts: Record<ItemId, number> = Object.create(null);
   let totalArea = 0;
 
   Object.entries(machineTotals).forEach(([mId, count]) => {
@@ -170,19 +170,25 @@ export function solveProduction(
         const ceiledCount = Math.ceil(count);
         if (machine.cost) {
             machine.cost.forEach(c => {
-                constructionCosts[c.itemId] = (constructionCosts[c.itemId] || 0) + (c.amount * ceiledCount);
+                const current = constructionCosts[c.itemId] || 0;
+                constructionCosts[c.itemId] = current + (c.amount * ceiledCount);
             });
         }
-        totalArea += (machine.width || 8) * (machine.length || 8) * ceiledCount;
+        const width = machine.width || 8;
+        const length = machine.length || 8;
+        totalArea += width * length * ceiledCount;
     }
   });
 
   // Calculate foundations (8x8m)
-  const foundationCount = Math.ceil(totalArea / 64);
+  const foundationCount = Math.ceil(totalArea / 64) || 0;
   const foundation = logisticsData.foundations[0];
-  foundation.cost.forEach(c => {
-    constructionCosts[c.itemId] = (constructionCosts[c.itemId] || 0) + (c.amount * foundationCount);
-  });
+  if (foundation && foundation.cost) {
+    foundation.cost.forEach(c => {
+        const current = constructionCosts[c.itemId] || 0;
+        constructionCosts[c.itemId] = current + (c.amount * foundationCount);
+    });
+  }
 
   return {
     targetItemId,

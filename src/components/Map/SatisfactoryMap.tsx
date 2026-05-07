@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, Marker, Popup, useMap, ImageOverlay } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import nodesData from '@/data/nodes.json';
@@ -18,10 +18,15 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 // Satisfactory map coordinates to Leaflet
 // Satisfactory coords are in cm. We scale them for Leaflet Simple CRS.
-// Game Y is North, which in Leaflet L.CRS.Simple is actually negative Y.
+// North is Y negative in game, but should be positive Latitude in Leaflet.
 const gameToMap = (x: number, y: number): [number, number] => {
   return [-y / 1000, x / 1000];
 };
+
+const mapBounds: L.LatLngBoundsExpression = [
+  [-375, -327.68], // Bottom-Left (South-West)
+  [375, 427.68]    // Top-Right (North-East)
+];
 
 const getMarkerIcon = (purity: string) => {
   let color = '#22c55e'; // Pure
@@ -89,9 +94,9 @@ export default function SatisfactoryMap() {
 
       <div className="h-[700px] w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative bg-zinc-950 group">
         <MapContainer
-          center={[0, 0]}
+          center={[0, 50]}
           zoom={1}
-          minZoom={0}
+          minZoom={-1}
           maxZoom={5}
           scrollWheelZoom={true}
           crs={L.CRS.Simple}
@@ -99,16 +104,10 @@ export default function SatisfactoryMap() {
         >
           <MapResizer />
 
-          {/* Enhanced Grid Background */}
-          <div className="absolute inset-0 pointer-events-none"
-               style={{
-                 backgroundImage: `
-                   radial-gradient(circle, #222 1px, transparent 1px),
-                   linear-gradient(to right, #111 1px, transparent 1px),
-                   linear-gradient(to bottom, #111 1px, transparent 1px)
-                 `,
-                 backgroundSize: '40px 40px, 200px 200px, 200px 200px'
-               }}
+          <ImageOverlay
+            url="/map-satisfactory.png"
+            bounds={mapBounds}
+            opacity={0.8}
           />
 
           {filteredNodes.map((node: any) => {

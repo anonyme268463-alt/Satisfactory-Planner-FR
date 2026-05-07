@@ -5,7 +5,14 @@ import Link from 'next/link';
 
 const SatisfactoryMap = dynamic(() => import('@/components/Map/SatisfactoryMap'), {
   ssr: false,
-  loading: () => <div className="h-[700px] w-full bg-zinc-900 animate-pulse rounded-2xl flex items-center justify-center text-zinc-700 uppercase font-black tracking-widest text-sm">Chargement de la topographie...</div>
+  loading: () => (
+    <div className="h-[700px] w-full bg-zinc-900 rounded-2xl flex items-center justify-center">
+      <div className="flex flex-col items-center gap-4">
+        <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500">Initializing Topography...</p>
+      </div>
+    </div>
+  )
 });
 
 export default function MapPage() {

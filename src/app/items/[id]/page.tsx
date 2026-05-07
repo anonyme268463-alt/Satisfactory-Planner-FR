@@ -3,6 +3,7 @@ import itemsData from '@/data/items.json';
 import recipesData from '@/data/recipes.json';
 import machinesData from '@/data/machines.json';
 import Link from 'next/link';
+import ItemImage from '@/components/ItemImage';
 
 export function generateStaticParams() {
   return itemsData.map((item) => ({
@@ -51,10 +52,7 @@ export default async function ItemDetailPage({ params }: { params: Promise<{ id:
       <div className="bg-zinc-800 p-8 rounded-xl border border-zinc-700 mt-4">
         <div className="flex justify-between items-start mb-8 gap-6">
           <div className="flex items-center gap-6">
-            <div className="w-24 h-24 bg-zinc-900 rounded-2xl flex items-center justify-center border border-zinc-700 shadow-inner">
-                {/* Real image would go here: <img src={item.imageUrl} alt={item.name} /> */}
-                <div className="text-5xl opacity-20">📦</div>
-            </div>
+            <ItemImage itemId={item.id} size={96} className="bg-zinc-950 shadow-2xl" />
             <div>
               <h1 className="text-4xl font-black text-white uppercase tracking-tighter">{item.name}</h1>
               <p className="text-xl text-zinc-400 italic font-medium">{item.nameEn}</p>

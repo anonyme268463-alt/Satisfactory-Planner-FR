@@ -38,9 +38,14 @@ function StepCard({
     >
       {depth > 0 && <div className="absolute top-8 left-0 w-8 h-px bg-white/5"></div>}
 
-      <div className="glass-panel rounded-2xl p-6 relative group hover:border-orange-500/30 transition-all duration-500">
+      <div className="glass-panel rounded-2xl p-6 relative group hover:border-orange-500/30 transition-all duration-500 ficsit-card">
         <div className="absolute top-0 left-0 w-1 h-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
         <div className="scanline"></div>
+
+        <div className="absolute top-3 right-3 flex items-center gap-2 pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity">
+            <span className="text-[7px] font-black text-zinc-500 uppercase tracking-widest">System // Nominal</span>
+            <div className="w-1.5 h-1.5 rounded-full bg-green-500 ficsit-pulse"></div>
+        </div>
 
         <div className="flex flex-col md:flex-row justify-between gap-6">
           <div className="flex items-center gap-5">
@@ -56,7 +61,8 @@ function StepCard({
             </div>
           </div>
 
-          <div className="flex gap-8 items-center bg-zinc-950/50 px-6 py-3 rounded-xl border border-white/5">
+          <div className="flex gap-8 items-center bg-zinc-950/50 px-6 py-3 rounded-xl border border-white/5 relative overflow-hidden">
+            <div className="absolute inset-0 scanline-subtle opacity-20 pointer-events-none"></div>
             <div className="text-right">
                 <p className="text-[9px] font-black text-zinc-500 uppercase tracking-[0.2em] mb-1">Machines</p>
                 <p className="text-lg font-black text-white">{step.machineCount.toFixed(2)}x <span className="text-orange-500">{machine?.name}</span></p>

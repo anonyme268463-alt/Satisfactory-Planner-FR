@@ -6,6 +6,8 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import nodesData from '@/data/nodes.json';
 import itemsData from '@/data/items.json';
+import { getAssetPath } from '@/lib/assets';
+import ItemImage from '../ItemImage';
 
 // Fix Leaflet icons
 const DefaultIcon = L.icon({
@@ -24,8 +26,8 @@ const gameToMap = (x: number, y: number): [number, number] => {
 };
 
 const mapBounds: L.LatLngBoundsExpression = [
-  [-375, -327.68], // Bottom-Left (South-West)
-  [375, 427.68]    // Top-Right (North-East)
+  [-375, -327.68], // South-West
+  [375, 427.68]    // North-East
 ];
 
 const getMarkerIcon = (purity: string) => {
@@ -59,12 +61,37 @@ function MapResizer() {
 export default function SatisfactoryMap() {
   const [mounted, setMounted] = useState(false);
   const [filter, setFilter] = useState<string | null>(null);
+  const [mouseCoords, setMouseCoords] = useState<{ x: number, y: number } | null>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return <div className="h-[600px] bg-zinc-900 animate-pulse rounded-2xl" />;
+  if (!mounted) return (
+    <div className="h-[700px] w-full bg-zinc-900 rounded-2xl flex items-center justify-center">
+      <div className="flex flex-col items-center gap-4">
+        <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500">Initializing Topography...</p>
+      </div>
+    </div>
+  );
+
+  const MapEvents = () => {
+    const map = useMap();
+    useEffect(() => {
+      map.on('mousemove', (e: any) => {
+        // Reverse transformation: [-y / 1000, x / 1000] -> [x, y]
+        // lat = -y / 1000 => y = -lat * 1000
+        // lng = x / 1000  => x = lng * 1000
+        setMouseCoords({
+          x: Math.round(e.latlng.lng * 1000),
+          y: Math.round(-e.latlng.lat * 1000)
+        });
+      });
+      map.on('mouseout', () => setMouseCoords(null));
+    }, [map]);
+    return null;
+  };
 
   const filteredNodes = filter
     ? nodesData.filter(n => n.itemId === filter)
@@ -74,41 +101,55 @@ export default function SatisfactoryMap() {
 
   return (
     <div className="space-y-4">
-      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+      <div className="flex flex-wrap gap-2 items-center bg-zinc-900/40 p-3 rounded-xl border border-white/5">
+        <div className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mr-2 border-r border-white/10 pr-3">
+          Secteur // Ressources
+        </div>
         <button
           onClick={() => setFilter(null)}
-          className={`px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest transition-all shrink-0 border border-transparent ${!filter ? 'bg-orange-500 text-zinc-950 shadow-[0_0_20px_rgba(249,115,22,0.4)]' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:border-zinc-600'}`}
+          className={`px-3 py-1.5 rounded-md text-[10px] font-black uppercase tracking-widest transition-all border ${!filter ? 'bg-orange-500 text-zinc-950 border-orange-400 shadow-[0_0_15px_rgba(249,115,22,0.3)]' : 'bg-zinc-800 text-zinc-400 border-zinc-700 hover:bg-zinc-700'}`}
         >
           Tous
         </button>
-        {resourceTypes.map(type => (
-          <button
-            key={type}
-            onClick={() => setFilter(type)}
-            className={`px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest whitespace-nowrap transition-all shrink-0 border border-transparent ${filter === type ? 'bg-orange-500 text-zinc-950 shadow-[0_0_20px_rgba(249,115,22,0.4)]' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:border-zinc-600'}`}
-          >
-            {itemsData.find(i => i.id === type)?.name || type}
-          </button>
-        ))}
+        {resourceTypes.map(type => {
+          const item = itemsData.find(i => i.id === type);
+          return (
+            <button
+              key={type}
+              onClick={() => setFilter(type)}
+              className={`px-3 py-1.5 rounded-md text-[10px] font-black uppercase tracking-widest whitespace-nowrap transition-all border flex items-center gap-2 ${filter === type ? 'bg-orange-500 text-zinc-950 border-orange-400 shadow-[0_0_15px_rgba(249,115,22,0.3)]' : 'bg-zinc-800 text-zinc-400 border-zinc-700 hover:bg-zinc-700'}`}
+            >
+              <div className={`w-2 h-2 rounded-full ${filter === type ? 'bg-zinc-950' : 'bg-orange-500/50'}`}></div>
+              {item?.name || type}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="h-[700px] w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative bg-zinc-950 group">
+      <div className="h-[700px] w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative bg-zinc-950 group/map">
+        <div className="radar-sweep"></div>
+        <div className="absolute inset-0 z-[400] pointer-events-none opacity-20" style={{
+          backgroundImage: `linear-gradient(rgba(242, 100, 25, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(242, 100, 25, 0.1) 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
+        }}></div>
         <MapContainer
           center={[0, 50]}
-          zoom={1}
+          zoom={2}
           minZoom={-1}
-          maxZoom={5}
+          maxZoom={6}
           scrollWheelZoom={true}
           crs={L.CRS.Simple}
           style={{ height: '100%', width: '100%', background: '#09090b' }}
+          attributionControl={false}
         >
           <MapResizer />
 
           <ImageOverlay
-            url="/map-satisfactory.png"
+            url={getAssetPath('/map-satisfactory.png')}
             bounds={mapBounds}
-            opacity={0.8}
+            opacity={0.9}
           />
+          <MapEvents />
 
           {filteredNodes.map((node: any) => {
             const item = itemsData.find(i => i.id === node.itemId);
@@ -119,18 +160,34 @@ export default function SatisfactoryMap() {
                 icon={getMarkerIcon(node.purity)}
               >
                 <Popup>
-                  <div className="p-2 min-w-[120px]">
-                    <h3 className="font-black text-zinc-900 uppercase leading-tight text-sm mb-1">{item?.name}</h3>
-                    <div className="flex items-center gap-1.5">
-                      <div className={`w-2 h-2 rounded-full ${
-                        node.purity === 'Pure' ? 'bg-green-500' :
-                        (node.purity === 'Normal' || node.purity === 'Normale') ? 'bg-yellow-500' : 'bg-red-500'
-                      }`}></div>
-                      <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-wider">{node.purity}</p>
+                  <div className="p-1 min-w-[180px]">
+                    <div className="flex items-start gap-3 mb-3">
+                      <ItemImage itemId={node.itemId} size={40} />
+                      <div>
+                        <h3 className="font-black text-white uppercase leading-tight text-xs mb-0.5 tracking-wider">{item?.name}</h3>
+                        <div className="flex items-center gap-1.5">
+                          <div className={`w-1.5 h-1.5 rounded-full ${
+                            node.purity === 'Pure' ? 'bg-green-500 shadow-[0_0_5px_rgba(34,197,94,0.5)]' :
+                            (node.purity === 'Normal' || node.purity === 'Normale') ? 'bg-yellow-500' : 'bg-red-500'
+                          }`}></div>
+                          <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-[0.2em]">{node.purity}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="mt-2 pt-2 border-t border-zinc-100 flex justify-between text-[9px] font-mono text-zinc-400">
-                      <span>X: {node.coords.x}</span>
-                      <span>Y: {node.coords.y}</span>
+
+                    <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/5">
+                      <div className="bg-black/40 p-1.5 rounded border border-white/5">
+                        <span className="block text-[7px] text-zinc-500 uppercase font-black mb-0.5">Axe X</span>
+                        <span className="text-[9px] font-mono text-orange-500/80">{node.coords.x.toLocaleString()}</span>
+                      </div>
+                      <div className="bg-black/40 p-1.5 rounded border border-white/5">
+                        <span className="block text-[7px] text-zinc-500 uppercase font-black mb-0.5">Axe Y</span>
+                        <span className="text-[9px] font-mono text-orange-500/80">{node.coords.y.toLocaleString()}</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-2 flex justify-center">
+                       <div className="text-[8px] font-black text-orange-500/40 uppercase tracking-[0.3em]">Ficsit // Scanner</div>
                     </div>
                   </div>
                 </Popup>
@@ -138,6 +195,28 @@ export default function SatisfactoryMap() {
             );
           })}
         </MapContainer>
+
+        {mouseCoords && (
+          <div className="absolute bottom-6 left-6 z-[1000] flex flex-col gap-1 pointer-events-none">
+            <div className="bg-zinc-950/90 backdrop-blur-md border-l-2 border-orange-500 px-4 py-2 shadow-2xl">
+              <div className="flex items-center gap-4">
+                <div className="flex flex-col">
+                  <span className="text-[7px] font-black text-zinc-500 uppercase tracking-[0.2em] mb-0.5">Target X</span>
+                  <span className="text-xs font-mono text-white leading-none">{mouseCoords.x.toLocaleString()}</span>
+                </div>
+                <div className="w-px h-6 bg-white/10"></div>
+                <div className="flex flex-col">
+                  <span className="text-[7px] font-black text-zinc-500 uppercase tracking-[0.2em] mb-0.5">Target Y</span>
+                  <span className="text-xs font-mono text-white leading-none">{mouseCoords.y.toLocaleString()}</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 px-2">
+              <div className="w-1 h-1 bg-orange-500 animate-pulse"></div>
+              <span className="text-[8px] font-black text-orange-500/60 uppercase tracking-[0.4em]">Tracking Active</span>
+            </div>
+          </div>
+        )}
 
         <div className="absolute top-4 right-4 z-[1000] bg-zinc-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl max-w-xs">
             <h4 className="text-[10px] font-black text-orange-500 uppercase tracking-[0.3em] mb-2">Légende Topographique</h4>

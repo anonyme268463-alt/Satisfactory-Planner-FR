@@ -109,7 +109,7 @@ function StepCard({
                         <span className="text-[10px] font-black text-white">MK{step.logistics.beltTier}</span>
                     </div>
                     <div className="bg-zinc-950 px-3 py-1.5 rounded border border-white/5 flex items-center gap-2">
-                        <span className="text-[9px] font-black text-zinc-500">PIPE</span>
+                                        <span className="text-[9px] font-black text-zinc-500">TUBE</span>
                         <span className="text-[10px] font-black text-white">MK{step.logistics.pipeTier}</span>
                     </div>
                 </div>
@@ -186,15 +186,15 @@ export default function ProductionPlanner() {
                         <Activity className="text-zinc-950" size={28} />
                     </div>
                     <div>
-                        <h1 className="text-4xl font-black uppercase tracking-tighter">Command Center</h1>
-                        <p className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.4em]">FICSIT Production Logistics v2.0</p>
+                        <h1 className="text-4xl font-black uppercase tracking-tighter">Centre de Commande</h1>
+                        <p className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.4em]">Logistique de Production FICSIT v2.0</p>
                     </div>
                 </div>
             </div>
 
             <div className="flex gap-4">
                 <div className="glass-panel px-6 py-4 rounded-2xl border-orange-500/20">
-                    <p className="text-[9px] font-black text-orange-500 uppercase tracking-widest mb-1">Target Object</p>
+                    <p className="text-[9px] font-black text-orange-500 uppercase tracking-widest mb-1">Objet Cible</p>
                     <Combobox
                         options={itemsData.filter(i => i.category !== 'Resource' && i.category !== 'Waste').map(i => ({ id: i.id, name: i.name }))}
                         value={targetItemId}
@@ -202,7 +202,7 @@ export default function ProductionPlanner() {
                     />
                 </div>
                 <div className="glass-panel px-6 py-4 rounded-2xl">
-                    <p className="text-[9px] font-black text-zinc-500 uppercase tracking-widest mb-1">Production Rate</p>
+                    <p className="text-[9px] font-black text-zinc-500 uppercase tracking-widest mb-1">Taux de Production</p>
                     <input
                         type="number" value={targetAmount} onChange={(e) => setTargetAmount(Number(e.target.value))}
                         className="bg-transparent border-none text-2xl font-black text-white focus:outline-none w-24 font-mono"

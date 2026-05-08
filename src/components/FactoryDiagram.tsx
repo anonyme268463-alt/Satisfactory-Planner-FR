@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Maximize2, Minimize2 } from 'lucide-react';
 import { FactoryLayout } from '@/lib/layout';
 
 export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
@@ -8,8 +9,17 @@ export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsFullscreen(false);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
 
   const baseScale = 5;
   const padding = 150;
@@ -50,7 +60,11 @@ export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
   return (
     <div
         ref={containerRef}
-        className="overflow-hidden bg-zinc-950 rounded-2xl border border-zinc-800 h-[600px] shadow-2xl relative cursor-grab active:cursor-grabbing select-none"
+        className={`overflow-hidden bg-zinc-950 transition-all duration-500 shadow-2xl relative cursor-grab active:cursor-grabbing select-none ${
+          isFullscreen
+            ? 'fixed inset-0 z-[100] p-8'
+            : 'rounded-2xl border border-zinc-800 h-[600px] w-full'
+        }`}
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -58,7 +72,7 @@ export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
         onMouseLeave={handleMouseUp}
     >
       {/* Controls Overlay */}
-      <div className="absolute top-4 right-4 flex flex-col gap-4 z-10">
+      <div className="absolute top-4 right-4 flex flex-col gap-4 z-20">
          <div className="flex gap-4 bg-zinc-900/80 backdrop-blur-md p-3 rounded-xl border border-zinc-700 shadow-xl">
             <div className="flex items-center gap-1">
                 <div className="w-3 h-3 bg-orange-500 rounded"></div>
@@ -71,6 +85,10 @@ export default function FactoryDiagram({ layout }: { layout: FactoryLayout }) {
          </div>
 
          <div className="flex flex-col gap-2 bg-zinc-900/80 backdrop-blur-md p-2 rounded-xl border border-zinc-700 shadow-xl self-end">
+            <button onClick={(e) => { e.stopPropagation(); setIsFullscreen(!isFullscreen); }} className="w-8 h-8 flex items-center justify-center hover:bg-zinc-800 rounded-lg text-orange-500 font-bold">
+               {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+            </button>
+            <div className="h-px bg-zinc-800 mx-1"></div>
             <button onClick={(e) => { e.stopPropagation(); setZoom(z => Math.min(z + 0.1, 5)); }} className="w-8 h-8 flex items-center justify-center hover:bg-zinc-800 rounded-lg text-orange-500 font-bold">+</button>
             <div className="h-px bg-zinc-800 mx-1"></div>
             <button onClick={(e) => { e.stopPropagation(); setZoom(z => Math.max(z - 0.1, 0.1)); }} className="w-8 h-8 flex items-center justify-center hover:bg-zinc-800 rounded-lg text-orange-500 font-bold">−</button>

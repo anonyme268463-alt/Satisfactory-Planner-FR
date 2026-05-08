@@ -16,7 +16,7 @@
     { "tier": 2, "speed": 120, "cost": [{ "itemId": "reinforced-iron-plate", "amount": 1 }] },
     { "tier": 3, "speed": 270, "cost": [{ "itemId": "steel-beam", "amount": 1 }] },
     { "tier": 4, "speed": 480, "cost": [{ "itemId": "encased-industrial-beam", "amount": 1 }] },
-    { "tier": 5, "speed": 780, "cost": [{ "itemId": "aluminum-alclad-sheet", "amount": 1 }] },
+    { "tier": 5, "speed": 780, "cost": [{ "itemId": "alclad-aluminum-sheet", "amount": 1 }] },
     { "tier": 6, "speed": 1200, "cost": [{ "itemId": "ficsite-trigon", "amount": 1 }] }
   ],
   "pipes": [

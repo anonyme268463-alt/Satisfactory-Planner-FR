@@ -252,7 +252,7 @@
       { "itemId": "heavy-modular-frame", "amount": 100 },
       { "itemId": "supercomputer", "amount": 100 },
       { "itemId": "cable", "amount": 100 },
-      { "itemId": "aluminum-alclad-sheet", "amount": 100 }
+      { "itemId": "alclad-aluminum-sheet", "amount": 100 }
     ]
   }
 ]

@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { MapContainer, Marker, Popup, useMap, ImageOverlay } from 'react-leaflet';
+import { Maximize2, Minimize2 } from 'lucide-react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import nodesData from '@/data/nodes.json';
@@ -62,9 +63,27 @@ export default function SatisfactoryMap() {
   const [mounted, setMounted] = useState(false);
   const [filter, setFilter] = useState<string | null>(null);
   const [mouseCoords, setMouseCoords] = useState<{ x: number, y: number } | null>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const mapRef = useRef<L.Map | null>(null);
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mapRef.current) {
+      setTimeout(() => {
+        mapRef.current?.invalidateSize();
+      }, 500);
+    }
+  }, [isFullscreen]);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsFullscreen(false);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
   }, []);
 
   if (!mounted) return (
@@ -100,8 +119,8 @@ export default function SatisfactoryMap() {
   const resourceTypes = Array.from(new Set(nodesData.map(n => n.itemId)));
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap gap-2 items-center bg-zinc-900/40 p-3 rounded-xl border border-white/5">
+    <div className={`space-y-4 ${isFullscreen ? 'fixed inset-0 z-[100] bg-zinc-950 p-4 flex flex-col' : ''}`}>
+      <div className="flex flex-wrap gap-2 items-center bg-zinc-900/40 p-3 rounded-xl border border-white/5 shrink-0">
         <div className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mr-2 border-r border-white/10 pr-3">
           Secteur // Ressources
         </div>
@@ -126,7 +145,7 @@ export default function SatisfactoryMap() {
         })}
       </div>
 
-      <div className="h-[700px] w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative bg-zinc-950 group/map">
+      <div className={`w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative bg-zinc-950 group/map flex-grow ${isFullscreen ? '' : 'h-[700px]'}`}>
         <div className="radar-sweep"></div>
         <div className="absolute inset-0 z-[400] pointer-events-none opacity-20" style={{
           backgroundImage: `linear-gradient(rgba(242, 100, 25, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(242, 100, 25, 0.1) 1px, transparent 1px)`,
@@ -141,6 +160,7 @@ export default function SatisfactoryMap() {
           crs={L.CRS.Simple}
           style={{ height: '100%', width: '100%', background: '#09090b' }}
           attributionControl={false}
+          ref={mapRef}
         >
           <MapResizer />
 
@@ -218,7 +238,15 @@ export default function SatisfactoryMap() {
           </div>
         )}
 
-        <div className="absolute top-4 right-4 z-[1000] bg-zinc-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl max-w-xs">
+        <div className="absolute top-4 right-4 z-[1000] flex flex-col gap-4 items-end">
+          <button
+            onClick={() => setIsFullscreen(!isFullscreen)}
+            className="bg-zinc-900/90 backdrop-blur-md p-2 rounded-xl border border-white/10 shadow-2xl text-orange-500 hover:bg-zinc-800 transition-colors"
+          >
+            {isFullscreen ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
+          </button>
+
+          <div className="bg-zinc-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl max-w-xs">
             <h4 className="text-[10px] font-black text-orange-500 uppercase tracking-[0.3em] mb-2">Légende Topographique</h4>
             <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -234,6 +262,7 @@ export default function SatisfactoryMap() {
                     <span className="text-[9px] text-zinc-300 font-bold uppercase">Impure</span>
                 </div>
             </div>
+          </div>
         </div>
       </div>
     </div>

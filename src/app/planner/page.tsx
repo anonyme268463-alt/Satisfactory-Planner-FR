@@ -337,7 +337,7 @@ export default function ProductionPlanner() {
                 </div>
 
                 {layout ? (
-                    <div className="glass-panel rounded-3xl p-8 overflow-hidden min-h-[600px] flex items-center justify-center">
+                    <div className="w-full">
                         <FactoryDiagram layout={layout} />
                     </div>
                 ) : (
